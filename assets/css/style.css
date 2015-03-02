@@ -66,6 +66,10 @@ header h1 {
 	vertical-align: middle;
 }
 
+nav {
+	display:none;
+}
+
 
 .octopus {
 	background: url('../img/octo-blue.png') no-repeat;
