@@ -66,16 +66,6 @@ header h1 {
 	vertical-align: middle;
 }
 
-nav {
-	display:none;
-	text-align:center;
-	padding: 1em;
-}
-
-nav > ul > li {
-	list-style: none;
-	padding: 0;
-}
 
 .octopus {
 	background: url('../img/octo-blue.png') no-repeat;
@@ -94,6 +84,7 @@ nav > ul > li {
 
 .sociallinks {
 	display: inline-block;
+	margin: 1em 0;
 }
 
 #section1 .fa-stack-1x {

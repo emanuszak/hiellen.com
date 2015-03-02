@@ -10,17 +10,68 @@
 	nav {
 		display: block;
 		font-size: 1.5em;
+		width: 100%;
 		margin-bottom: 25%;
+		color: #999;
+		text-align:center;
 	}
 	
 	nav ul {
+		display: inline-block;
+		width: 80%;
+		padding: 0;
 		margin: 0 auto;
+	}
+	
+	nav li {
+		margin: .25em;
+		list-style: none;
+		border-radius: 25px;
+		background-color: #FFF;
+		border: 2px solid #FFF;
 	}
 	
 	.printme {
 		display:none;
 	}
 	
+<<<<<<< HEAD
 	
 	
 }
+=======
+	#section2 article {
+		width: 100%;
+	}
+	
+	.sociallinks {
+		display: inline-block;
+		margin: 1em auto;
+	}
+	
+	/* Contact Form */
+	.contactform {
+		width: 100%;
+	}
+
+	input {
+		width: 100%;
+	}
+
+	textarea {
+		width: 100%;
+	}
+
+	.actions {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.actions button {
+		display:block;
+		width: 100%;
+		margin: .5em auto;
+	}
+	
+}
+>>>>>>> mobile-view
