@@ -1,0 +1,247 @@
+@import url(http://fonts.googleapis.com/css?family=Lato|Lobster+Two);
+
+body {
+	background-color: #F88379;
+	font-family: 'Lato', Arial, sans-serif;
+	font-weight: 400;
+	color: #FFF;
+	width: 100%;
+	margin: 0;
+}
+
+#wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+a:link {text-decoration:none; color: #7f7f7f;}
+a:visited {text-decoration:none; color:#7f7f7f;}
+a:hover {text-decoration:none; color:#666;}
+
+h3, h4 {
+	margin: .25em 0;
+}
+
+h5 {
+	margin: 0;
+	font-family: 'Lobster Two', cursive;
+	font-weight: 100;
+	font-size: 1em;
+}
+
+section h2 {
+	font-family: 'Lobster Two', cursive;
+	font-weight:400;
+	font-size:2.25em;
+	color: #FFF;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+.textwrap {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+header {
+	margin: 0 auto;
+	max-width: 800px;
+	text-align:center;
+	display:table;
+	height: 65vh;
+}
+
+header h1 {
+	font-family: 'Lobster Two', cursive;
+	font-weight:400;
+	color: #FFF;
+	font-size: 5.5em;
+	display: table-cell;
+	text-align:left;
+	vertical-align: middle;
+}
+
+nav {
+	display:none;
+	text-align:center;
+	padding: 1em;
+}
+
+nav > ul > li {
+	list-style: none;
+	padding: 0;
+}
+
+.octopus {
+	background: url('../img/octo-blue.png') no-repeat;
+	width: 203px;
+	height: 177px;
+	float:right;
+	display: inline-block;
+	margin: -100px 20% 0 0;
+}
+
+/* About */
+#section1 {
+	background-color: #7DCFB6;
+	padding: 15px;
+}
+
+.sociallinks {
+	display: inline-block;
+}
+
+#section1 .fa-stack-1x {
+	color: #7DCFB6;
+}
+
+#section1 a:link {color: #FFF;}
+#section1 a:visited {color: #FFF;}
+#section1 a:hover {color: #FFF;}
+
+/* Contact Form */
+.contactform {
+	margin: 0 auto;
+	font-size: 1.5em;
+	width: 65%;
+}
+
+form {
+	padding: 20px;
+	margin: 5%;
+	border: 3px solid #FFF;
+	border-radius: 25px;
+}
+
+label {
+	display: inline-block;
+	font-size: .83em;
+	width: 15%;
+	vertical-align: top;
+}
+
+input {
+	width: 84%;
+	border: none;
+	border-radius: 25px;
+	outline:none;
+	color: #999;
+	font-size: .83em;
+	padding: .33em;
+	margin: .25em 0;
+	box-sizing: border-box;
+}
+
+textarea {
+	width: 84%;
+	outline: none;
+	border-radius: 25px;
+	border: none;
+	color: #999;
+	font-size: .83em;
+	padding: .5em;
+	margin: .25em 0;
+	box-sizing: border-box;
+}
+
+#section1 button {
+	border: none;
+	border-radius: 25px;
+	outline:none;
+	font-size: .83em;
+	background-color: #FFF;
+	border: 2px solid #FFF;
+}
+
+#section1 button:hover {
+	background-color: #7DCFB6;
+	color:#FFF;
+	border: 2px solid #FFF;
+	cursor:pointer;
+}
+
+.contactme {
+	display: block;
+	font-family: 'Lobster Two', cursive;
+	color: #7f7f7f;
+	margin: 0 auto;
+	min-width: 15%;
+}
+
+.actions {
+	margin-left: 16%;
+	width: 84%;
+}
+
+.actions button {
+	display:inline;
+	margin: 0 auto;
+	width: 49%;
+}
+
+
+/* Resume */
+#section2 {
+	background-color: #00B2CA;
+	padding: 15px;
+	overflow: hidden;
+	display: flex;
+}
+
+.section-header {
+	display: block;
+}
+
+.section-header h2 {
+	display: inline-block;
+	float:left;
+}
+
+.printme {
+	background-color: #FFF;
+	margin: .83em .25em;
+	float:right;
+	padding: .5em;
+	border: 3px solid #FFF;
+	border-radius: 50%;
+	height: 2em;
+	width: 2em;
+	text-align:center;
+	line-height: 1;
+}
+
+
+#section2 article {
+	width: 70%;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+	float:left;
+}
+
+#section2 aside {
+	margin-left:1em;
+	width: 25%;
+	min-width: 225px;
+	box-sizing: border-box;
+	float:left;
+}
+
+.resume > ul > li {
+	list-style: none;
+	margin: .55em;
+}
+
+
+
+/* Colophon */
+#section3 {
+	background-color: #1D4E89;
+	padding: 15px;
+}
+
+

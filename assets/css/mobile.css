@@ -1,0 +1,23 @@
+@media screen and (max-width: 736px) and (orientation: portrait) {
+	header {
+		height: 40vh;
+	}
+	
+	header h1 {
+		font-size: 4em;
+	}
+	
+		display: block;
+		font-size: 1.5em;
+		margin-bottom: 25%;
+	}
+	
+	nav ul {
+		margin: 0 auto;
+	}
+	
+	.printme {
+		display:none;
+	}
+	
+}
