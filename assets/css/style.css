@@ -1,9 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Lato|Lobster+Two);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400|Lobster+Two);
 
 body {
 	background-color: #F88379;
 	font-family: 'Lato', Arial, sans-serif;
-	font-weight: 400;
+	font-weight: 300;
 	color: #FFF;
 	width: 100%;
 	margin: 0;
@@ -18,16 +18,10 @@ a:link {text-decoration:none; color: #7f7f7f;}
 a:visited {text-decoration:none; color:#7f7f7f;}
 a:hover {text-decoration:none; color:#666;}
 
-h3, h4 {
-	margin: .25em 0;
+h3, h4, h5 {
+	margin: .33em 0;
 }
 
-h5 {
-	margin: 0;
-	font-family: 'Lobster Two', cursive;
-	font-weight: 100;
-	font-size: 1em;
-}
 
 section h2 {
 	font-family: 'Lobster Two', cursive;
@@ -208,6 +202,9 @@ textarea {
 	width: 2em;
 	text-align:center;
 	line-height: 1;
+	font-family: 'Lobster Two', cursive;
+	font-weight: 100;
+	font-size: 1em;
 }
 
 
@@ -226,9 +223,10 @@ textarea {
 	float:left;
 }
 
+
 .resume > ul > li {
 	list-style: none;
-	margin: .55em;
+	margin: 1.5em .5em;
 }
 
 
