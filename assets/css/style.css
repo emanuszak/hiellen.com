@@ -9,6 +9,10 @@ body {
 	margin: 0;
 }
 
+.standout {
+	font-weight: 400;
+}
+
 #wrapper {
 	max-width: 1000px;
 	margin: 0 auto;
