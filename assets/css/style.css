@@ -118,6 +118,7 @@ a[ id= "section2" ]:target ~ #section2 {
     margin: 0 auto;
 	font-size: 1.5em;
 	width: 65%;
+    text-align:center;
 }
 
 form {
