@@ -42,13 +42,27 @@
 	.sociallinks {
 		display: inline-block;
 		margin: 1em auto;
+        width: 100%;
+        text-align:center;
 	}
 	
 	/* Contact Form */
-	.contactform {
+    #contact{
+        display:block !important;
+    }
+    
+	#contactform {
 		width: 100%;
 	}
 
+    button.contactme {
+        display:none;
+    }
+    
+    #reset {
+        display:none;
+    }
+    
 	input {
 		width: 100%;
 	}

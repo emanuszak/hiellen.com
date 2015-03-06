@@ -9,6 +9,10 @@ body {
 	margin: 0;
 }
 
+.standout {
+	font-weight: 400;
+}
+
 #wrapper {
 	max-width: 1000px;
 	margin: 0 auto;
@@ -64,6 +68,22 @@ nav {
 	display:none;
 }
 
+/*Scrolling Nav*/
+
+a[ id= "section1" ]:target ~ #section1 {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+
+a[ id= "contact" ]:target ~ #contactform {
+    display:block;
+    -webkit-transform: translateY( -500px );
+    transform: translateY( -500px );
+}
+a[ id= "section2" ]:target ~ #section2 {
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+}
 
 .octopus {
 	background: url('../img/octo-blue.png') no-repeat;
@@ -94,14 +114,15 @@ nav {
 #section1 a:hover {color: #FFF;}
 
 /* Contact Form */
-.contactform {
-	margin: 0 auto;
+#contactform {
+    margin: 0 auto;
 	font-size: 1.5em;
 	width: 65%;
 }
 
 form {
-	padding: 20px;
+	display:none;
+    padding: 20px;
 	margin: 5%;
 	border: 3px solid #FFF;
 	border-radius: 25px;
@@ -209,17 +230,15 @@ textarea {
 
 
 #section2 article {
-	width: 70%;
-	padding-bottom: 10px;
-	box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70%;
+    margin-right: 2em;
 	float:left;
 }
 
 #section2 aside {
-	margin-left:1em;
-	width: 25%;
-	min-width: 225px;
 	box-sizing: border-box;
+    width: 25%;
 	float:left;
 }
 
@@ -236,5 +255,3 @@ textarea {
 	background-color: #1D4E89;
 	padding: 15px;
 }
-
-

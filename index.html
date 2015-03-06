@@ -7,7 +7,7 @@
 <link href="assets/css/style.css" type="text/css" rel="stylesheet">
 <link href="assets/css/mobile.css" type="text/css" rel="stylesheet">
 <link href="assets/css/print.css" type="text/css" rel="stylesheet">
-<title>Hi Ellen</title>
+<title>Hi, I'm Ellen</title>
 </head>
 
 <body>
@@ -19,32 +19,33 @@
 	
 	<nav>
 		<ul>
-			<li><a href="#">About Me</a></li>
-			<li><a href="#">Contact</a></li>
-			<li><a href="#">Resume</a></li>
+			<li><a href="#section1">About Me</a></li>
+			<li><a href="#contactform">Contact</a></li>
+			<li><a href="#section2">Resume</a></li>
 		</ul>
 	</nav>
 	
 <!--SECTION 1: About-->	
 	<section id="section1">
 		<div class="octopus"></div>
-		<div class="textwrap">
+		<div class="textwrap standout">
 			<h2>About Me</h2>
 				<p>I'm an aspiring front-end developer and a recovering public relations professional.<p>
-				<p>I've spent more than eight years doing strategic communications and media relations in various industries&mdash;most recently I've helped startups and tech companies.  I'm known for being able to understand the nuts and bolts of the tech companies I've worked with.  </p>
+				<p>I've spent more than eight years doing strategic communications and media relations in various industries&mdash;most recently I've helped startups and tech companies launch products and share their company's mission.  I'm known for being able to understand the nuts and bolts of the tech companies I've worked with.  </p>
 				<p>After spending about four years talking about tech, I want to start actually building tech and become a full-time developer.  I offer more than just technical ability to produce code; my experience in brand messaging gives me a unique perspective on what a project requires to meet the business's goals and needs.</p>
 				
-<!-- 			<button type="submit" class="contactme">Contact Me</button>				 -->
-				<div class="contactform">
-					<form name="contact" method="post">
+				
+				<div id="contactform">
+				<div id="form-messages"></div>
+					<form id="contact" name="contact" method="post" action="mailer.php">
 						<label for="name">Name</label>
-							<input type="text" id="name">
+							<input type="text" name="name" id="name" required>
 						<label for="email">Email</label>
-							<input type="email" id="email"><br>
+							<input type="email" name="email" id="email" required><br>
 						<label for="website">Website</label>
-							<input type="text" id="website"><br>
+							<input type="text" name="website" id="website"><br>
 						<label for="message">Message</label>
-							<textarea id="message" rows="5"></textarea>
+							<textarea id="message" name="message" rows="5" required></textarea>
 							<div class="actions">
 								<button type="submit" id="submit">Send</button>
 								<button type="reset" id="reset">Cancel</button>
@@ -98,7 +99,7 @@
 					<h5>Resound Marketing | Freelance | TriplePoint PR, April 2011-December 2014</h5>
 					<ul>
 						<li>Planned strategic public relations campaigns for technology, mobile app, video game, and digital lifestyle clients</li>
-						<li>Generated on-message coverage with USA Today, Wall Street Journal, New York Times, NBC Chicago, WNYC, Associated Press, Huffington Post, Reuters, Fast Company, TechCrunch, Mashable, GigaOM, Boston Globe, Wired.com, Fortune, Forbes.com, The Verge</li>
+						<li>Generated on-message coverage with USA Today, Wall Street Journal, New York Times, WNYC, Associated Press, Huffington Post, Reuters, Fast Company, TechCrunch, Mashable, GigaOM, Boston Globe, Wired.com, Fortune, Forbes.com, The Verge</li>
 						<li>Launched over 35 mobile game and lifestyle apps on the Apple App Store, driving downloads through positive app reviews and game features</li>
 						<li>Wrote, edited, and proofread all press materials including press releases, op-eds and byliners, blog posts, and website content</li>
 						<li>Secured speaking engagements for client executives in the local tech scene, SXSWinteractive</li>
@@ -118,7 +119,7 @@
 					</li>
 
 					<li><h4>Publicity Assistant</h4>
-					<h5>Simon & Schuster, September 2007-February 2010</h5>
+					<h5>Simon &amp; Schuster, September 2007-February 2010</h5>
 					</li>
 
 					<li><h4>Web Editor</h4>
@@ -134,13 +135,13 @@
 						<li>Created online version of Global Health Nexus magazine's bi-annual issues</li>
 						<li>Designed and developed website for Human Resources and for Shelter-in-Place program</li>
 						<li>Provided computer technical support for students and faculty members</li>
-						<li>Assisted in running a technology orientation course for all incoming students, installing requisite 							software and checking hardware</li>
+						<li>Assisted in running a technology orientation course for all incoming students, installing requisite software and checking hardware</li>
 					</ul>
 				</li>
 			</ul>
 
 			<h3>Education</h3>
-				<ul><h4>New York University, College of Arts & Science</h4>
+				<ul><h4>New York University, College of Arts &amp; Science</h4>
 					<h5>Bachelor of Arts in Linguistics, September 2007</h5></ul>
 		</article>
 	
@@ -190,7 +191,7 @@
 			<div class="textwrap">
 				<h2>Colophon</h2>
 				<p>The main typography of this website is Lato. Titles and other headings are set in Lobster Two. Fonts are served from Google Fonts.</p>
-				<p>This website is hand-coded in validated web-standard HTML, CSS, JavaScript, and jQuery using Coda, and hosted on Amazon Web Services.</p>
+				<p>This website is hand-coded in validated web-standard HTML, CSS, JavaScript, and jQuery using Brackets by Adobe, and hosted on Amazon Web Services.</p>
 				<p>2015</p>
 			</div>
 		</section>
