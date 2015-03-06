@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+//error_reporting(E_ALL);
+//ini_set("display_errors", 1);
 
 include_once "lib/swiftmailer/lib/swift_required.php";
 
@@ -15,11 +15,13 @@ $to = array(
  'ellen.manuszak@gmail.com'  => 'Ellen Manuszak'
 );
 
-$text = "Sender Website: " . $sender_website . "\n";
+$text = "New message from " . $sender_name . "\n";
+$text .= "Sender Website: " . $sender_website . "\n";
 $text .= "Message: " . $sender_message . "\n";
 
-$html = "<em>Sender Website".$sender_website."</em><br/>";
-$html .= "<em>Sender Message".$sender_message."</em>";
+$html = "<strong>New message from " . $sender_name . "</strong><br/>";
+$html .= "Sender Website: " . $sender_website . "<br/>";
+$html .= "<p>" . $sender_message . "</p>";
 
 $transport = Swift_SmtpTransport::newInstance('smtp.mandrillapp.com', 587);
 $transport->setUsername('ellen.manuszak@gmail.com');
