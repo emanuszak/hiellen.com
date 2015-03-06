@@ -2,7 +2,7 @@
 //error_reporting(E_ALL);
 //ini_set("display_errors", 1);
 
-include_once "lib/swiftmailer/lib/swift_required.php";
+include_once "../lib/swiftmailer/lib/swift_required.php";
 
 $sender_name = $_POST['name'];
 $sender_email = $_POST['email'];
