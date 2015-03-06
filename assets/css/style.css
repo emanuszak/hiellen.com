@@ -242,13 +242,14 @@ textarea {
 	float:left;
 }
 
-
 .resume > ul > li {
 	list-style: none;
 	margin: 1.5em .5em;
 }
 
-
+.resume li li {
+    padding: .33em;
+}
 
 /* Colophon */
 #section3 {
