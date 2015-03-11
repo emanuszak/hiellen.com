@@ -1,5 +1,5 @@
 @media print {
-	header, #section1, footer, .button, .octopus {
+	header, #section1, footer, .button, .octopus, #section3, .section-header, .printme {
 		display:none;
 	}
 	
@@ -14,17 +14,17 @@
 	}
 	
 	#section2 article {
-		width: 60%;
+		width: 70%;
 	}
 	
 	#section2 aside {
 		width: 20%;
 	}
 	
-	.section-header:before {
+	.resume:before {
 		content: "Ellen Manuszak | ellen.manuszak@gmail.com | 646.229.8864";
-		font-family: 'Lobster Two', cursive;
-		font-size: 1.5em;
+		font-size: 1em;
+        font-weight:400;
 		text-align:center;
 	}
 	
