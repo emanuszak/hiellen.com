@@ -179,7 +179,7 @@ textarea {
 	display: block;
 	font-family: 'Lobster Two', cursive;
 	color: #7f7f7f;
-	margin: 0 auto;
+	margin: 1.5em auto;
 	min-width: 15%;
 }
 
@@ -220,8 +220,8 @@ textarea {
 	padding: .5em;
 	border: 3px solid #FFF;
 	border-radius: 50%;
-	height: 2em;
-	width: 2em;
+	height: 2.5em;
+	width: 2.5em;
 	text-align:center;
 	line-height: 1;
 	font-family: 'Lobster Two', cursive;
