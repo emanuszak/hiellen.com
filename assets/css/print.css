@@ -1,5 +1,5 @@
 @media print {
-	header, #section1, footer, .button, .octopus, #section3, .section-header, .printme {
+	header, footer, .button, .octopus, #section3, .printme, #contactform {
 		display:none;
 	}
 	
@@ -21,8 +21,8 @@
 		width: 20%;
 	}
 	
-	.resume:before {
-		content: "Ellen Manuszak | ellen.manuszak@gmail.com | 646.229.8864";
+	.sociallinks:before {
+		content: "ellen.manuszak@gmail.com \A 646.229.8864 \A";
 		font-size: 1em;
         font-weight:400;
 		text-align:center;
