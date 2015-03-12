@@ -1,5 +1,4 @@
 @media screen 
-    and (min-width: 414px)
     and (max-width: 736px) {
 	header {
 		height: 40vh;
@@ -83,5 +82,17 @@
 		width: 100%;
 		margin: .5em auto;
 	}
+        
+    #section2 aside {
+        width: 100%;
+    }
+        
+    #section2 aside li {
+        display: inline-block;
+    }
+    
+    #section2 aside li:before {
+        content: "\2022\A";
+    }
 	
 }
