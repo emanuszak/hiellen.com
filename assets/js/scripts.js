@@ -1,5 +1,12 @@
 $("a[href^='http://']").attr("target","_blank");
 
+//slide down
+$(document).ready(function() {
+    $(".clickme").click(function() {
+
+        $(this).next().toggle("slow");
+        }); 
+});
 
 // Hide and Reveal Contact Form
 
