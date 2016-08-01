@@ -9,224 +9,44 @@
 <link rel="shortcut icon" type="image/png" href="assets/img/octo-icon.png">
 <link href="assets/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
 <link href="assets/css/style.css" type="text/css" rel="stylesheet">
-<link href="assets/css/mobile.css" type="text/css" rel="stylesheet">
-<link href="assets/css/print.css" type="text/css" rel="stylesheet">
         <title>Hi, I'm Ellen</title>
     </head>
 
 <body>
+<div id="wrapper">
 	
-	<header>
-		<h1>Hello,<br>
-		<span class="indent">I'm Ellen</span></h1>
+	<header class="flexWrapper">
+		
+		<div class="flexColumn">
+			<div class="polygon poly-m">
+				<h1>hello</h1>
+			</div>
+			
+			<div class="polygon poly-m">
+				<h1>I'm Ellen</h1>
+			</div>
+		</div>
+		
+		<div class="polygon poly-l">
+			<img src="img/headshot.jpg">
+		</div>
 	</header>
 	
-	<nav>
-		<ul>
-			<li><a href="#section1">Who is Ellen</a></li>
-			<li><a href="#contactform">Get in Touch</a></li>
-			<li><a href="#section2">Resume</a></li>
-		</ul>
-	</nav>
 	
 <!--SECTION 1: About-->	
 	<section id="section1">
 		<div class="icon"></div>
 		<div class="textwrap standout">
 			<h2>Who is Ellen?</h2>
-				<p>I'm a front-end developer and recovering public relations professional.<p>
+				<p>I'm a front-end designer and recovering public relations professional.<p>
 				<p>I spent the first part of my career doing strategic communications and media relations in various industries&mdash;most recently I've launched startups and helped tech companies share their stories.</p>
-				<p>I taught myself how to code as a kid in 1997, making Geocities sites.  I want to get back to that original passion and start actually building tech as a full-time web developer.  I offer more than just technical ability to push pixels; my background in PR gives me a unique perspective on how code and content work together to effectively deliver brand messaging.</p>
+				<p>I taught myself how to code as a kid making Geocities sites.  I want to get back to that original passion and start actually building tech as a full-time web developer.  I offer more than just technical ability to push pixels; my background in PR gives me a unique perspective on how code and content work together to effectively deliver brand messaging.</p>
 				<p>My personal interests include health and fitness&mdash;I run distances from the 5K to the marathon, stand-up paddleboard in the Hudson River, bike around Brooklyn and Manhattan, and I occasionally venture to Staten Island to golf.</p>
 				<p>I'm available for hire for web development projects, and select public relations work.</p>
-				<div id="contactform">
-					<form id="contact" name="contact" method="post" action="assets/php/mailer.php">
-						<label for="name">Name</label>
-							<input type="text" name="name" id="name" required>
-						<label for="email">Email</label>
-							<input type="email" name="email" id="email" required><br>
-						<label for="website">Website</label>
-							<input type="text" name="website" id="website"><br>
-						<label for="message">Message</label>
-							<textarea id="message" name="message" rows="5" required></textarea>
-							<div id="form-messages"></div>
-                            <div class="actions">
-								<button type="submit" id="submit">Send</button>
-								<button type="reset" id="reset">Cancel</button>
-							</div>
-					</form>
-				</div>
-				
-				<div class="sociallinks">
-					<a href="http://www.linkedin.com/in/emanuszak/en">
-						<span class="fa-stack fa-2x">
-  							<i class="fa fa-circle fa-stack-2x"></i>
-  							<i class="fa fa-linkedin fa-stack-1x"></i>
-						</span>	
-					</a>
-					<a href="http://github.com/emanuszak">
-						<span class="fa-stack fa-2x">
-  							<i class="fa fa-circle fa-stack-2x"></i>
-  							<i class="fa fa-github fa-stack-1x"></i>
-						</span>	
-					</a>
-					<a href="http://www.twitter.com/emanuszak">
-						<span class="fa-stack fa-2x">
-  							<i class="fa fa-circle fa-stack-2x"></i>
-  							<i class="fa fa-twitter fa-stack-1x"></i>
-						</span>	
-					</a>
-                    <a href="http://www.instagram.com/emanuszak">
-						<span class="fa-stack fa-2x">
-  							<i class="fa fa-circle fa-stack-2x"></i>
-  							<i class="fa fa-instagram fa-stack-1x"></i>
-						</span>	
-					</a>
-					<a href="http://www.facebook.com/emanuszak">
-						<span class="fa-stack fa-2x">
-  							<i class="fa fa-circle fa-stack-2x"></i>
-  							<i class="fa fa-facebook fa-stack-1x"></i>
-						</span>	
-					</a>
-				</div>
 		</div>
 	</section>
-	
-<!--SECTION 2: Resume-->	
-	<section id="section2">
-	<div class="textwrap">
-	<div class="section-header clearfix"><h2>Resume</h2>
-		<div class="printme"><a href="assets/emanuszak_resume.pdf">print resume</a></div>
-	</div>
-	
-		<article class="resume">
-			
-			<h3>Web Development Experience</h3>
-				<ul>
-					<li><h4>2015-Present: Noble Desktop</h4>
-						<ul>
-							<li>Write and validate code examples for JavaScript, PHP, HTML5, CSS3, and responsive email workbooks, among other topics</li>
-							<li>Update and maintain company website using Ruby on Rails</li>
-							<li>Develop new educational coursework according to current standards in front-end development</li>
-						</ul>
-					</li>
-					
-					<li><h4>2010-Present: Freelance Web Developer</h4> 
-                        <ul>
-	           
-                            <li><a href="http://www.mhzchoice.com">Mhz Choice</a> - Translated design PSDs into responsive landing page for online television network using HTML5, CSS3, and jQuery</li>
-                            <li><a href="http://www.eloped.us">Eloped.Us</a> - Created digital suite for wedding announcement and responsive invitation email with Bootstrap</li>
-                            <li><a href="http://www.dashingwhippets.org">Dashing Whippets</a> - Conceptualized, designed, and developed website for NYC running club using HTML5, CSS3, jQuery, WordPress, and PHP</li>
-                            <li>Designed and developed websites for Detroit and Chicago hockey charity events using HTML, CSS, and JavaScript</li>
-                            <li>Contracted as web editor to update and maintain NYC women’s interest magazine using HTML, CSS, and WordPress</li>
-                        </ul>
-                    </li>
-                    
-                    <li><h4>January 2004-May 2006: New York University College of Dentistry Informatics</h4>
-					   <ul>
-						  <li>Maintained and updated the NYU College of Dentistry internet and intranet websites</li>
-						  <li>Created web issues of the university dental magazine</li>
-						  <li>Designed and developed websites for various departments and programs using HTML, CSS, JavaScript, and PHP</li>
-						  <li>Provided computer technical support for students and faculty members</li>
-						  <li>Assisted in running a technology orientation course for all incoming students, installing requisite software and checking hardware</li>
-					   </ul>
-				    </li>
-                </ul>
-            
-            <h3>Public Relations Experience</h3>
-                <ul>
-					<li><h4>April 2011-December 2014: Technology Public Relations Executive</h4>
-					<ul><h5>Resound Marketing | Freelance | TriplePoint PR</h5>
-<!--
-						<li>Planned strategic public relations campaigns and product launches for technology, consumer electronics, mobile apps, video games, and digital lifestyle companies.</li>
-						<li>Conducted media relations to generate on-message coverage with top tech and business media (USA Today, Wall Street Journal, New York Times, WNYC, Associated Press, Huffington Post, Reuters, Fast Company, TechCrunch, Mashable, GigaOm, Boston Globe, Wired.com, Fortune, The Verge)</li>
--->
-					</ul>
-					</li>
-					
-					<li><h4>January 2007-March 2011: Book Publicity and Marketing Assistant</h4>
-					<ul><h5>Interweave Press | Simon &amp; Schuster | Tor/Forge</h5>
-<!--
-						<li>Developed and created email newsletters</li>
-						<li>Conducted A/B testing to improve click-through rates</li>
-						<li>Increased book sales generated from direct-to-consumer email marketing</li>
-						<li>Worked with marketing design team to conceptualize web and print ad creative and other promotional collateral</li>
-                        <li>Executed book review campaigns</li>
--->
-					</ul>
-
-					</li>
-
-					
-			</ul>
-
-			<h3>Education</h3>
-				<ul><li><h4>New York University, College of Arts &amp; Science</h4>
-					<h5>Bachelor of Arts in Linguistics, September 2007</h5></li></ul>
-		</article>
-	
-		<aside class="clearfix">
-			<h3>Skills</h3>
-				<h4>Technical</h4>
-					<ul>
-						<li>HTML</li>
-						<li>CSS</li>
-						<li>Sass</li>
-						<li>JavaScript</li>
-						<li>WordPress Development</li>
-						<li>Git</li>
-						<li>Photoshop</li>
-						<li>Dreamweaver</li>
-						<li>Apache</li>
-						<li>Ruby on Rails</li>
-						<li>Amazon Web Services</li>
-					</ul>
-				<h4>Creative</h4>
-					<ul>
-						<li>Copy Writing</li>
-						<li>Copy Editing</li>
-						<li>Event Planning</li>
-						<li>Speaking Engagements</li>
-						<li>Brand Messaging</li>
-						<li>Thought Leadership</li>
-					</ul>
-				<h4>Strategic</h4>
-					<ul>
-						<li>Client Management</li>
-						<li>Strategic Communications</li>
-						<li>Campaign Planning</li>
-						<li>Key Differentiation</li>
-						<li>Product Launches</li>
-						<li>Media Relations</li>
-						<li>Public Relations</li>
-						<li>Press Briefing</li>
-						<li>Research</li>
-						<li>Business Development</li>
-					</ul>
-		</aside>
-	</div>
-	</section>
-	
-<!--SECTION 3: Portfolio-->	
-<!--
-		<section id="section3">
-			<div class="textwrap">
-				<h2>Portfolio</h2>
-				<div class="project">
-					<div class="screenshot"><a href="http://www.mhzchoice.com"><img src="assets/img/mhzlanding.png"></a></div>
-					<div class="projectDescription">
-						<h3><a href="http://www.mhzchoice.com">MHz Choice</a></h3>
-						<p>Hired as freelance front-end developer to develop a landing page for a subscription streaming TV service. Using Photoshop design mockups as a guideline, created a fully responsive site.</p>
-						<p>Used: HTML5, CSS3, JavaScript, jQuery</p>
-						<p>Visit: <a href="http://www.mhzchoice.com">www.mhzchoice.com</a></p>
-						</div>
-				</div>
-				
-			</div>
-		</section>
--->
-<!--JavaScript-->
-<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+</div>
+				<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="assets/js/scripts.js"></script>	
 </body>
 </html>
