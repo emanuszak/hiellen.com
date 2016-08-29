@@ -1,0 +1,153 @@
+---
+---
+
+@import 'https://fonts.googleapis.com/css?family=Overlock:400,900|Merriweather:300,400,700';
+
+/* VARIABLES */
+$font-stack: 300 16px/1.5 'Merriweather', serif;
+$primary-text: #222;
+$primary-celeste: #8ce2d0;
+
+
+/* MIXINS and FUNCTIONS */
+@mixin flexbox() {
+	display: -webkit-flex;
+	display: flex;
+	align-content: space-around;
+}
+
+@mixin baseline() {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@function calcContainerSize($divisor) {
+	@return 100vw / $divisor;
+}
+$xlarge-shape: calcContainerSize(1.65);
+$large-shape: calcContainerSize(2);
+$medium-shape: calcContainerSize(2.75);
+$small-shape: calcContainerSize(4);
+
+/*MAIN STYLES */
+body {
+	@include baseline();
+	background: #a7e7d8;
+	font:  $font-stack;
+	color: $primary-text;
+}
+
+p {
+	margin: 1em;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	text-align: center;
+}
+
+h1 {
+	font: 900 15vw 'Overlock', sans-serif;
+	color: white;
+	padding-top: calc(50vh - 11.5vw);
+}
+
+h2 {
+	color: #222;
+	font-size: 4vw;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+cite {
+	font-style: normal;
+}
+
+#wrapper {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	background: linear-gradient(to top left, #a7e7d8 ,  #8ce2d0 , #75cbc8);
+}
+
+#innerWrapper {
+	background: linear-gradient(45deg, transparent 43%, #222 43%, #222 43.15%, transparent 43.15%), linear-gradient(-26deg, rgba(white, .6) 60%, transparent 60%);
+}
+
+header, #pageTwo {
+	height: 100vh;
+}
+
+.flexWrapper {
+	@include flexbox();
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items:flex-start;
+}
+
+
+#pageTwo div:first-child {
+	background: url('../img/dogrmobile-thumb.jpg') no-repeat center top / cover;
+}
+
+#pageTwo div:nth-child(2) {
+	background: url('../img/elopedus-thumb.jpg') no-repeat center top / cover;
+}
+
+#pageTwo div:nth-child(3) {
+	background: url('../img/mhzlanding-thumb.jpg') no-repeat center top / cover;
+}
+
+#pageTwo div:last-child {
+	background: #222;
+	display: table;
+}
+
+#pageTwo h3 {
+	color: #fff;
+	font-size: 5vw;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.xl {
+	width: $xlarge-shape;
+ 	height: $xlarge-shape;
+}
+
+.lg {
+	width: $large-shape;
+ 	height: $large-shape;
+}
+
+.md {
+	width: $medium-shape;
+	height: $medium-shape;
+}
+
+.sm {
+	width: $small-shape;
+	height: $small-shape;
+}
+
+.light {
+	color: #fff;
+}
+
+.dark {
+	color: #222;
+}
+
+.right {
+	text-align: right;
+}
+
+.circle {
+	background: #FFF;
+	border-radius: 50%;
+}
