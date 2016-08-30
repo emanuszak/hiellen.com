@@ -3,32 +3,7 @@
 
 @import 'https://fonts.googleapis.com/css?family=Overlock:400,900|Merriweather:300,400,700';
 
-/* VARIABLES */
-$font-stack: 300 16px/1.5 'Merriweather', serif;
-$primary-text: #222;
-$primary-celeste: #8ce2d0;
-
-
-/* MIXINS and FUNCTIONS */
-@mixin flexbox() {
-	display: -webkit-flex;
-	display: flex;
-	align-content: space-around;
-}
-
-@mixin baseline() {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-@function calcContainerSize($divisor) {
-	@return 100vw / $divisor;
-}
-$xlarge-shape: calcContainerSize(1.65);
-$large-shape: calcContainerSize(2);
-$medium-shape: calcContainerSize(2.75);
-$small-shape: calcContainerSize(4);
+@import 'presets';
 
 /*MAIN STYLES */
 body {
@@ -79,7 +54,7 @@ cite {
 	background: linear-gradient(45deg, transparent 43%, #222 43%, #222 43.15%, transparent 43.15%), linear-gradient(-26deg, rgba(white, .6) 60%, transparent 60%);
 }
 
-header, #pageTwo {
+header {
 	height: 100vh;
 }
 
@@ -89,7 +64,6 @@ header, #pageTwo {
 	justify-content: space-around;
 	align-items:flex-start;
 }
-
 
 #pageTwo div:first-child {
 	background: url('../img/dogrmobile-thumb.jpg') no-repeat center top / cover;
@@ -150,4 +124,5 @@ header, #pageTwo {
 .circle {
 	background: #FFF;
 	border-radius: 50%;
+	display: inline-block;
 }

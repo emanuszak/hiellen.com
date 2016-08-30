@@ -1,0 +1,26 @@
+/* VARIABLES */
+$font-stack: 300 16px/1.5 'Merriweather', serif;
+$primary-text: #222;
+$primary-celeste: #8ce2d0;
+
+
+/* MIXINS and FUNCTIONS */
+@mixin flexbox() {
+	display: -webkit-flex;
+	display: flex;
+	align-content: space-around;
+}
+
+@mixin baseline() {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@function calcContainerSize($divisor) {
+	@return 100vw / $divisor;
+}
+$xlarge-shape: calcContainerSize(1.65);
+$large-shape: calcContainerSize(2);
+$medium-shape: calcContainerSize(2.75);
+$small-shape: calcContainerSize(4);
