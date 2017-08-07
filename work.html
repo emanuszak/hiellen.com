@@ -1,0 +1,20 @@
+---
+menu: main
+nav_label: work
+sub_text: Work I've done
+nav_weight: 2
+---
+
+<section class="portfolio">
+	{% assign portfolio_pages = site.portfolio | sort: 'project_weight' %}
+	{% for p in portfolio_pages %}
+		<article class="project {{ p.name }}">
+			<div class="project-title">
+				<a href="{{ p.url | relative_url }}">
+					<h3>{{ p.title }}</h3>
+				</a>
+				<div>{{ p.tech_stack }}</div>
+			</div>
+		</article>
+	{% endfor %}
+</section>
