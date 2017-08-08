@@ -5,69 +5,69 @@
 require './vendor/autoload.php';
 require './transport.php';
 
+$sender_name = $_POST['name'];
+$sender_email = $_POST['email'];
+$sender_message = $_POST['message'];
+
 // Instantiate a new PHPMailer 
 $mail = new PHPMailer;
 
 // Tell PHPMailer to use SMTP
 $mail->isSMTP();
 
-// If you're using Amazon SES in a Region other than US West (Oregon), 
-// replace email-smtp.us-east-1.amazonaws.com with the Amazon SES SMTP  
-// endpoint in the appropriate Region.
-$mail->Host = 'email-smtp.us-east-1.amazonaws.com';
-
-// Tells PHPMailer to use SMTP authentication
+$mail->Host = $aws_host;
 $mail->SMTPAuth = true;
-
-// Replace smtp_username with your Amazon SES SMTP user name.
 $mail->Username = $aws_ses_user;
-
-// Replace smtp_password with your Amazon SES SMTP password.
 $mail->Password = $aws_ses_pw;
-
-// Enable SSL encryption
 $mail->SMTPSecure = 'ssl';
-
-// The port you will connect to on the Amazon SES SMTP endpoint.
 $mail->Port = 465;
 
-// Replace sender@example.com with your "From" address. 
-// This address must be verified with Amazon SES.
-$mail->setFrom('ellen.manuszak@gmail.com', 'Ellen');
+$mail->setFrom('ellen@cactus.works', 'Ellen');
 
 // Replace recipient@example.com with a "To" address. If your account 
 // is still in the sandbox, this address must be verified.
 // Also note that you can include several addAddress() lines to send
 // email to multiple recipients.
-$mail->addAddress('ellen.manuszak@gmail.com', 'Ellen');
-
-$sender_name = $_POST['name'];
-$sender_email = $_POST['email'];
-$sender_message = $_POST['message'];
+$mail->addAddress('ellen@cactus.works', 'Ellen');
 
 // Tells PHPMailer to send HTML-formatted email
 $mail->isHTML(true);
 
 // The subject line of the email
-$mail->Subject = $sender_name . ' says hello from hiellen.com';
+$mail->Subject = "[hiellen.com] " . $sender_name . " says hello";
 
 // The HTML-formatted body of the email
 $body = "<h1>New message from " . $sender_name . "</h1>";
 $body .= $sender_email . "\n";
 $body .= "<p>" . $sender_message . "</p>";
 
-
 $mail->Body = $body;
 
 // The alternative email body; this is only displayed when a recipient
 // opens the email in a non-HTML email client. The \r\n represents a 
 // line break.
-$mail->AltBody = "Email Test\r\nThis email was sent through the 
-Amazon SES SMTP interface using the PHPMailer class.";
+$mail->AltBody = "New message from " . $sender_name . "\r\n" . $sender_message . "\r\n";
 
 if(!$mail->send()) {
     echo 'Email not sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
     echo 'Message successfully sent!';
+    $mail->clearAddresses();
+    
+    // Second Copy
+    $mail->addAddress($sender_email, $sender_name);
+    $mail->Subject = "Your message to hiellen.com";
+    // The HTML-formatted body of the email
+    $body = '<h1 style="color:#e51041;font-family: Futura, Franklin Gothic Medium,Trebuchet MS,serif;">Thank you for reaching out to hiellen.com</h1>';
+    $body .= '<p style="font-family:Futura, Franklin Gothic Medium,Trebuchet MS,serif;font-size:14px;">Below is a copy of your sent message:</p>';
+    $body .= '<p style="font-family:Palatino Linotype, Palatino, serif;font-size:14px;border-left:#e51041 solid 10px;padding-left:15px;color:#666666;">' . $sender_message . '</p>';
+    $body .= '<p style="font-family:Futura, Franklin Gothic Medium,Trebuchet MS,serif;font-size:14px;">I will try to respond to your email as quickly as possible but please be patient and allow five business days for a reply.</p>';
+    $body .= '<p style="font-family:Futura, Franklin Gothic Medium,Trebuchet MS,serif;font-size:14px;">All the best,<br>Ellen Manuszak</p>';
+    
+    $mail->Body = $body;
+    
+    $mail->send();
+
 }
+
