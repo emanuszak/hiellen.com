@@ -34,7 +34,7 @@ $mail->addAddress('ellen@cactus.works', 'Ellen');
 $mail->isHTML(true);
 
 // The subject line of the email
-$mail->Subject = "[hiellen.com] " . $sender_name . " says hello";
+$mail->Subject = "[hiellen/cactus.works] " . $sender_name . " says hello";
 
 // The HTML-formatted body of the email
 $body = "<h1>New message from " . $sender_name . "</h1>";
@@ -57,13 +57,14 @@ if(!$mail->send()) {
     
     // Second Copy
     $mail->addAddress($sender_email, $sender_name);
-    $mail->Subject = "Your message to hiellen.com";
+    $mail->Subject = "Your message to Ellen";
     // The HTML-formatted body of the email
-    $body = '<h1 style="color:#e51041;font-family: Futura, Franklin Gothic Medium,Trebuchet MS,serif;">Thank you for reaching out to hiellen.com</h1>';
+    $body = '<h1 style="color:#e51041;font-family: Futura, Franklin Gothic Medium,Trebuchet MS,serif;">Thank you for reaching out!</h1>';
     $body .= '<p style="font-family:Futura, Franklin Gothic Medium,Trebuchet MS,serif;font-size:14px;">Below is a copy of your sent message:</p>';
     $body .= '<p style="font-family:Palatino Linotype, Palatino, serif;font-size:14px;border-left:#e51041 solid 10px;padding-left:15px;color:#666666;">' . $sender_message . '</p>';
     $body .= '<p style="font-family:Futura, Franklin Gothic Medium,Trebuchet MS,serif;font-size:14px;">I will try to respond to your email as quickly as possible but please be patient and allow five business days for a reply.</p>';
     $body .= '<p style="font-family:Futura, Franklin Gothic Medium,Trebuchet MS,serif;font-size:14px;">All the best,<br>Ellen Manuszak</p>';
+    $body .= '<p style="font-family:Futura, Franklin Gothic Medium,Trebuchet MS,serif;font-size:12px;">You are receiving this email because you submitted the contact form on hiellen.com/cactus.works.</p>';
     
     $mail->Body = $body;
     
