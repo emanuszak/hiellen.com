@@ -3,6 +3,7 @@
 @import 'susy';
 @import 'breakpoint';
 @import 'mixins';
+@import 'portfolio';
 
 $susy: (
 	columns: 12,
@@ -304,14 +305,7 @@ a.overlay-menu {
 		}
 	}
 }
-@each $project in $portfolio {
-	.#{$project} {
-   		$opacity: .8;
-    	background: linear-gradient(to bottom, rgba(20,20,83,$opacity), rgba(20,20,83,$opacity)),
-    				url('../img/#{$project}/#{$project}_thumb.png') no-repeat center top / cover;
-     	background-blend-mode: multiply, luminosity;
-    }
-}
+
 .project-header {
 	margin-bottom: 1rem;
 	a, span{
