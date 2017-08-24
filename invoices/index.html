@@ -1,11 +1,18 @@
 ---
+layout: default
 nav_exclude: true
 ---
-<center>
-<iframe id="invoiceIFrame" width="100%" height="1200" style="max-width:1000px"></iframe>
-<center>
+
+<div class="invoice-wrapper">
+    <a href="/" class="breadcrumb"><i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Cactus.Works</a>
+    <p>If you have questions about billing, payment methods, or your invoice, please email me directly or via the contact form below.</p>
+        
+    <center>
+    <iframe id="invoiceIFrame" width="100%" height="1200" style="max-width:1000px"></iframe>
+    </center>
+</div>
 <script language="javascript">
 var iframe = document.getElementById('invoiceIFrame');
 iframe.src = 'https://app.invoiceninja.com/view/'
-             + window.location.search.substring(1);
+             + window.location.search.substring(1, 33);
 </script>

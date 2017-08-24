@@ -31,6 +31,11 @@ a, a:active, a:visited {
 	text-decoration: none;
 	color: color(primary);
 }
+a.breadcrumb {
+    font-family: font(defaultSans);
+    text-align: left;
+    display: inline-block;
+}
 button {
 	padding: .55em;
 	font: 700 1rem font(defaultSans);
@@ -158,7 +163,7 @@ footer {
 	@include span(full);
 	@include breakpoint(575px) {
 		@include span(5 at 5 of 10);
-		transform: translateY(-25%);
+		transform: translateY(-30%);
 	}
 	border: solid 4px color(primary);
 	border-bottom-width: 1px;
@@ -462,4 +467,11 @@ a.overlay-menu {
 }
 [data-status="active"] {
 	color: #333;
+}
+
+// Invoice
+.invoice-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
 }
