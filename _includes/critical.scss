@@ -1,0 +1,249 @@
+@import 'susy';
+@import 'breakpoint';
+@import 'mixins';
+
+$susy: (
+	columns: 12,
+	math: fluid,
+	global-box-sizing: border-box,
+// 	debug: (image: show)	
+);
+// breakpoints
+$mobile-only: max-width 575px;
+
+/* Global Styles */
+* {
+	box-sizing: border-box;
+}
+body {
+	@extend %zeroMP;
+	background: color(primary);
+	font: 18px/2 font(defaultSerif);
+	color: color(primaryText);
+}
+button {
+	transition: all 1s ease-in;
+}
+a, a:active, a:visited {
+	text-decoration: none;
+	color: color(primary);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+ul, li {
+	@extend %zeroMP;
+}
+header {
+	background-color: color(bgColor);
+	$setTransform: 6deg;
+	.site-header {
+		@include angled-edge(color(primary), 18vh, -$setTransform, left);
+		overflow: hidden;
+		h1 {
+			margin: 0;
+			@include reSkew($setTransform);
+			position: absolute;
+			left: 3vw;
+			bottom: .25em;
+			font: 700 1.5em font(defaultSans);
+			color: color(lightAccent);
+			.greeting {
+				font-weight:400;
+				display: block;
+				@include breakpoint(575px) {
+					display: inline-block;
+				}
+			}
+			a:link, a:visited, a:active, a:hover {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.wrapper {
+	@include container;
+	background-color: color(bgColor);
+	position: relative;
+	margin: 0 auto;
+	padding: 2rem 0 0;
+	width: 100%;
+	text-align: center;
+ 	&:after {
+	 	content: "";
+		transform: skewY(-4deg);
+		transform-origin: 100%;
+		background-color: color(bgColor);
+		display: block;
+		height: 7vw;
+		z-index: -1;
+		margin-bottom: 7vw;
+ 	}
+}
+.sidebar {
+	@include span(full split);
+	@include breakpoint(575px) {
+		@include span(3 of 12);
+		margin: gutter(12) 0;
+		@for $i from 1 through 10 {
+            $nav-skew: (random(10) + 3) + deg;
+            $nav-rotate: (random(5) - 5) + deg;
+        	.nav-#{$i} {
+            	width: (random(90) + 20%);
+            	min-width: 70%;
+            	max-width: 100%;
+            	transform-origin-y: 0;
+        		transform: skewX(-$nav-skew) rotate($nav-rotate);
+        		a {
+                    transform: skewX($nav-skew);
+        		}
+        	}
+        }
+		.global-nav li[class|="nav"] {
+			display: block;
+			font-size: 2rem;
+			background-color: color(primaryText);
+			margin-bottom: 1rem;
+			text-align: right;
+		}
+		.global-nav a {
+    		display:inline-block;
+    		padding-right: 1rem;
+    		color: #fff;
+		}
+  }
+}
+.global-nav {
+	text-align: left;
+	li[class|="nav"] {
+		line-height: 1.5;
+		display: inline-block;
+		list-style: none;
+		padding-top: .25rem;
+		padding-right: .5rem;
+		font-size: 7vw;
+		font-family: font(defaultSans);
+	}
+}
+
+.content-container {
+	@include span(full split);
+	@include breakpoint(575px) {
+		@include span(8 at 5 of 12);
+		padding-right: gutter(12);
+	}
+	text-align: left;
+	.big-text {
+		color: color(primaryText);
+		font: 700 5rem font(defaultSans);
+		margin: -.5rem .5rem auto 0;
+		float: left;
+		&:after {
+			clear: both;
+		}
+	}
+}
+footer {
+	@include container(10);
+	background-color: color(primary);
+	-webkit-backface-visibility: hidden;
+}
+.contact-form {
+	@include span(full);
+	@include breakpoint(575px) {
+		@include span(5 at 5 of 10);
+		transform: translateY(-35%);
+	}
+	border: solid 4px color(primary);
+	border-bottom-width: 1px;
+	background-color: white;
+	padding: 1rem;
+	font: 700 1.2rem font(defaultSerif);
+	text-align:left;
+	h2 {
+		margin-top: 0;
+	}
+	label, input, textarea {
+		width: 100%;
+		display: block;
+		margin: 0;
+		&:focus {
+			outline: none;
+		}
+	}
+	input, textarea {
+		border: none;
+	}
+	input, textarea {
+		line-height: 1.5;
+		font: 700 1.5rem font(defaultSans);
+		color: color(primaryText);
+		border-bottom: .1rem solid lighten(color(primaryText), 70%);
+		margin-bottom: 1rem;
+		transition: all 1s ease-in-out;
+		&:focus {
+			border-bottom: .1rem solid color(primaryText);
+		}
+	}
+	textarea {
+		font-weight: 400;
+	}
+	label {
+		text-align: left;
+	}
+	.actions {
+		text-align: right;
+	}
+	.form-send {
+		padding: .55em;
+		color:white;
+		outline: none;
+		&:hover {
+			cursor: pointer;
+		}
+		&#submit {
+			background-color: color(primaryText);
+		}
+		&#reset {
+			background-color: white;
+			color: lighten(color(primaryText), 50%);
+		}
+	}
+}
+.socialmedia {
+	@include span(full no-gutters);
+	text-align: center;
+	.profile {
+		margin-top: 1rem;
+		border-radius: 50%;
+		width: 60%;
+		height: auto;
+	}
+	@include breakpoint(575px) {
+		@include span(5 at 1 of 10 no-gutters);
+		img.profile {
+			width: 50%;
+		}
+	}
+}
+.social-icons {
+	margin: 1em auto;
+	text-align: center;
+	li {
+		font: 700 1.7rem font(defaultSans);
+ 		display: inline-block;
+ 		&:not(:first-child) {
+	 		margin-left: 1rem;
+ 		}
+	}
+	a:link, a:visited, a:active {
+		color: color(primaryText);
+		vertical-align: middle;
+		&:hover {
+			color: white;
+		}
+	}
+}

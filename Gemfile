@@ -24,4 +24,5 @@ gem "minima"
 	gem 'sass-rails', '~> 5.0.0'
 	gem 'susy', '~> 2.2', '>= 2.2.12'
 	gem 'breakpoint', '~> 2.7', '>= 2.7.1'
+	gem 'jekyll-sitemap'
  end
