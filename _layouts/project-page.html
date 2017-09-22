@@ -3,6 +3,7 @@ layout: default
 ---
 
 <section class="project-header">
+    <div>
 	<h2>{{ page.title }}</h2>
 	{% if page.status == 'active' %}
 		<a href="http://{{ page.address }}" target="_blank">{{ page.address }}</a>
@@ -11,16 +12,17 @@ layout: default
 	{% else %} <div></div>
 	{% endif %}
 	<p class="project-statement">{{ page.project_description }}</p>
-	
-	<aside class="project-brief">
-		<div class="inner-border">
-			<div>Deployed: {{ page.project_date }}</div>
-			<div>Platforms: {{page.project_platforms }}</div>
-			<div>Role: {{ page.project_role }}</div>
-			<div>Tech: {{ page.tech_stack }}</div>
-		</div>
-	</aside>
-	
+    </div>
+
+<aside class="project-brief">
+	<div class="inner-border">
+		<div>Deployed: {{ page.project_date }}</div>
+		<div>Platforms: {{page.project_platforms }}</div>
+		<div>Role: {{ page.project_role }}</div>
+		<div>Tech: {{ page.tech_stack }}</div>
+	</div>
+</aside>
+
 </section>
 
 <div class="project-hero">

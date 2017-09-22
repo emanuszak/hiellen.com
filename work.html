@@ -8,13 +8,14 @@ nav_weight: 2
 <section class="portfolio">
 	{% assign portfolio_pages = site.portfolio | sort: 'project_weight' %}
 	{% for p in portfolio_pages %}
-		<article class="project {{ p.name }}">
-			<div class="project-title">
-				<a href="{{ p.url | relative_url }}">
-					<h3>{{ p.title }}</h3>
-				</a>
-				<div>{{ p.tech_stack }}</div>
-			</div>
-		</article>
+	<article class="project-wrapper">
+    	<div class="project-title">
+			<a href="{{ p.url | relative_url }}">
+				<h3>{{ p.title }}</h3>
+			</a>
+    	</div>
+		<div class="project {{ p.name }}"></div>
+        <div class="project-description">{{ p.tech_stack }}</div>
+	</article>
 	{% endfor %}
 </section>
