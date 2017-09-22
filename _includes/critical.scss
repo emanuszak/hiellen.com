@@ -1,13 +1,6 @@
-@import 'susy';
 @import 'breakpoint';
 @import 'mixins';
 
-$susy: (
-	columns: 12,
-	math: fluid,
-	global-box-sizing: border-box,
-// 	debug: (image: show)	
-);
 // breakpoints
 $mobile-only: max-width 575px;
 
@@ -17,7 +10,7 @@ $mobile-only: max-width 575px;
 }
 body {
 	@extend %zeroMP;
-	background: color(primary);
+	background: color(bgColor);
 	font: 18px/2 font(defaultSerif);
 	color: color(primaryText);
 }
@@ -36,37 +29,22 @@ img {
 ul, li {
 	@extend %zeroMP;
 }
-header {
-	background-color: color(bgColor);
-	$setTransform: 6deg;
-	.site-header {
-		@include angled-edge(color(primary), 18vh, -$setTransform, left);
-		overflow: hidden;
-		h1 {
-			margin: 0;
-			@include reSkew($setTransform);
-			position: absolute;
-			left: 3vw;
-			bottom: .25em;
-			font: 700 1.5em font(defaultSans);
-			color: color(lightAccent);
-			.greeting {
-				font-weight:400;
-				display: block;
-				@include breakpoint(575px) {
-					display: inline-block;
-				}
-			}
-			a:link, a:visited, a:active, a:hover {
-				color: #fff;
-				text-decoration: none;
-			}
-		}
-	}
+.logo {
+    max-width: 100px;
+    height: auto;
+    text-align: center;
+    img {
+        margin: 0 auto;
+    }
+    h1 {
+        margin: 0;
+    }
 }
 .wrapper {
-	@include container;
-	background-color: color(bgColor);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+// 	background-color: color(bgColor);
 	position: relative;
 	margin: 0 auto;
 	padding: 2rem 0 0;
@@ -74,20 +52,19 @@ header {
 	text-align: center;
  	&:after {
 	 	content: "";
-		transform: skewY(-4deg);
-		transform-origin: 100%;
-		background-color: color(bgColor);
-		display: block;
-		height: 7vw;
-		z-index: -1;
-		margin-bottom: 7vw;
+		flex: 0 0 100%;
+        transform: skewY(-4deg);
+        transform-origin: 100%;
+        background-color: color(footer);
+        height: 7vw;
+        margin-top: 5%;
  	}
 }
-.sidebar {
-	@include span(full split);
+.global-nav {
+	text-align: left;
+	flex: 0 1 24%;
+    margin-right: 4%;
 	@include breakpoint(575px) {
-		@include span(3 of 12);
-		margin: gutter(12) 0;
 		@for $i from 1 through 10 {
             $nav-skew: (random(10) + 3) + deg;
             $nav-rotate: (random(5) - 5) + deg;
@@ -102,38 +79,40 @@ header {
         		}
         	}
         }
-		.global-nav li[class|="nav"] {
-			display: block;
-			font-size: 2rem;
-			background-color: color(primaryText);
-			margin-bottom: 1rem;
-			text-align: right;
-		}
-		.global-nav a {
+		a {
     		display:inline-block;
     		padding-right: 1rem;
     		color: #fff;
 		}
-  }
-}
-.global-nav {
-	text-align: left;
+    }
+	ul {
+    	display: grid;
+        grid-template-rows: repeat(5, 1rem);
+        grid-row-gap: 5rem;
+	}
 	li[class|="nav"] {
+    	@include breakpoint(575px) {
+        	display: block;
+			font-size: 2rem;
+			background-color: color(nav);
+			text-align: right;
+			box-shadow: 5px 5px color(navAccent);
+    	}
 		line-height: 1.5;
 		display: inline-block;
 		list-style: none;
-		padding-top: .25rem;
-		padding-right: .5rem;
+		padding: .5rem .5rem .5rem 0;
 		font-size: 7vw;
 		font-family: font(defaultSans);
 	}
 }
 
 .content-container {
-	@include span(full split);
+    flex: 0 1 64%;
+    margin: 0 auto;
+    min-height: 70vh;
 	@include breakpoint(575px) {
-		@include span(8 at 5 of 12);
-		padding-right: gutter(12);
+
 	}
 	text-align: left;
 	.big-text {
@@ -147,22 +126,25 @@ header {
 	}
 }
 footer {
-	@include container(10);
-	background-color: color(primary);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	background-color: color(footer);
 	-webkit-backface-visibility: hidden;
 }
 .contact-form {
-	@include span(full);
-	@include breakpoint(575px) {
-		@include span(5 at 5 of 10);
-		transform: translateY(-35%);
-	}
-	border: solid 4px color(primary);
+	flex: 1 0 100%;
+	border: solid 4px color(footer);
 	border-bottom-width: 1px;
 	background-color: white;
 	padding: 1rem;
 	font: 700 1.2rem font(defaultSerif);
 	text-align:left;
+	color: color(formText);
+	@include breakpoint(575px) {
+    	flex: 0 1 48%;
+		transform: translateY(-35%);
+	}
 	h2 {
 		margin-top: 0;
 	}
@@ -180,12 +162,12 @@ footer {
 	input, textarea {
 		line-height: 1.5;
 		font: 700 1.5rem font(defaultSans);
-		color: color(primaryText);
-		border-bottom: .1rem solid lighten(color(primaryText), 70%);
+		color: color(formText);
+		border-bottom: .1rem solid lighten(color(formText), 70%);
 		margin-bottom: 1rem;
 		transition: all 1s ease-in-out;
 		&:focus {
-			border-bottom: .1rem solid color(primaryText);
+			border-bottom: .1rem solid color(formText);
 		}
 	}
 	textarea {
@@ -205,16 +187,16 @@ footer {
 			cursor: pointer;
 		}
 		&#submit {
-			background-color: color(primaryText);
+			background-color: color(formText);
 		}
 		&#reset {
 			background-color: white;
-			color: lighten(color(primaryText), 50%);
+			color: lighten(color(formText), 50%);
 		}
 	}
 }
 .socialmedia {
-	@include span(full no-gutters);
+	flex: 1 0 100%;
 	text-align: center;
 	.profile {
 		margin-top: 1rem;
@@ -223,7 +205,7 @@ footer {
 		height: auto;
 	}
 	@include breakpoint(575px) {
-		@include span(5 at 1 of 10 no-gutters);
+		flex: 0 1 50%;
 		img.profile {
 			width: 50%;
 		}
