@@ -19,12 +19,12 @@
     </head>
 
 	<body>
-		<header>
-			<div class="site-header">
-				<h1><span class="greeting"><a href={{ "/index.html" | relative_url }}>{{ page.header_text }}</span> {{ page.sub_text }}</a></h1>
-			</div>
+		<header class="site-header">
+    		<div class="logo">
+        		<img src={{ "/assets/img/cactusworkslogo.svg" | relative_url }}>
+        		<h1>Cactus.Works</h1>
+    		</div>
 		</header>
-		
 		<div class="wrapper">
 			{{ content }}
 		</div>

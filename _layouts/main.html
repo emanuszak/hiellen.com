@@ -2,19 +2,17 @@
 layout: default
 ---
 
-<div class="sidebar">
-	<nav class="global-nav">
-		<ul>
-			{% assign nav_pages = site.html_pages | sort: 'nav_weight' %}
-		    {% for p in nav_pages %}
-		    	{% if p.menu == 'main' %}
-		        	<li class="nav-{{ p.nav_weight }}"><a href="{{p.url | relative_url}}">{{ p.nav_label }}</a></li>
-		        {% endif %}
-	 	    {% endfor %}
-	 	    	<li class="nav-4"><a href={{ "docs/emanuszak_resume.pdf" | relative_url }} rel="nofollow">resume</a></li>
-		</ul>
-	</nav>
-</div>
+<nav class="global-nav">
+	<ul>
+		{% assign nav_pages = site.html_pages | sort: 'nav_weight' %}
+	    {% for p in nav_pages %}
+	    	{% if p.menu == 'main' %}
+	        	<li class="nav-{{ p.nav_weight }}"><a href="{{p.url | relative_url}}">{{ p.nav_label }}</a></li>
+	        {% endif %}
+ 	    {% endfor %}
+ 	    	<li class="nav-4"><a href={{ "docs/emanuszak_resume.pdf" | relative_url }} rel="nofollow">resume</a></li>
+	</ul>
+</nav>
 <div class="content-container">
 	{{ content }}
 </div>
