@@ -1,7 +1,11 @@
 <footer>
-	<div class="socialmedia">
-		<img class="profile" src={{ "/assets/img/ellen.jpg" | relative_url }}>
-		{% include socialmedia.html %}
-	</div>
+    <div class="left-col">
+    	<div class="profile">
+    		<img src={{ "/assets/img/ellen.jpg" | relative_url }}>
+    	</div>
+        <div class="socialmedia">
+    		{% include socialmedia.html %}
+    	</div>
+    </div>
 	{% include contactform.html %}
 </footer>
