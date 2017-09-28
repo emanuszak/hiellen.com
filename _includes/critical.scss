@@ -11,8 +11,11 @@ $mobile-only: max-width 575px;
 body {
 	@extend %zeroMP;
 	background: color(bgColor);
-	font: 18px/2 font(defaultSerif);
+	font: 20px/2 $defaultSerif;
 	color: color(primaryText);
+}
+ div > p:first-child, div > h2:first-child {
+    margin-top: 0;
 }
 button {
 	transition: all 1s ease-in;
@@ -43,8 +46,7 @@ ul, li {
 .wrapper {
     display:flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-// 	background-color: color(bgColor);
+    justify-content: flex-start; 
 	position: relative;
 	margin: 0 auto;
 	padding: 2rem 0 0;
@@ -58,6 +60,7 @@ ul, li {
         background-color: color(footer);
         height: 7vw;
         margin-top: 5%;
+        z-index: -1;
  	}
 }
 .global-nav {
@@ -103,7 +106,9 @@ ul, li {
 		list-style: none;
 		padding: .5rem .5rem .5rem 0;
 		font-size: 7vw;
-		font-family: font(defaultSans);
+		font-family: $defaultSans;
+		font-weight: 700;
+        min-height: 4rem;
 	}
 }
 
@@ -117,7 +122,7 @@ ul, li {
 	text-align: left;
 	.big-text {
 		color: color(primaryText);
-		font: 700 5rem font(defaultSans);
+		font: 700 5rem $defaultSans;
 		margin: -.5rem .5rem auto 0;
 		float: left;
 		&:after {
@@ -138,12 +143,12 @@ footer {
 	border-bottom-width: 1px;
 	background-color: white;
 	padding: 1rem;
-	font: 700 1.2rem font(defaultSerif);
+	font: 700 1.2rem $defaultSerif;
 	text-align:left;
 	color: color(formText);
 	@include breakpoint(575px) {
     	flex: 0 1 48%;
-		transform: translateY(-35%);
+		transform: translateY(-30%);
 	}
 	h2 {
 		margin-top: 0;
@@ -161,7 +166,7 @@ footer {
 	}
 	input, textarea {
 		line-height: 1.5;
-		font: 700 1.5rem font(defaultSans);
+		font: 700 1.5rem $defaultSans;
 		color: color(formText);
 		border-bottom: .1rem solid lighten(color(formText), 70%);
 		margin-bottom: 1rem;
@@ -195,27 +200,35 @@ footer {
 		}
 	}
 }
-.socialmedia {
+.left-col {
 	flex: 1 0 100%;
 	text-align: center;
-	.profile {
-		margin-top: 1rem;
-		border-radius: 50%;
-		width: 60%;
-		height: auto;
-	}
 	@include breakpoint(575px) {
 		flex: 0 1 50%;
-		img.profile {
-			width: 50%;
-		}
 	}
+}
+.profile {
+    $profile-rotate: 4deg;
+	margin: 1rem auto 0;
+	width: 50%;
+	height: auto;
+	text-align: center;
+	box-shadow: 1px 1px 0 5px color(lightAccent);
+    background-color: color(lightAccent);
+    transform: rotate(-$profile-rotate);
+	@include breakpoint(575px) {
+    	img {
+			width: 100%;
+			display: block;
+            transform: rotate($profile-rotate);
+		}
+    }
 }
 .social-icons {
 	margin: 1em auto;
 	text-align: center;
 	li {
-		font: 700 1.7rem font(defaultSans);
+		font: 700 1.7rem $defaultSans;
  		display: inline-block;
  		&:not(:first-child) {
 	 		margin-left: 1rem;

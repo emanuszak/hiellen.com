@@ -22,13 +22,13 @@ $mobile-only: max-width 575px;
 }
 
 a.breadcrumb {
-    font-family: font(defaultSans);
+    font-family: $defaultSans;
     text-align: left;
     display: inline-block;
 }
 button {
 	padding: .55em;
-	font: 700 1rem font(defaultSans);
+	font: 700 1rem $defaultSans;
 	border: none;
 	&:hover {
 		cursor: pointer;
@@ -37,7 +37,7 @@ button {
 
 a.overlay-menu {
 	color: #fff;
-	font: 700 .83rem font(defaultSans);
+	font: 700 .83rem $defaultSans;
 	padding-left: 1rem;
 	position: fixed;
 	bottom: 0;
