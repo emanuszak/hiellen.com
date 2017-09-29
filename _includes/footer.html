@@ -1,11 +1,16 @@
 <footer>
-    <div class="left-col">
-    	<div class="profile">
-    		<img src={{ "/assets/img/ellen.jpg" | relative_url }}>
-    	</div>
-        <div class="socialmedia">
-    		{% include socialmedia.html %}
-    	</div>
+    <div class="flex-wrapper">
+        <div class="left-col">
+        	<div class="profile">
+        		<img src={{ "/assets/img/ellen.jpg" | relative_url }} alt="Ellen Manuszak">
+        	</div>
+            <div class="socialmedia">
+        		{% include socialmedia.html %}
+        	</div>
+        </div>
+    	{% include contactform.html %}
     </div>
-	{% include contactform.html %}
+	<div class="smallprint">
+    	<p>&copy; 2017 Ellen Manuszak</p>
+	</div>
 </footer>

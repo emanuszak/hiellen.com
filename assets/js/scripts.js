@@ -3,6 +3,8 @@ $().ready(function() {
 
 $("a[href^='http://']").attr("target","_blank");
 
+
+
 //Contact Form
 
 //Captcha

@@ -1,16 +1,12 @@
 ---
-menu: main
-nav_label: home
-nav_weight: 1
-sub_text: I write user interface code.
 ---
 
-## Hi, I'm Ellen.
+# Welcome to Cactus.Works.
 
-I write user interface code.
+Cactus.Works is website and HTML email development by Ellen Manuszak.
 
-I make websites and HTML emails in Brooklyn.  My skills are a cross-section of technical, UX, and communications.
+I write user interface code--HTML5, CSS3, JavaScript, WordPress.  I also wrote a book on coding responsive HTML emails.
 
-I've done work for a top twenty-five Fortune 500 financial institution, a global television programming company, and others. I also wrote a book on coding responsive HTML emails. 
+I've done work for a Fortune 500 financial institution, a global television programming company, among others.
 
 Check out some of the [projects I've done](work.html) or get in touch with me via the form below.

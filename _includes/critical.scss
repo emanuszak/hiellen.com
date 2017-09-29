@@ -11,10 +11,10 @@ $mobile-only: max-width 575px;
 body {
 	@extend %zeroMP;
 	background: color(bgColor);
-	font: 20px/2 $defaultSerif;
+	font: 20px/1.5 $secondarySans;
 	color: color(primaryText);
 }
- div > p:first-child, div > h2:first-child {
+ div > p:first-child, div > h1:first-child {
     margin-top: 0;
 }
 button {
@@ -22,9 +22,9 @@ button {
 }
 a, a:active, a:visited {
 	text-decoration: none;
-	color: color(primary);
+	color: color(link);
+	background: linear-gradient(transparent 70%, color(linkUnderline) 70%);
 }
-
 img {
 	max-width: 100%;
 	height: auto;
@@ -32,21 +32,29 @@ img {
 ul, li {
 	@extend %zeroMP;
 }
+.flex-wrapper {
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
 .logo {
-    max-width: 100px;
-    height: auto;
-    text-align: center;
+    display: inline-block;
+    width: 20%;
     img {
-        margin: 0 auto;
+        width: 70%;
+        margin: 1rem auto 0;
     }
     h1 {
         margin: 0;
     }
+    a {
+        background: none;
+        outline: none;
+        display: block;
+        text-align: center;
+    }
 }
-.wrapper {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; 
+#wrapper { 
 	position: relative;
 	margin: 0 auto;
 	padding: 2rem 0 0;
@@ -59,7 +67,7 @@ ul, li {
         transform-origin: 100%;
         background-color: color(footer);
         height: 7vw;
-        margin-top: 5%;
+        margin-top: 8%;
         z-index: -1;
  	}
 }
@@ -99,7 +107,7 @@ ul, li {
 			font-size: 2rem;
 			background-color: color(nav);
 			text-align: right;
-			box-shadow: 5px 5px color(navAccent);
+			box-shadow: 5px 5px 0 1px color(navAccent);
     	}
 		line-height: 1.5;
 		display: inline-block;
@@ -131,13 +139,18 @@ ul, li {
 	}
 }
 footer {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
 	background-color: color(footer);
 	-webkit-backface-visibility: hidden;
 }
-.contact-form {
+.smallprint {
+    font-size: .8rem;
+    text-align: center;
+    color: darken(color(primary), 25%);
+    p {
+        margin-bottom: 0;
+    }
+}
+#contact-form {
 	flex: 1 0 100%;
 	border: solid 4px color(footer);
 	border-bottom-width: 1px;
@@ -146,6 +159,7 @@ footer {
 	font: 700 1.2rem $defaultSerif;
 	text-align:left;
 	color: color(formText);
+	position: relative;
 	@include breakpoint(575px) {
     	flex: 0 1 48%;
 		transform: translateY(-30%);
@@ -213,8 +227,8 @@ footer {
 	width: 50%;
 	height: auto;
 	text-align: center;
-	box-shadow: 1px 1px 0 5px color(lightAccent);
-    background-color: color(lightAccent);
+	box-shadow: 1px 1px 0 5px color(footerAccent);
+    background-color: color(footerAccent);
     transform: rotate(-$profile-rotate);
 	@include breakpoint(575px) {
     	img {
