@@ -2,26 +2,26 @@
 layout: default
 ---
 
-<section class="project-header">
-    <div>
-	<h2>{{ page.title }}</h2>
-	{% if page.status == 'active' %}
-		<a href="http://{{ page.address }}" target="_blank">{{ page.address }}</a>
-	{% else if page.status == 'inactive' %}
-	<span data-status="{{ page.status }}">{{ page.status }}</span>
-	{% else %} <div></div>
-	{% endif %}
-	<p class="project-statement">{{ page.project_description }}</p>
+<section class="project-header flex-wrapper">
+    <div class="project-overview">
+    	<h2>{{ page.title }}</h2>
+    	{% if page.status == 'active' %}
+    		<a href="http://{{ page.address }}" target="_blank">{{ page.address }}</a>
+    	{% else if page.status == 'inactive' %}
+    	<span data-status="{{ page.status }}">{{ page.status }}</span>
+    	{% else %} <div></div>
+    	{% endif %}
+    	<p class="project-statement">{{ page.project_description }}</p>
     </div>
 
-<aside class="project-brief">
-	<div class="inner-border">
-		<div>Deployed: {{ page.project_date }}</div>
-		<div>Platforms: {{page.project_platforms }}</div>
-		<div>Role: {{ page.project_role }}</div>
-		<div>Tech: {{ page.tech_stack }}</div>
-	</div>
-</aside>
+    <div class="project-brief flex-wrapper">
+    	<div class="project-inner-container">
+    		<div>Deployed: {{ page.project_date }}</div>
+    		<div>Platforms: {{page.project_platforms }}</div>
+    		<div>Role: {{ page.project_role }}</div>
+    		<div>Tech: {{ page.tech_stack }}</div>
+    	</div>
+    </div>
 
 </section>
 
@@ -35,3 +35,4 @@ layout: default
 
 <!-- 	{{ content }} -->
 </div>
+
