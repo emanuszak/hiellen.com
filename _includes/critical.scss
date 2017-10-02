@@ -33,8 +33,12 @@ ul, li {
 	@extend %zeroMP;
 }
 .flex-wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
+    -webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+	-webkit-justify-content: space-evenly;
 	justify-content: space-evenly;
 }
 .logo {
@@ -68,8 +72,11 @@ ul, li {
 	text-align: center;
  	&:after {
 	 	content: "";
+	 	-webkit-flex: 0 0 100%;
 		flex: 0 0 100%;
+		-webkit-transform: skewY(-4deg);
         transform: skewY(-4deg);
+        -webkit-transform-origin: 100%;
         transform-origin: 100%;
         background-color: color(footer);
         height: 7vw;
@@ -77,11 +84,27 @@ ul, li {
         z-index: -1;
  	}
 }
+@supports not (display: grid) {
+    .global-nav ul {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-justify-content: space-between;
+        justify-content: space-between;
+        li[class|="nav"] {
+            margin-bottom: 3vw;
+        }    
+    }
+}
 .global-nav {
 	text-align: left;
+	-webkit-flex: 0 1 100%;
 	flex: 0 1 100%;
     margin-right: 4%;
 	@include breakpoint(575px) {
+    	-webkit-flex: 0 1 24%;
     	flex: 0 1 24%;
 		@for $i from 1 through 10 {
             $nav-skew: (random(10) + 3) + deg;
@@ -90,9 +113,12 @@ ul, li {
             	width: (random(90) + 20%);
             	min-width: 80%;
             	max-width: 100%;
-            	transform-origin-y: 0;
+            	-webkit-transform: skewX(-$nav-skew) rotate($nav-rotate);
         		transform: skewX(-$nav-skew) rotate($nav-rotate);
+        		-webkit-transform-origin: 0 0;
+        		transform-origin: 0 0;
         		a {
+            		-webkit-transform: skewX($nav-skew);
                     transform: skewX($nav-skew);
         		}
         	}
@@ -123,6 +149,7 @@ ul, li {
 			background-color: color(nav);
 			text-align: right;
 			box-shadow: 5px 5px 0 1px color(navAccent);
+			min-height: 4rem;
 			a {
     			background: none;
     			padding-left: 0;
@@ -132,10 +159,12 @@ ul, li {
 }
 
 .content-container {
+    -webkit-flex: 0 1 90%;
     flex: 0 1 90%;
     margin: 0 auto;
     min-height: 70vh;
 	@include breakpoint(575px) {
+    	-webkit-flex: 0 1 64%;
         flex: 0 1 64%;
 	}
 	text-align: left;
@@ -163,6 +192,7 @@ footer {
     }
 }
 #contact-form {
+    -webkit-flex: 1 0 100%;
 	flex: 1 0 100%;
 	border: solid 4px color(footer);
 	border-bottom-width: 1px;
@@ -173,7 +203,9 @@ footer {
 	color: color(formText);
 	position: relative;
 	@include breakpoint(575px) {
-    	flex: 0 1 48%;
+    	-webkit-flex: 0 1 45%;
+    	flex: 0 1 45%;
+    	-webkit-transform: translateY(-30%);
 		transform: translateY(-30%);
 	}
 	h2 {
@@ -227,10 +259,12 @@ footer {
 	}
 }
 .left-col {
+    -webkit-flex: 1 0 100%;
 	flex: 1 0 100%;
 	text-align: center;
 	margin: 0 0 15vw;
 	@include breakpoint(575px) {
+    	-webkit-flex: 0 1 50%;
 		flex: 0 1 50%;
 		margin: 0;
 	}
@@ -243,8 +277,10 @@ footer {
 	text-align: center;
 	box-shadow: 1px 1px 0 5px color(footerAccent);
     background-color: color(footerAccent);
+    -webkit-transform: rotate(-$profile-rotate);
     transform: rotate(-$profile-rotate);
     img {
+        -webkit-transform: rotate($profile-rotate);
         transform: rotate($profile-rotate);
     }
 	@include breakpoint(575px) {

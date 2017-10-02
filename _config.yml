@@ -25,7 +25,7 @@ sass:
     style: compressed
     sass_dir: _sass
 
-gems: ['octopress-autoprefixer', 'susy', 'breakpoint', 'jekyll-sitemap']
+gems: ['susy', 'breakpoint', 'jekyll-sitemap']
 
 # Build settings
 markdown: kramdown

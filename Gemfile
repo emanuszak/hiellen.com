@@ -20,7 +20,7 @@ gem "minima"
 
 # If you have any plugins, put them here!
  group :jekyll_plugins do
-	gem 'octopress-autoprefixer'
+#	gem 'octopress-autoprefixer'
 	gem 'sass-rails', '~> 5.0.0'
 	gem 'susy', '~> 2.2', '>= 2.2.12'
 	gem 'breakpoint', '~> 2.7', '>= 2.7.1'
