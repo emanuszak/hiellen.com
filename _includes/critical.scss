@@ -84,20 +84,6 @@ ul, li {
         z-index: -1;
  	}
 }
-@supports not (display: grid) {
-    .global-nav ul {
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-justify-justify-content: space-between;
-        justify-content: space-between;
-        li[class|="nav"] {
-            margin-bottom: 3vw;
-        }    
-    }
-}
 .global-nav {
 	text-align: left;
 	-webkit-flex: 0 1 100%;
@@ -130,15 +116,20 @@ ul, li {
 		}
     }
 	ul {
-    	display: grid;
-        grid-template-rows: repeat(5, 1rem);
-        grid-row-gap: 7vw;
+    	display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-justify-content: space-between;
+            justify-content: space-between;
 	}
 	li[class|="nav"] {
 		list-style: none;
 		padding: .5rem .25rem .5rem 0;
 		font-family: $secondarySans;
 		font-weight: 700;
+		margin-bottom: 3vw;
         a {
             white-space: nowrap;
             padding-left: 25%;

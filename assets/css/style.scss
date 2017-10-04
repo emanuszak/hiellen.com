@@ -4,6 +4,7 @@
 @import 'breakpoint';
 @import 'mixins';
 @import 'portfolio';
+@import 'post';
 
 $susy: (
 	columns: 12,
@@ -43,18 +44,7 @@ a.overlay-menu {
 	top: 10px;
 	right: 0;
 	line-height: 2;
-/*
-	&:before {
-		content: '';
-		display: block;
-		position: inherit;
-		left: 0;
-		right: 0;
-		height: 2rem;
-		background: rgba(color(primary),.6);
-		z-index: -1;
-	}
-*/
+
 }
 
 .image-tile {
