@@ -1,5 +1,6 @@
 ---
 menu: main
+title: "About Ellen"
 nav_label: about ellen
 nav_weight: 2
 ---

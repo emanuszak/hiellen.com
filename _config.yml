@@ -35,10 +35,17 @@ defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
+      type: "pages"
     values:
       layout: "main"
-      header_text: I'm Ellen.
-      sub_text: I write user interface code.
+      title: "I'm Ellen. This is Cactus.Works"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      category: "blog"
 
 collections:
   portfolio:
