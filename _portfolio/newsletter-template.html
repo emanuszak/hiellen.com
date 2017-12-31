@@ -1,0 +1,38 @@
+---
+layout: project-page
+title: Financial Monthly Newsletter
+name: newsletter
+address: 
+work_type: email 
+hero_path: newsletter-hero.png
+project_weight: 4
+project_role: front-end dev
+tech_stack: HTML Email
+status: active
+project_date: 2017
+project_platforms: desktop & mobile
+project_description: a multi-column responsive HTML newsletter template
+published: true
+---
+
+<figure>
+    <img src="/assets/img/newsletter/newsletter-mobile_top.png" alt="Two Column newsletter top half">
+    <img src="/assets/img/newsletter/newsletter-mobile_bottom.png" alt="Two Column newsletter bottom half">
+    <figcaption>Two-Column newsletter on mobile</figcaption>
+</figure>
+
+<h3>Client</h3>
+<p>A top-25 Fortune 500 financial institution</p>
+<p>All content has been replaced due to privacy/disclosure, but the code base remains as was deployed.</p>
+
+<h3>Goal</h3>
+<p>Turn newsletter design mockup into a newsletter template to be reused each month with new content</p>
+
+<h3>Challenge</h3>
+<p>Required high support for Windows Outlook, BlackBerry.</p>
+<p>The design asked to have images swapped out between the desktop and mobile versions, but display properties are not widely supported across clients.</p>
+
+<h3>Architecture</h3>
+<p>This email is a two-column newsletter-style email.</p>
+<p>The accompanying images for the articles are swapped out for mobile-specific images when viewed on the phone.  The display hide/show is achieved using !mso conditional comments in order to properly hide the mobile-specific images in Outlook.</p>
+<p>The hero is a background image, with uses both CSS background properties and also Microsoft VML to ensure visibility in Outlook.</p>
