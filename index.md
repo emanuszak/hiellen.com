@@ -1,4 +1,7 @@
 ---
+menu: main
+nav_label: main
+nav_weight: 1
 ---
 
 # Welcome to Cactus.Works.

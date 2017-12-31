@@ -25,10 +25,20 @@
             		<img src={{ "/assets/img/cactusworks.svg" | relative_url }} alt="Cactus Works">
         		</a>
     		</div>
+    		
+    	{% if page.layout == 'main' %}	
+    		<div class="header-button_contact">
+        		<div class="header-button_inner-wrapper">
+        		    <a href="#contact-form">work with me</a>
+        		</div>
+    		</div>
+        {% endif %}
+    		
 		</header>
 		<div id="wrapper" class="flex-wrapper">
 			{{ content }}
 		</div>
+		
 		{% if page.layout == 'project-page' %}
 				<a class="overlay-menu" href={{ "/work.html" | relative_url }}><i class="fa fa-arrow-left" aria-hidden="true"></i> view all work</a>
 		{% endif %}

@@ -1,12 +1,15 @@
 ---
 menu: main
 nav_label: portfolio
-nav_weight: 1
+nav_weight: 2
 ---
 
 <section class="portfolio">
 	{% assign portfolio_pages = site.portfolio | sort: 'project_weight' %}
+	
+	<h2 class="portfolio-category">Web</h2>
 	{% for p in portfolio_pages %}
+	    {% if p.work_type == 'web' %}
 	<a href="{{ p.url | relative_url }}">
     	<article class="project-wrapper">
         	<div class="project-title">
@@ -16,5 +19,21 @@ nav_weight: 1
             <div class="project-description">{{ p.tech_stack }}</div>
     	</article>
 	</a>
+	    {% endif %}
+	{% endfor %}
+	
+	<h2 class="portfolio-category">Responsive Email</h2>
+    {% for p in portfolio_pages %}
+	    {% if p.work_type == 'email' %}
+	<a href="{{ p.url | relative_url }}">
+    	<article class="project-wrapper">
+        	<div class="project-title">
+                <h3>{{ p.title }}</h3>
+        	</div>
+    		<div class="project {{ p.name }}"></div>
+            <div class="project-description">{{ p.tech_stack }}</div>
+    	</article>
+	</a>
+	    {% endif %}
 	{% endfor %}
 </section>
