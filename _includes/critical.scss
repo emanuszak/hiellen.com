@@ -68,24 +68,24 @@ ul, li {
 .header-button_contact {
     position: absolute;
     top: 40px;
-    right: 50px;
+    right: 10px;
     .header-button_inner-wrapper {
         position: relative;
         &:after {
             content: '';
             display:inline-block;
-            height: 24px;
-            width: calc(2rem * 7);
             background-color: #fff;
+            height: 16px;
+            width: calc(2rem * 4);
             position: absolute;
-            top: 9px;
-            left: -18px;
+            top: 12px;
+            left: 0;
             z-index: -3;
             -webkit-clip-path: polygon(0 0, 98% 0%, 99% 77%, 6% 98%);
             clip-path: polygon(0 0, 98% 0%, 99% 77%, 6% 98%);
         }
         a {
-            font: 700 1.5rem 'Oxygen';
+            font: 700 1rem $defaultSans;
             color: color(contactButton);
             text-transform: uppercase;
             background: none;
@@ -101,6 +101,24 @@ ul, li {
                 left: 0;
                 font-weight: 700;
                 z-index: -1;
+                @supports not (-webkit-text-stroke: 0.13em) {
+                    text-shadow: -1px -2px 0px #fff;
+                }
+            }
+        }
+    }
+    @include breakpoint(575px) {
+        position:absolute;
+        right: 50px;
+        .header-button_inner-wrapper {
+            &:after {
+                height: 24px;
+                width: calc(2rem * 7);
+                top: 9px;
+                left: -18px;
+            }
+            a {
+                font: 700 1.5rem $defaultSans;
             }
         }
     }
@@ -311,6 +329,8 @@ footer {
     background-color: color(footerAccent);
     -webkit-transform: rotate(-$profile-rotate);
     transform: rotate(-$profile-rotate);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     img {
         -webkit-transform: rotate($profile-rotate);
         transform: rotate($profile-rotate);
