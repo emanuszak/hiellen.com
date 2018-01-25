@@ -1,5 +1,6 @@
 @import 'breakpoint';
 @import 'mixins';
+@import 'tuesday';
 
 // breakpoints
 $mobile-only: max-width 575px;
@@ -21,9 +22,15 @@ button {
 	transition: all 1s ease-in;
 }
 a, a:active, a:visited {
+    -webkit-transition: background 180ms ease-in;
+	transition: background 180ms ease-in;
 	text-decoration: none;
 	color: color(link);
 	background: linear-gradient(transparent 70%, color(linkUnderline) 70%);
+}
+a:hover {
+    background: color(linkUnderline);
+    
 }
 img {
 	max-width: 100%;
@@ -96,12 +103,12 @@ ul, li {
             &:before {
                 content: 'WORK WITH ME';
                 display: inline-block;
-                -webkit-text-stroke: 0.13em #fff;
+                -webkit-text-stroke: 0.2rem #fff;
                 position: absolute;
                 left: 0;
                 font-weight: 700;
                 z-index: -1;
-                @supports not (-webkit-text-stroke: 0.13em) {
+                @supports not (-webkit-text-stroke: 0.2rem) {
                     text-shadow: -1px -2px 0px #fff;
                 }
             }
@@ -153,7 +160,12 @@ ul, li {
     	-webkit-flex: 0 1 24%;
     	flex: 0 1 24%;
 		@for $i from 1 through 10 {
-            $nav-skew: (random(10) + 3) + deg;
+    		.nav-#{$i}-animate {
+                @include animated;
+            	@include tdStampInSwing;
+            	animation-delay: 700ms + ($i * 80ms);
+        	}
+            $nav-skew: (random(10) + 4) + deg;
             $nav-rotate: (random(5) - 5) + deg;
         	.nav-#{$i} {
             	width: (random(90) + 20%);
