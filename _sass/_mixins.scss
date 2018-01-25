@@ -22,9 +22,10 @@ $colors: (
 );
 
 
-$defaultSerif: 'Merriweather', 'Palatino', serif;
-$defaultSans: 'Oxygen', 'Futura', sans-serif;
-$secondarySans: 'Lato', 'Trebuchet MS', sans-serif;
+$defaultSerif: 'Roboto Slab', 'Palatino', serif;
+$defaultSans: 'Lato', 'Trebuchet MS', sans-serif;
+$secondarySans: 'Roboto Condensed', 'Futura', sans-serif;
+$headings: 'Roboto Condensed', sans-serif;
 
 /* MIXINS and FUNCTIONS */
 %zeroMP {

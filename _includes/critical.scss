@@ -12,7 +12,7 @@ $mobile-only: max-width 575px;
 body {
 	@extend %zeroMP;
 	background: color(bgColor);
-	font: 20px/1.5 $secondarySans;
+	font: 20px/1.5 $defaultSans;
 	color: color(primaryText);
 }
  div > p:first-child, div > h1:first-child {
@@ -38,6 +38,9 @@ img {
 }
 ul, li {
 	@extend %zeroMP;
+}
+h1 {
+    font-family: $headings;
 }
 .flex-wrapper {
     display: -webkit-flex;
@@ -163,7 +166,7 @@ ul, li {
     		.nav-#{$i}-animate {
                 @include animated;
             	@include tdStampInSwing;
-            	animation-delay: 700ms + ($i * 80ms);
+            	animation-delay: 550ms + ($i * 80ms);
         	}
             $nav-skew: (random(10) + 4) + deg;
             $nav-rotate: (random(5) - 5) + deg;
@@ -213,9 +216,14 @@ ul, li {
 			text-align: right;
 			box-shadow: 5px 5px 0 1px color(navAccent);
 			min-height: 4rem;
+			-webkit-transition: box-shadow 120ms ease-out;
+			transition: box-shadow 120ms ease-out;
 			a {
     			background: none;
     			padding-left: 0;
+			}
+			&:hover {
+    			box-shadow: 5px 5px 0 1px color(bgColor);
 			}
     	}
 	}
@@ -364,8 +372,10 @@ footer {
 	a:link, a:visited, a:active {
 		color: color(primaryText);
 		vertical-align: middle;
+		-webkit-transition: color 200ms ease-in-out;
+		transition: color 200ms ease-in-out;
 		&:hover {
-			color: white;
+			color: color(footerAccent);
 		}
 	}
 }

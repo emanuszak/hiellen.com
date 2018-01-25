@@ -16,6 +16,7 @@ $portfolio: (
     }
 }
 .portfolio-category {
+    font-family: $secondarySans;
     color:color(primary);
     margin-bottom: 50px;
     margin-top: -10px;
@@ -83,7 +84,7 @@ $portfolio: (
         position: absolute;
         top: -2.5rem;
 	a, h3 {
-		font-family: $defaultSans;
+		font-family: $secondarySans;
 		margin: 0 0 .25rem;
 		color: color(projectTitle);
 	}
@@ -123,6 +124,9 @@ $portfolio: (
     p {
         margin-bottom: 0;
     }
+    h2 {
+        font-family: $secondarySans;
+    }
     @include breakpoint(575px) {
         margin-bottom: 0;
     }
@@ -155,6 +159,9 @@ $portfolio: (
 	p {
 		margin: 1rem;
 	}
+	h3 {
+        font-family: $secondarySans;
+    }
 	figure {
     	float:right;
     	width:40%;
