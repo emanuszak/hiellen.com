@@ -1,0 +1,33 @@
+$postRotate: -3deg;
+.post-wrapper {
+    background-color: color(postAccent);
+    padding: 1.5rem;
+    -webkit-transform: rotate($postRotate);
+    transform: rotate($postRotate);
+}
+.post-content {
+    background-color: color(postBackground);
+    color: color(postText);
+    padding: 2rem;
+    -webkit-transform: rotate(-$postRotate);
+    transform: rotate(-$postRotate);
+    .post-title {
+        color: color(primary);
+        margin-bottom: 0;
+    }
+    .post-date {
+        margin: 0;
+        font-size: .75rem;
+    }
+}
+.post-tags {
+    -webkit-transform: rotate(-$postRotate);
+    transform: rotate(-$postRotate);
+    margin-top: .5rem;
+    li {
+        display: inline-block;
+        padding: .25rem;
+        background-color: color(tagsColor);
+        font-size: .75rem;
+    }
+} 

@@ -1,0 +1,64 @@
+/* VARIABLES and PLACEHOLDERS */
+
+$colors: (
+	primaryText: #fff,
+	darkText: #111131,
+	primary: #e51041, //vividpink alternative #ea1851
+	lightAccent: #fff,
+	bgColor: #101e2c,
+	contactButton: #101e2c,
+	nav: #e51041,
+	navAccent: #fff,
+	footer: #e51041,
+	footerAccent: #101e2c,
+	formText: #111131,
+	projectTitle: #fff,
+	link: #fff,
+	linkUnderline: #e51041,
+	postBackground: #fff,
+	postAccent: #e51041,
+	postText: #111131,
+	tagsColor: #101e2c,
+);
+
+
+$defaultSerif: 'Merriweather', 'Palatino', serif;
+$defaultSans: 'Oxygen', 'Futura', sans-serif;
+$secondarySans: 'Lato', 'Trebuchet MS', sans-serif;
+
+/* MIXINS and FUNCTIONS */
+%zeroMP {
+	margin: 0;
+	padding: 0;
+}
+%clearFix {
+	clear:both;
+}
+@function color($key) {
+	@if map-has-key($colors, $key) {
+		@return map-get($colors, $key);
+	}
+}
+@function font($key) {
+	@if map-has-key($fonts, $key) {
+		@return map-get($fonts, $key);
+	}
+}
+@mixin square($hw) {
+	height: $hw;
+	width: $hw;
+}
+@mixin angled-edge($color, $height, $skew, $origin) {
+	transform: skewY($skew);
+	transform-origin: $origin;
+	height: $height;
+	background-color: $color;
+	-webkit-backface-visibility: hidden;
+}
+@mixin level-text($deg) {
+	transform: rotate($deg);
+	transform-origin: center;
+}
+@mixin reSkew($deg) {
+	transform: skewY($deg) rotate(-$deg);
+}

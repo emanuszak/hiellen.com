@@ -1,0 +1,168 @@
+$portfolio: (
+	mhz: null,
+	dogr: null, 
+	eloped: null,
+	adoptee: null,
+	mmp: null,
+	newsletter: null,
+	stanlaw: null,
+);
+@each $project in $portfolio {
+	.#{$project} {
+   		$opacity: .7;
+    	background: linear-gradient(to bottom, rgba(20,20,83,$opacity), rgba(20,20,83,$opacity)),
+    				url('../img/#{$project}/#{$project}_thumb.png') no-repeat center top / cover;
+     	background-blend-mode: multiply, luminosity;
+    }
+}
+.portfolio-category {
+    color:color(primary);
+    margin-bottom: 50px;
+    margin-top: -10px;
+}
+.portfolio {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 12vw;
+    a {
+    	display:block;
+    	background: none;
+	}
+	@include breakpoint (575px) {
+    	margin-top: 0;
+	}
+}
+.project-wrapper { 
+    $skew-x: -3deg;
+    $skew-y: 2deg;
+    padding-left: .5rem;
+    background: color(primary);
+    height: 16vh;
+    position: relative;
+    -webkit-transform: skew($skew-x, $skew-y) rotate(-3deg);
+    transform: skew($skew-x, $skew-y) rotate(-3deg);
+    box-shadow: 1px 1px 0 15px color(lightAccent);
+    margin-bottom: 5rem;
+    @include breakpoint (575px) {
+        height: 23vh;
+    }
+    .project {
+        -webkit-transform: skew(-$skew-x, -$skew-y);
+        transform: skew(-$skew-x, -$skew-y);
+        @include breakpoint (575px) {
+            -webkit-transform: skew(-$skew-x, -$skew-y);
+            transform: skew(-$skew-x, -$skew-y);
+        }
+    }
+}
+.project-description {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    right: 1rem;
+    font-size: 1rem;
+}
+.project {
+	width: 100%;
+	text-align: left;
+ 	height: 13vh;
+ 	position: absolute;
+ 	top: 0;
+ 	right: .45rem;
+ 	@include breakpoint(575px) {
+     	height: 20vh;
+     	top: .5rem;
+ 	}
+}
+.project-title {
+        position: absolute;
+        top: -2.5rem;
+	a, h3 {
+		font-family: $defaultSans;
+		margin: 0 0 .25rem;
+		color: color(projectTitle);
+	}
+	div {
+		display:block;
+		color: white;
+		font: 400 1em $defaultSans;
+	}
+}
+.project-header {
+    width: 100%;
+	margin: 0 2rem 1rem;
+	a, span{
+		font-family: $defaultSans;
+	}
+	h2 {
+		line-height: 1.5;
+		margin: 0;
+	}
+	> div {
+    	border: 5px solid color(primaryText);
+	}
+}
+.project-overview, .project-brief {
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+    padding: 1rem;
+    @include breakpoint(575px) {
+        -webkit-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+}
+.project-overview {
+    margin-bottom: 1rem;
+    p {
+        margin-bottom: 0;
+    }
+    @include breakpoint(575px) {
+        margin-bottom: 0;
+    }
+}
+.project-brief {
+	font-family: $defaultSans;
+	background-color: color(primaryText);
+	color: color(darkText);
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	.project-inner-container {
+    	-webkit-transform: skewX(4deg);
+        transform: skewX(4deg);
+    }
+}
+.project-hero, .project-details {
+    margin: 0 auto;
+}
+.project-hero {
+	width: 90%;
+	img {
+		display: block;
+	}
+}
+.project-details {
+	width: 90%;
+	margin-bottom: 2rem;
+	text-align: left;
+	p {
+		margin: 1rem;
+	}
+	figure {
+    	float:right;
+    	width:40%;
+    	border: solid white 3px;
+	}
+	figcaption {
+    	font-size:14px;
+    	text-align: center;
+    	font-style: italic;
+	}
+}

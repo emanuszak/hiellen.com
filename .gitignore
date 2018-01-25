@@ -3,6 +3,5 @@ _config.yml
 .jekyll-metadata
 _site/
 transport.php
-_sass/
 _psds/
 _drafts/
