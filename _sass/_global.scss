@@ -1,0 +1,43 @@
+/* Global Styles */
+* {
+	box-sizing: border-box;
+}
+body {
+	@extend %zeroMP;
+	background: color(bgColor);
+	font: 20px/1.5 $defaultSans;
+	color: color(primaryText);
+}
+ div > p:first-child, div > h1:first-child {
+    margin-top: 0;
+}
+button {
+	transition: all 1s ease-in;
+	padding: .55em;
+	font: 700 1rem $defaultSans;
+	border: none;
+	&:hover {
+		cursor: pointer;
+	}
+}
+a, a:active, a:visited {
+    -webkit-transition: background 180ms ease-in;
+	transition: background 180ms ease-in;
+	text-decoration: none;
+	color: color(link);
+	background: linear-gradient(transparent 70%, color(linkUnderline) 70%);
+}
+a:hover {
+    background: color(linkUnderline);
+    
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+ul, li {
+	@extend %zeroMP;
+}
+h1 {
+    font-family: $headings;
+}

@@ -1,0 +1,25 @@
+/* ======================================== */
+/* ==== tuesday.less ====================== */
+/* ==== A quirky CSS Animation Library ==== */
+/* ======================================== */
+
+$easeOutCirc: cubic-bezier(0, 0.590, 0.375, 1);
+$easeInCirc: cubic-bezier(0.590, 0, 1, 0.375);
+
+@mixin animated {
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+}
+@mixin infinite {
+	animation-iteration-count: infinite;
+}
+
+// load animation modules
+// @import 'modules/basic-fade';
+// @import 'modules/fade';
+// @import 'modules/zoom';
+@import 'modules/stamp';
+// @import 'modules/swing';
+// @import 'modules/hinge-flip';
+// @import 'modules/drop';
+// @import 'modules/plop';

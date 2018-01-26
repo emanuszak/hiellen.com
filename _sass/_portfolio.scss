@@ -173,3 +173,13 @@ $portfolio: (
     	font-style: italic;
 	}
 }
+
+[data-status] {
+	text-transform: capitalize;
+}
+[data-status="inactive"] {
+	color: #8c8c8c;
+}
+[data-status="active"] {
+	color: #333;
+}
