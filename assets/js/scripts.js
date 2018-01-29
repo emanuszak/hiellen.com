@@ -5,12 +5,29 @@ $("a[href^='http://']").attr("target","_blank");
 
 
 
-//Contact Form
+//Contact Form Modal
 
-//Captcha
-function onSubmitFn(token) {
-    document.getElementById("contact").submit();
+/*
+function openForm(event) {
+    $('.contact-wrapper').addClass('full-screen');
+    if ($(event.target).is('.form-reset')) {
+        $('.contact-wrapper').removeClass('full-screen');
+    }
 }
+*/
+
+$('body').on('click','.open-intake-form', function() {
+    $('.contact-wrapper').addClass('full-screen');
+    $('.contact-wrapper').load('collaborate.html .intake-form-wrapper');
+});
+
+
+$('.contact-wrapper').on('click','.form-reset', function(){
+    $('.contact-wrapper').removeClass('full-screen');
+    $('.contact-wrapper').load('index.html .contact-wrapper-inner');
+});
+
+
 
 /*Auto resize textarea via stephanwagner.me/auto-resizing-textarea */
 jQuery.each(jQuery('textarea[data-autoresize]'), function() {
@@ -57,6 +74,9 @@ $(form).submit(function(e) {
 		$('#name').val('');
 		$('#email').val('');
 		$('#message').val('');
+		
+		$('.contact-form-wrapper').removeClass('full-screen');
+		
 	})
 	.fail(function(data) {
 		// Make sure that the formMessages div has the 'error' class.

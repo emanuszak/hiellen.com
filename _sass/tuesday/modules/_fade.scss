@@ -3,7 +3,7 @@
     0% { 
         opacity: 0;
         transform: translateY(-10px);
-        animation-timing-function: @easeOutCirc;
+        animation-timing-function: $easeOutCirc;
     }
 
     100% { 
@@ -16,7 +16,7 @@
     0% { 
         opacity: 0;
         transform: translateX(10px);
-        animation-timing-function: @easeOutCirc;
+        animation-timing-function: $easeOutCirc;
     }
 
     100% { 
@@ -29,7 +29,7 @@
     0% { 
         opacity: 0;
         transform: translateY(10px);
-        animation-timing-function: @easeOutCirc;
+        animation-timing-function: $easeOutCirc;
     }
 
     100% { 
@@ -42,7 +42,7 @@
     0% { 
         opacity: 0;
         transform: translateX(-10px);
-        animation-timing-function: @easeOutCirc;
+        animation-timing-function: $easeOutCirc;
     }
 
     100% { 
@@ -69,7 +69,7 @@
     0% { 
         opacity: 1;
         transform: translateY(0);
-        animation-timing-function: @easeOutCirc;
+        animation-timing-function: $easeOutCirc;
     }
 
     100% { 
@@ -82,7 +82,7 @@
     0% { 
         opacity: 1;
         transform: translateX(0);
-        animation-timing-function: @easeOutCirc;
+        animation-timing-function: $easeOutCirc;
     }
 
     100% { 
@@ -95,7 +95,7 @@
     0% { 
         opacity: 1;
         transform: translateY(0);
-        animation-timing-function: @easeOutCirc;
+        animation-timing-function: $easeOutCirc;
     }
 
     100% { 
@@ -108,7 +108,7 @@
     0% { 
         opacity: 1;
         transform: translateX(0);
-        animation-timing-function: @easeOutCirc;
+        animation-timing-function: $easeOutCirc;
     }
 
     100% { 

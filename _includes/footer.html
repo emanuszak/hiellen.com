@@ -4,11 +4,24 @@
         	<div class="profile">
         		<img src={{ "/assets/img/ellen.jpg" | relative_url }} alt="Ellen Manuszak">
         	</div>
-            <div class="socialmedia">
-        		{% include socialmedia.html %}
-        	</div>
         </div>
-    	{% include contactform.html %}
+
+        <div class="contact-wrapper">
+            <div class="contact-wrapper-inner">
+                <h2>Let's talk!</h2>
+                
+                <h3>Just saying hi?</h3>  
+                <p>Email me at ellen@cactus.works</p>
+                
+                <h3>Have a project?</h3>
+                <button class="open-intake-form">Tell me more about what you're working on.</button>
+                
+                <div class="socialmedia">
+            		{% include socialmedia.html %}
+            	</div>
+            </div>
+        </div>
+        
     </div>
 	<div class="smallprint">
     	<p>&copy; 2017 Ellen Manuszak</p>

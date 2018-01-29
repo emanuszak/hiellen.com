@@ -1,0 +1,48 @@
+---
+layout: focus
+---
+    <div class="intake-form-wrapper">
+        <div id="contact-form">
+        	<h2>How can I help you?</h2>
+        	<form id="contact" name="contact" method="POST" action="assets/php/mailform.php">
+        		<input type="hidden" id="honeypot">
+        		
+        		<div class="contact-form-row">
+            		<label for="name">Hello, my name is </label>
+            			<input type="text" name="name" id="name" required="">
+        		</div>
+        		
+        		<fieldset>
+            		<legend class="for-screen-readers">Project type</legend>
+            		<span>I have a</span>
+            			<input type="checkbox" name="project" id="project_website" value="project_website" class="for-screen-readers">
+            			<label for="project_website">website</label>
+            			
+            			<input type="checkbox" name="project" id="project_email" value="project_email" class="for-screen-readers">
+            			<label for="project_email">html email</label>
+            			
+            			<input type="checkbox" name="project" id="project_wordpress" value="project_wordpress" class="for-screen-readers">
+            			<label for="project_wordpress">wordpress</label>
+            			
+                    <span>project that I need</span>
+                        <input type="checkbox" name="work" id="design" value="design" class="for-screen-readers">
+            			<label for="design">designed</label>
+            			
+            			<input type="checkbox" name="work" id="develop" value="develop" class="for-screen-readers">
+            			<label for="develop">developed</label>
+                </fieldset> 
+                <label for="project_deadline">I'd like to launch by</label>
+                <input type="date" id="project_deadline" value="" size="8">
+        		<div class="contact-form-row">
+            		<label for="email">You can email me at </label>
+            			<input type="email" name="email" id="email" required="">
+        		</div>
+        		
+        		<div id="form-messages"></div>
+        		<div class="actions">
+        			<button type="submit" id="submit" class="form-send">send message</button> 
+        			<button type="reset" id="reset" class="form-reset">cancel and close</button>
+        		</div>
+        	</form>
+        </div>
+    </div>

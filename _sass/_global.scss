@@ -20,16 +20,8 @@ button {
 		cursor: pointer;
 	}
 }
-a, a:active, a:visited {
-    -webkit-transition: background 180ms ease-in;
-	transition: background 180ms ease-in;
-	text-decoration: none;
-	color: color(link);
-	background: linear-gradient(transparent 70%, color(linkUnderline) 70%);
-}
-a:hover {
-    background: color(linkUnderline);
-    
+a, a:hover {
+    text-decoration: none;
 }
 img {
 	max-width: 100%;
