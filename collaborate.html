@@ -1,6 +1,8 @@
 ---
-layout: focus
+layout: boilerplate
+colors: white
 ---
+<div id="stand-alone-page" class="contact-wrapper full-screen flex-wrapper">
     <div class="intake-form-wrapper">
         <div id="contact-form">
         	<h2>How can I help you?</h2>
@@ -8,7 +10,7 @@ layout: focus
         		<input type="hidden" id="honeypot">
         		
         		<div class="contact-form-row">
-            		<label for="name">Hello, my name is </label>
+            		<label for="name">Hi, my name is </label>
             			<input type="text" name="name" id="name" required="">
         		</div>
         		
@@ -25,16 +27,17 @@ layout: focus
             			<label for="project_wordpress">wordpress</label>
             			
                     <span>project that I need</span>
+                    <div class="contact-form-row">
+                        <input type="checkbox" name="work" id="develop" value="develop" class="for-screen-readers">
+            			<label for="develop">developed</label>
                         <input type="checkbox" name="work" id="design" value="design" class="for-screen-readers">
             			<label for="design">designed</label>
-            			
-            			<input type="checkbox" name="work" id="develop" value="develop" class="for-screen-readers">
-            			<label for="develop">developed</label>
+                    </div>
                 </fieldset> 
                 <label for="project_deadline">I'd like to launch by</label>
-                <input type="date" id="project_deadline" value="" size="8">
+                <input type="date" id="project_deadline" value="">
         		<div class="contact-form-row">
-            		<label for="email">You can email me at </label>
+            		<label for="email">You can email me back at </label>
             			<input type="email" name="email" id="email" required="">
         		</div>
         		
@@ -45,4 +48,9 @@ layout: focus
         		</div>
         	</form>
         </div>
+        
+        <div class="logo-absolute-bottom-left m opacity-50">
+        {% include logo-rect.html %}
+        </div>
     </div>
+</div>
