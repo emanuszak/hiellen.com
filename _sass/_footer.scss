@@ -1,9 +1,36 @@
 footer {
 	background-color: color(footer);
-	-webkit-backface-visibility: hidden;
 	.contact-wrapper {
     	text-align: center;
 	}
+}
+
+.contact-wrapper {
+    -webkit-flex: 1 0 100%;
+	flex: 1 0 100%;
+	border: solid 4px color(footer);
+	border-bottom-width: 1px;
+	background-color: white;
+	padding: 1rem;
+	font-size: 1.2rem;
+	text-align:left;
+	color: color(formText);
+    @include breakpoint(575px) {
+    	-webkit-flex: 0 1 45%;
+    	flex: 0 1 45%;
+    	-webkit-transform: translateY(-30%);
+		transform: translateY(-30%);
+	}
+}
+
+.contact-wrapper-inner {
+    h2 {
+        font-family: $headings;
+        margin-bottom: 0;
+    }
+    p {
+        margin: 0;
+    }
 }
 .smallprint {
     font-size: .8rem;
@@ -36,8 +63,6 @@ footer {
     background-color: color(footerAccent);
     -webkit-transform: rotate(-$profile-rotate);
     transform: rotate(-$profile-rotate);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     img {
         -webkit-transform: rotate($profile-rotate);
         transform: rotate($profile-rotate);
@@ -46,8 +71,14 @@ footer {
     	width: 50%;
     }
 }
+.email-me {
+    font-family: $defaultSans;
+}
+
+.socialmedia {
+    margin: 1em auto;
+}
 .social-icons {
-	margin: 1em auto;
 	text-align: center;
 	li {
 		font: 700 1.7rem $defaultSans;
@@ -67,3 +98,9 @@ footer {
 	}
 }
 
+button.open-intake-form {
+    background-color: color(contactButtonBg);
+    color: white;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
