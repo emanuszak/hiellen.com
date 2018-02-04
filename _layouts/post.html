@@ -13,7 +13,7 @@ layout: main
     <div class="post-tags">
         <ul>
             {% for tag in page.tags %}
-                <li>{{ tag }}</li>
+                <li><a href="{{tag | slugify }}">{{ tag }}</a></li>
             {% endfor %}
         </ul>
     </div>

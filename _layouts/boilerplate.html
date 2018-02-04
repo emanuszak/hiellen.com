@@ -6,13 +6,18 @@
 		<meta name="author" content="{{ site.author }}">
 		<meta name="description" content="{{ site.description }}">
 		<link rel="icon" type="image/png" href={{ "/assets/img/favicon-hi.png" | relative_url }}>
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Lato:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Lato:400,700|Roboto+Condensed:300,400,700" rel="stylesheet">
 		
 		<style type="text/css">
     		{% capture critical_sass %}
               {% include critical.scss %}
             {% endcapture %}
             {{ critical_sass | scssify }}
+            {%if page.colors %}
+                body {
+                    background-color: {{ page.colors }};
+                }
+            {% endif %}
         </style>
         <link href={{ "/assets/css/style.css" | relative_url }} type="text/css" rel="stylesheet">
 		<title>{{ page.title }} | Cactus.Works</title>
