@@ -12,7 +12,6 @@ body {
     margin-top: 0;
 }
 button {
-	transition: all 1s ease-in;
 	padding: .55em;
 	font: 700 1rem $defaultSans;
 	border: none;
@@ -32,4 +31,90 @@ ul, li {
 }
 h1 {
     font-family: $headings;
+}
+
+// Style Components
+
+.xs {
+    
+}
+.s {
+    width: 35%;
+}
+.m {
+    width: 50%;
+}
+
+.logo-absolute-bottom-left {
+    bottom: 10px;
+    left: 6px;
+    @include breakpoint(575px) {
+        position: absolute;
+    }
+}
+
+// Structural Elements
+
+.wrapper { 
+	position: relative;
+	margin: 0 auto;
+	padding: 2rem 0 0;
+	width: 100%;
+	text-align: center;
+	a, a:active, a:visited {
+        -webkit-transition: background 180ms ease-in;
+    	transition: background 180ms ease-in;
+    	color: color(link);
+    	background: linear-gradient(transparent 70%, color(linkUnderline) 70%);
+    }
+ 	&:after {
+	 	content: "";
+	 	-webkit-flex: 0 0 100%;
+		flex: 0 0 100%;
+		-webkit-transform: skewY(-4deg);
+        transform: skewY(-4deg);
+        -webkit-transform-origin: 100%;
+        transform-origin: 100%;
+        background-color: color(footer);
+        height: 7vw;
+        margin-top: 8%;
+ 	}
+}
+
+.content-container {
+    -webkit-flex: 0 1 90%;
+    flex: 0 1 90%;
+    margin: 0 auto;
+	@include breakpoint(575px) {
+    	-webkit-flex: 0 1 64%;
+        flex: 0 1 64%;
+	}
+	text-align: left;
+	.big-text {
+		color: color(primaryText);
+		font: 700 5rem $defaultSans;
+		margin: -.5rem .5rem auto 0;
+		float: left;
+		&:after {
+			clear: both;
+		}
+	}
+    a:hover {
+        background: color(linkUnderline);  
+    }
+}
+
+.flex-wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 100%;
+	-webkit-justify-content: space-evenly;
+	justify-content: space-evenly;
+}
+
+a.email {
+    color: color(darkText);
 }

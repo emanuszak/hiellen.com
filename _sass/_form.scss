@@ -1,23 +1,4 @@
-.contact-wrapper {
-    -webkit-flex: 1 0 100%;
-	flex: 1 0 100%;
-	border: solid 4px color(footer);
-	border-bottom-width: 1px;
-	background-color: white;
-	padding: 1rem;
-	font-size: 1.2rem;
-	text-align:left;
-	color: color(formText);
-	h2 {
-    	font-family: $headings;
-	}
-    @include breakpoint(575px) {
-    	-webkit-flex: 0 1 45%;
-    	flex: 0 1 45%;
-    	-webkit-transform: translateY(-30%);
-		transform: translateY(-30%);
-	}
-}
+
 
 .contact-wrapper.full-screen {
     -webkit-transform: translateY(0%);
@@ -69,6 +50,9 @@
     		width: auto;
 		}
 	}
+	legend {
+    	font-size: 1px;
+	}
 	input:not([type="checkbox"]) {
     	line-height: 1.5;
 		color: color(formText);
@@ -119,8 +103,7 @@
             	background-color: color(formText);
             	color: white;
             	&:before {
-                	font-family: 'FontAwesome';
-                	content: '\f14a\00A0';
+                	content: '\2714';
             	}
         	}
     	}
@@ -130,18 +113,12 @@
     	padding: .5rem;
     	background-color: lighten(color(formText), 80%);
     	border: 1px solid lighten(color(formText), 80%);
-/*
-    	@include breakpoint(575px) {
-        	padding: 
-    	}
-*/
     	&:hover {
         	border: dashed color(formText) 1px;
         	cursor: pointer;
     	}
     	&:before {
-        	font-family: 'FontAwesome';
-        	content: '\f0c8\00A0' ;
+        	content: '\2717\00A0';
         	color: lighten(color(formText), 60%);
     	}
 	}
@@ -149,14 +126,17 @@
 		text-align: right;
 	}
 	.form-send {
-		padding: .55em;
+		padding: 1rem;
+		font-size: 1.2rem;
 		color:white;
 		outline: none;
 		&:hover {
 			cursor: pointer;
 		}
 		&#submit {
-			background-color: color(formText);
+			background-color: #fff;
+            color: color(formText);
+            border: 2px solid color(formText);
 		}
 	}
 	.form-reset, .cancel-to-home {

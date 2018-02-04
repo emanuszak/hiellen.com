@@ -1,6 +1,6 @@
 @import 'tuesday/tuesday';
 
-.logo {
+.logo-header {
     display: inline-block;
     width: 50%;
     img {
@@ -45,8 +45,8 @@
             -webkit-clip-path: polygon(0 0, 98% 0%, 99% 77%, 6% 98%);
             clip-path: polygon(0 0, 98% 0%, 99% 77%, 6% 98%);
         }
-        button {
-            font: 700 1.5rem $defaultSans;
+        a {
+            font: 700 1.6rem $defaultSans;
             color: color(contactButton);
             text-transform: uppercase;
             background: none;
@@ -55,18 +55,10 @@
             display: inline-block;
             transform: rotate(2deg);
             padding: 0;
-            &:before {
-                content: 'WORK WITH ME';
-                display: inline-block;
-                -webkit-text-stroke: 0.2rem #fff;
-                position: absolute;
-                left: 0;
-                font-weight: 700;
-                z-index: -1;
-                @supports not (-webkit-text-stroke: 0.2rem) {
-                    text-shadow: -1px -2px 0px #fff;
-                }
-            }
+            text-shadow: 1px 1px 0px white,
+                                -1px 1px white,
+                                -1px -1px white, 
+                                1px -1px white;
         }
     }
     @include breakpoint(575px) {
@@ -77,7 +69,7 @@
                 height: 24px;
                 width: calc(2rem * 7);
                 top: 8px;
-                left: -18px;
+                left: -12px;
             }
             a {
                 font: 700 1.5rem $defaultSans;
@@ -86,83 +78,11 @@
     }
 }
 
-.global-nav {
-	text-align: left;
-	-webkit-flex: 0 1 100%;
-	flex: 0 1 100%;
-    margin-right: 4%;
-    a {
-        color: color(link);
-        background: linear-gradient(transparent 70%, color(linkUnderline) 70%);
-    }
-	@include breakpoint(575px) {
-    	-webkit-flex: 0 1 24%;
-    	flex: 0 1 24%;
-		@for $i from 1 through 10 {
-    		.nav-#{$i}-animate {
-                @include animated;
-            	@include tdStampInSwing;
-            	animation-delay: 550ms + ($i * 80ms);
-        	}
-            $nav-skew: (random(10) + 4) + deg;
-            $nav-rotate: (random(5) - 5) + deg;
-        	.nav-#{$i} {
-            	width: (random(90) + 20%);
-            	min-width: 80%;
-            	max-width: 100%;
-            	-webkit-transform: skewX(-$nav-skew) rotate($nav-rotate);
-        		transform: skewX(-$nav-skew) rotate($nav-rotate);
-        		-webkit-transform-origin: 0 0;
-        		transform-origin: 0 0;
-        		a {
-            		-webkit-transform: skewX($nav-skew);
-                    transform: skewX($nav-skew);
-        		}
-        	}
-        }
-		a {
-    		display:inline-block;
-    		padding-right: 1rem;
-    		color: #fff;
-		}
-    }
-	ul {
-    	display: -webkit-flex;
-            display: -ms-flex;
-            display: flex;
-            -webkit-flex-direction: column;
-            flex-direction: column;
-            -webkit-justify-justify-content: space-between;
-            justify-content: space-between;
-	}
-	li[class|="nav"] {
-		list-style: none;
-		padding: .5rem .25rem .5rem 0;
-		font-family: $secondarySans;
-		font-weight: 700;
-		margin-bottom: 3vw;
-        a {
-            white-space: nowrap;
-            padding-left: 25%;
-        }
-    	@include breakpoint(575px) {
-        	display: block;
-			font-size: 2rem;
-			background-color: color(nav);
-			text-align: right;
-			box-shadow: 5px 5px 0 1px color(navAccent);
-			min-height: 4rem;
-			-webkit-transition: box-shadow 120ms ease-out;
-			transition: box-shadow 120ms ease-out;
-			a {
-    			background: none;
-    			padding-left: 0;
-			}
-			&:hover {
-    			box-shadow: 5px 5px 0 1px color(bgColor);
-			}
-    	}
-	}
+.new-client-status {
+    margin: 0;
+    font: 300 1.2rem $secondarySans;
+    color: color(primary);
+    
 }
 
 /*Portfolio navigation */
@@ -174,6 +94,7 @@ a.overlay-menu {
 	top: 10px;
 	right: 0;
 	line-height: 2;
+	background: linear-gradient(transparent 70%, color(linkUnderline) 70%);
 }
 a.overlay-menu_bottom {
     line-height:100px;

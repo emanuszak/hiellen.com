@@ -33,6 +33,9 @@ $portfolio: (
     a {
     	display:block;
     	background: none;
+    	&:hover {
+        	background: none;
+    	}
 	}
 	@include breakpoint (575px) {
     	margin-top: 0;
