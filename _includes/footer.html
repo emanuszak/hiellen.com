@@ -10,13 +10,14 @@
             <div class="contact-wrapper-inner">
                 <h2>Let's talk!</h2>
                 
-                <h3>Just saying hi?</h3>  
-                <p>Email me at ellen@cactus.works</p>
-                
                 <h3>Have a project?</h3>
-                <button class="open-intake-form">Tell me more about what you're working on.</button>
+                <button class="open-intake-form shadow">Tell me about what you're working on.</button>
+                
+                <h3>Just saying hi?</h3>  
+                <p class="email-me">Email me at <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
                 
                 <div class="socialmedia">
+                    <p>Or find me on social media</p>
             		{% include socialmedia.html %}
             	</div>
             </div>

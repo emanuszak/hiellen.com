@@ -2,13 +2,14 @@
 menu: main
 nav_label: main
 nav_weight: 1
+title: I'm Ellen. This is
 ---
 
 # Welcome to Cactus.Works.
 
 Cactus.Works is website and HTML email development by Ellen Manuszak.
 
-I write user interface code--HTML5, CSS3, JavaScript, WordPress.  I also wrote a book on coding responsive emails.
+I write user interface code--HTML5, CSS3, JavaScript, WordPress.  I also contributed to a book on coding responsive emails.
 
 I've done work for a Fortune 500 financial institution, a global television programming company, among others.
 

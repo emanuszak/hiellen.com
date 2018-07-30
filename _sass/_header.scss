@@ -30,20 +30,23 @@
     position: absolute;
     top: 40px;
     right: 10px;
+    &:hover {
+        cursor: pointer;
+    }
     .header-button_inner-wrapper {
         position: relative;
         &:after {
             content: '';
-            display:inline-block;
-            background-color: #fff;
+            display: inline-block;
             height: 20px;
             width: calc(2rem * 6.5);
+            background-color: #fff;
             position: absolute;
             top: 6px;
             left: -10px;
             z-index: -3;
             -webkit-clip-path: polygon(0 0, 98% 0%, 99% 77%, 6% 98%);
-            clip-path: polygon(0 0, 98% 0%, 99% 77%, 6% 98%);
+            clip-path: polygon(0 0, 98% 0%, 99% 77%, 6% 98%)
         }
         a {
             font: 700 1.6rem $defaultSans;
@@ -55,14 +58,24 @@
             display: inline-block;
             transform: rotate(2deg);
             padding: 0;
+/*
             text-shadow: 1px 1px 0px white,
                                 -1px 1px white,
                                 -1px -1px white, 
                                 1px -1px white;
+*/
+            &:before {
+                content: 'WORK WITH ME';
+                display: inline-block;
+                -webkit-text-stroke: 0.2em #fff;
+                position: absolute;
+                left: 0;
+                font-weight: 700;
+                z-index: -1
+            }
         }
     }
     @include breakpoint(575px) {
-        position:absolute;
         right: 50px;
         .header-button_inner-wrapper {
             &:after {

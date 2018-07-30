@@ -25,7 +25,7 @@ sass:
     style: compressed
     sass_dir: _sass
 
-gems: ['susy', 'breakpoint', 'jekyll-sitemap']
+plugins: ['susy', 'breakpoint', 'jekyll-sitemap']
 
 # Build settings
 markdown: kramdown
@@ -50,5 +50,3 @@ defaults:
 collections:
   portfolio:
     output: true
-    
- 

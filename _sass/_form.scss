@@ -103,7 +103,8 @@
             	background-color: color(formText);
             	color: white;
             	&:before {
-                	content: '\2714';
+                	font-family: 'FontAwesome';
+                	content: '\f14a\00A0';
             	}
         	}
     	}
@@ -118,7 +119,8 @@
         	cursor: pointer;
     	}
     	&:before {
-        	content: '\2717\00A0';
+        	font-family: 'FontAwesome';
+        	content: '\f0c8\00A0';
         	color: lighten(color(formText), 60%);
     	}
 	}

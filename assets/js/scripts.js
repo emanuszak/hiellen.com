@@ -7,12 +7,12 @@ $("a[href^='http://']").attr("target","_blank");
 //Contact Form Modal
 $('header, footer').on('click','.open-intake-form', function() {
     $('.contact-wrapper').addClass('full-screen flex-wrapper');
-    $('.contact-wrapper').load('collaborate.html .intake-form-wrapper');
+    $('.contact-wrapper').load('/collaborate.html .intake-form-wrapper');
 });
 
 $('.contact-wrapper').on('click','.form-reset', function(){
     $('.contact-wrapper').removeClass('full-screen flex-wrapper');
-    $('.contact-wrapper').load('index.html .contact-wrapper-inner');
+    $('.contact-wrapper').load('/index.html .contact-wrapper-inner');
 });
 
 $('#stand-alone-page.contact-wrapper').ready(function() {
