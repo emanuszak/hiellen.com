@@ -2,10 +2,11 @@ $portfolio: (
 	mhz: null,
 	dogr: null, 
 	eloped: null,
-	adoptee: null,
+	adoptee-citizen: null,
 	mmp: null,
 	newsletter: null,
 	stanlaw: null,
+	charet: null,
 );
 @each $project in $portfolio {
 	.#{$project} {
