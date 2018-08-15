@@ -7,6 +7,7 @@ $portfolio: (
 	newsletter: null,
 	stanlaw: null,
 	charet: null,
+	hbo: null,
 );
 @each $project in $portfolio {
 	.#{$project} {
