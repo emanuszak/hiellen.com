@@ -24,9 +24,6 @@ $portfolio: (
     margin-top: -10px;
 }
 .portfolio {
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
     -webkit-justify-content: space-between;
@@ -43,7 +40,7 @@ $portfolio: (
     	margin-top: 0;
 	}
 }
-.project-wrapper { 
+.project { 
     $skew-x: -3deg;
     $skew-y: 2deg;
     padding-left: .5rem;
@@ -57,49 +54,48 @@ $portfolio: (
     @include breakpoint (575px) {
         height: 23vh;
     }
-    .project {
+    .project-img {
         -webkit-transform: skew(-$skew-x, -$skew-y);
         transform: skew(-$skew-x, -$skew-y);
+        width: 100%;
+    	text-align: left;
+    	height: 13vh;
+    	position: absolute;
+    	top: 0;
+    	right: .45rem;
         @include breakpoint (575px) {
             -webkit-transform: skew(-$skew-x, -$skew-y);
             transform: skew(-$skew-x, -$skew-y);
+            height: 20vh;
+            top: .5rem;
         }
     }
-}
-.project-description {
-    position: absolute;
-    color: #fff;
-    bottom: 0;
-    right: 1rem;
-    font-size: 1rem;
-}
-.project {
-	width: 100%;
-	text-align: left;
- 	height: 13vh;
- 	position: absolute;
- 	top: 0;
- 	right: .45rem;
- 	@include breakpoint(575px) {
-     	height: 20vh;
-     	top: .5rem;
- 	}
-}
-.project-title {
+    .project-title {
         position: absolute;
         top: -2.5rem;
-	a, h3 {
-		font-family: $secondarySans;
-		margin: 0 0 .25rem;
-		color: color(projectTitle);
-	}
-	div {
-		display:block;
-		color: white;
-		font: 400 1em $defaultSans;
-	}
+    	a, h3 {
+    		font-family: $secondarySans;
+    		margin: 0 0 .25rem;
+    		color: color(projectTitle);
+    	}
+    	div {
+    		display:block;
+    		color: white;
+    		font: 400 1em $defaultSans;
+    	}
+    }
+    .project-stack {
+        position: absolute;
+        color: #fff;
+        bottom: 0;
+        right: 1rem;
+        font-size: 1rem;
+    }
 }
-.project-header {
+
+
+
+.case-study-header {
     width: 100%;
 	margin: 0 2rem 1rem;
 	a, span{
@@ -113,7 +109,7 @@ $portfolio: (
     	border: 5px solid color(primaryText);
 	}
 }
-.project-overview, .project-brief {
+.case-study-overview, .case-study-brief {
     -webkit-flex: 0 0 100%;
     flex: 0 0 100%;
     -webkit-transform: skewX(-4deg);
@@ -124,7 +120,7 @@ $portfolio: (
         flex: 0 0 50%;
     }
 }
-.project-overview {
+.case-study-overview {
     margin-bottom: 1rem;
     p {
         margin-bottom: 0;
@@ -136,7 +132,7 @@ $portfolio: (
         margin-bottom: 0;
     }
 }
-.project-brief {
+.case-study-brief {
 	font-family: $defaultSans;
 	background-color: color(primaryText);
 	color: color(darkText);
@@ -148,16 +144,16 @@ $portfolio: (
         transform: skewX(4deg);
     }
 }
-.project-hero, .project-details {
+.case-study-hero, .case-study-details {
     margin: 0 auto;
 }
-.project-hero {
+.case-study-hero {
 	width: 90%;
 	img {
 		display: block;
 	}
 }
-.project-details {
+.case-study-details {
 	width: 90%;
 	margin-bottom: 2rem;
 	text-align: left;

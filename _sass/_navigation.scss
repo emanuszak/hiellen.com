@@ -7,45 +7,11 @@
         color: color(link);
         background: linear-gradient(transparent 70%, color(linkUnderline) 70%);
     }
-	@include breakpoint(575px) {
-    	-webkit-flex: 0 1 20%;
-    	flex: 0 1 20%;
-		@for $i from 1 through 10 {
-    		.nav-#{$i}-animate {
-                @include animated;
-            	@include tdStampInSwing;
-            	animation-delay: 550ms + ($i * 80ms);
-        	}
-            $nav-skew: (random(10) + 4) + deg;
-            $nav-rotate: (random(5) - 5) + deg;
-        	.nav-#{$i} {
-            	width: (random(90) + 20%);
-            	min-width: 80%;
-            	max-width: 100%;
-            	-webkit-transform: skewX(-$nav-skew) rotate($nav-rotate);
-        		transform: skewX(-$nav-skew) rotate($nav-rotate);
-        		-webkit-transform-origin: 0 0;
-        		transform-origin: 0 0;
-        		a {
-            		-webkit-transform: skewX($nav-skew);
-                    transform: skewX($nav-skew);
-        		}
-        	}
-        }
-		a {
-    		display:inline-block;
-    		padding-right: 1rem;
-    		color: #fff;
-		}
-    }
 	ul {
-    	display: -webkit-flex;
-            display: -ms-flex;
-            display: flex;
-            -webkit-flex-direction: column;
-            flex-direction: column;
-            -webkit-justify-justify-content: space-between;
-            justify-content: space-between;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
 	}
 	li[class|="nav"] {
 		list-style: none;
@@ -91,5 +57,36 @@
 			}
     	}
 	}
+	@include breakpoint(575px) {
+    	-webkit-flex: 0 1 20%;
+    	flex: 0 1 20%;
+		@for $i from 1 through 10 {
+    		.nav-#{$i}-animate {
+                @include animated;
+            	@include tdStampInSwing;
+            	animation-delay: 550ms + ($i * 80ms);
+        	}
+            $nav-skew: (random(10) + 4) + deg;
+            $nav-rotate: (random(5) - 5) + deg;
+        	.nav-#{$i} {
+            	width: (random(90) + 20%);
+            	min-width: 80%;
+            	max-width: 100%;
+            	-webkit-transform: skewX(-$nav-skew) rotate($nav-rotate);
+        		transform: skewX(-$nav-skew) rotate($nav-rotate);
+        		-webkit-transform-origin: 0 0;
+        		transform-origin: 0 0;
+        		a {
+            		-webkit-transform: skewX($nav-skew);
+                    transform: skewX($nav-skew);
+        		}
+        	}
+        }
+		a {
+    		display:inline-block;
+    		padding-right: 1rem;
+    		color: #fff;
+		}
+    }
 }
 

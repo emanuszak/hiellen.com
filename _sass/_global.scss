@@ -1,6 +1,9 @@
-/* Global Styles */
-* {
+// Base
+html {
 	box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 body {
 	@extend %zeroMP;
@@ -8,7 +11,7 @@ body {
 	font: 20px/1.5 $defaultSans;
 	color: color(primaryText);
 }
- div > p:first-child, div > h1:first-child {
+div > p:first-child, div > h1:first-child {
     margin-top: 0;
 }
 button {
@@ -32,29 +35,14 @@ ul, li {
 h1 {
     font-family: $headings;
 }
-
-// Style Components
-
-.xs {
-    
-}
-.s {
-    width: 35%;
-}
-.m {
-    width: 50%;
+footer {
+	background-color: color(footer);
+	.contact-wrapper {
+    	text-align: center;
+	}
 }
 
-.logo-absolute-bottom-left {
-    bottom: 10px;
-    left: 6px;
-    @include breakpoint(575px) {
-        position: absolute;
-    }
-}
-
-// Structural Elements
-
+// Layout
 .wrapper { 
 	position: relative;
 	margin: 0 auto;
@@ -115,6 +103,23 @@ h1 {
 	justify-content: space-evenly;
 }
 
-a.email {
-    color: color(darkText);
+// Module
+.xs {
+    
 }
+.s {
+    width: 35%;
+}
+.m {
+    width: 50%;
+}
+
+.logo-absolute-bottom-left {
+    bottom: 10px;
+    left: 6px;
+    @include breakpoint(575px) {
+        position: absolute;
+    }
+}
+
+// State

@@ -5,19 +5,19 @@ nav_weight: 3
 title: Work I've Done
 ---
 
-<section class="portfolio">
+<section class="portfolio flex-wrapper">
 	{% assign portfolio_pages = site.portfolio | sort: 'project_weight' %}
 	
 	<h2 class="portfolio-category">Web</h2>
 	{% for p in portfolio_pages %}
 	    {% if p.work_type == 'web' %}
 	<a href="{{ p.url | relative_url }}">
-    	<article class="project-wrapper">
+    	<article class="project">
         	<div class="project-title">
                 <h3>{{ p.title }}</h3>
         	</div>
-    		<div class="project {{ p.name }}"></div>
-            <div class="project-description">{{ p.tech_stack }}</div>
+    		<div class="project-img {{ p.name }}"></div>
+            <div class="project-stack">{{ p.tech_stack }}</div>
     	</article>
 	</a>
 	    {% endif %}
@@ -27,12 +27,12 @@ title: Work I've Done
     {% for p in portfolio_pages %}
 	    {% if p.work_type == 'email' %}
 	<a href="{{ p.url | relative_url }}">
-    	<article class="project-wrapper">
+    	<article class="project">
         	<div class="project-title">
                 <h3>{{ p.title }}</h3>
         	</div>
-    		<div class="project {{ p.name }}"></div>
-            <div class="project-description">{{ p.tech_stack }}</div>
+    		<div class="project-img {{ p.name }}"></div>
+            <div class="project-stack">{{ p.tech_stack }}</div>
     	</article>
 	</a>
 	    {% endif %}

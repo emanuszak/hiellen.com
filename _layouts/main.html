@@ -3,7 +3,7 @@ layout: default
 ---
 
 <nav class="global-nav">
-	<ul>
+	<ul class="flex-wrapper">
 		{% assign nav_pages = site.html_pages | sort: 'nav_weight' %}
 	    {% for p in nav_pages %}
 	    	{% if p.menu == 'main' %}
@@ -13,6 +13,7 @@ layout: default
  	    	<span class="nav-4-animate"><li class="nav-4"><a href={{ "docs/emanuszak_resume.pdf" | relative_url }} rel="nofollow">resume</a></li></span>
 	</ul>
 </nav>
+
 <div class="content-container">
 	{{ content }}
 </div>

@@ -1,11 +1,12 @@
 ---
 ---
-@import 'breakpoint';
-@import 'mixins';
-@import 'accessibility';
-@import 'form';
-@import 'portfolio';
-@import 'post';
+@import 'breakpoint',
+		'mixins',
+		'accessibility',
+		'form',
+		'portfolio',
+		'post',
+		'invoice';
 
 // breakpoints
 $mobile-only: max-width 575px;
@@ -29,12 +30,4 @@ $mobile-only: max-width 575px;
 
 .opacity-50 {
     opacity: .5;
-}
-
-
-// Invoice
-.invoice-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: left;
 }

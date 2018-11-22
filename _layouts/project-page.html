@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<section class="project-header flex-wrapper">
-    <div class="project-overview">
+<section class="case-study-header flex-wrapper">
+    <div class="case-study-overview">
     	<h2>{{ page.title }}</h2>
     	{% if page.status == 'active' %}
     		<a href="http://{{ page.address }}" target="_blank">{{ page.address }}</a>
@@ -11,25 +11,24 @@ layout: default
     	<span data-status="{{ page.status }}">{{ page.status }}</span>
     	{% else %} <div></div>
     	{% endif %}
-    	<p class="project-statement">{{ page.project_description }}</p>
+    	<p class="case-study-statement">{{ page.project_description }}</p>
     </div>
 
-    <div class="project-brief flex-wrapper">
-    	<div class="project-inner-container">
+    <div class="case-study-brief flex-wrapper">
+    	<div class="case-study-inner-container">
     		<div>Deployed: {{ page.project_date }}</div>
     		<div>Platforms: {{page.project_platforms }}</div>
     		<div>Role: {{ page.project_role }}</div>
     		<div>Tech: {{ page.tech_stack }}</div>
     	</div>
     </div>
-
 </section>
 
-<div class="project-hero">
+<div class="case-study-hero">
 	<img src="/assets/img/{{page.name}}/{{page.hero_path}}">
 </div>
 
-<div class="project-details">
+<div class="case-study-details">
 	
 
 

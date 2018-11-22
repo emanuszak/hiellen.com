@@ -1,0 +1,27 @@
+// Invoice
+.page__billing {
+    margin: 0 auto;
+    text-align: left;
+    .content {
+	    max-width: 1000px;
+	    margin: auto;
+    }
+	p {
+		color: color(darkText);
+		font-family: $defaultSans;
+	}
+	a {
+		color: color(primary);
+	}
+}
+
+.invoice-wrapper {
+	position: fixed;
+	left: 2vw;
+	right: 2vw;
+	object#invoice {
+		width: 96vw;
+		height: 80vh;
+	}
+}
+
