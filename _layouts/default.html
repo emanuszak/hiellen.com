@@ -1,15 +1,16 @@
 ---
 layout: boilerplate
 ---
+
 {% include header.html %}
 
-
-<div class="wrapper flex-wrapper">
+<div class="wrapper">
 	{{ content }}
+	
 </div>
 
 {% if page.layout == 'project-page' %}
 		<a class="overlay-menu" href={{ "/work.html" | relative_url }}><i class="fa fa-arrow-left" aria-hidden="true"></i> view all work</a>
 {% endif %}
 
-{% include footer.html %}
+

@@ -17,10 +17,7 @@ $().ready(function() {
         $('.contact-wrapper').removeClass('full-screen flex-wrapper');
         $('.contact-wrapper').load('/index.html .contact-wrapper-inner');
     });
-    
-    $('#stand-alone-page.contact-wrapper').ready(function() {
-        $('button.form-reset').replaceWith("<a href='/' class='cancel-to-home'>cancel and return to Cactus.Works</a>");
-    });
+
     
     
     /*Auto resize textarea via stephanwagner.me/auto-resizing-textarea */

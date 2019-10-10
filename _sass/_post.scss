@@ -12,7 +12,7 @@ $postRotate: -3deg;
     -webkit-transform: rotate(-$postRotate);
     transform: rotate(-$postRotate);
     .post-title {
-        color: color(primary);
+        color: $color;
         margin-bottom: 0;
     }
     .post-date {

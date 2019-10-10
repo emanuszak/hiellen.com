@@ -8,10 +8,10 @@
     }
 	p {
 		color: color(darkText);
-		font-family: $defaultSans;
+		font-family: $default-sans;
 	}
 	a {
-		color: color(primary);
+		color: $color;
 	}
 }
 

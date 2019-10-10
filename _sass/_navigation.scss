@@ -1,92 +1,19 @@
 .global-nav {
-	text-align: left;
-	-webkit-flex: 0 1 100%;
-	flex: 0 1 100%;
-    margin-right: 4%;
+	ul, ol {
+		display: flex;
+		flex-flow: column;	
+		justify-content: space-between;
+		height: 80vh;
+		margin-left: .5rem;
+	}
     a {
-        color: color(link);
-        background: linear-gradient(transparent 70%, color(linkUnderline) 70%);
+        color: $color;
+//         border-bottom: 1px solid $color;
     }
-	ul {
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-justify-content: space-between;
-        justify-content: space-between;
-	}
 	li[class|="nav"] {
-		list-style: none;
-		padding: .5rem .25rem .5rem 0;
-		font-family: $secondarySans;
-		font-weight: 700;
-		margin-bottom: 3.5vw;
-        a {
-            white-space: nowrap;
-            padding-left: 25%;
-        }
-    	@include breakpoint(575px) {
-        	display: block;
-			font-size: 2rem;
-			background-color: color(nav);
-			text-align: right;
-			box-shadow: 8px 5px 0px 1px color(bgColor),
-			            0 5px 0px 1px color(bgColor),
-			            14px -5px 0 1px color(navAccent), 
-			            14px 10px 0 1px color(navAccent),
-			            0px 10px 0 1px color(navAccent),
-			            0px -5px 0 1px color(navAccent);
-            filter: drop-shadow(1px 1px transparent); //Fixes alias problem in Safari
-			min-height: 4rem;
-			-webkit-transition: all 120ms ease-out;
-			transition: all 120ms ease-out;
-			a {
-    			background: none;
-    			padding-left: 0;
-    			display: block;
-			}
-			&:hover {
-    			background-color: color(navAccent);
-    			box-shadow: 5px 5px 0px 1px color(bgColor), 
-    			            0 5px 0px 1px color(bgColor),
-    			            18px -5px 0 1px color(nav), 
-    			            18px 10px 0 1px color(nav), 
-    			            0px 10px 0 1px color(nav), 
-    			            0px -5px 0 1px color(nav);
-                a {
-                    color: color(nav);
-                }
-			}
-    	}
+		font: 400 .85rem $default-serif;		
+		padding: 0;
 	}
-	@include breakpoint(575px) {
-    	-webkit-flex: 0 1 20%;
-    	flex: 0 1 20%;
-		@for $i from 1 through 10 {
-    		.nav-#{$i}-animate {
-                @include animated;
-            	@include tdStampInSwing;
-            	animation-delay: 550ms + ($i * 80ms);
-        	}
-            $nav-skew: (random(10) + 4) + deg;
-            $nav-rotate: (random(5) - 5) + deg;
-        	.nav-#{$i} {
-            	width: (random(90) + 20%);
-            	min-width: 80%;
-            	max-width: 100%;
-            	-webkit-transform: skewX(-$nav-skew) rotate($nav-rotate);
-        		transform: skewX(-$nav-skew) rotate($nav-rotate);
-        		-webkit-transform-origin: 0 0;
-        		transform-origin: 0 0;
-        		a {
-            		-webkit-transform: skewX($nav-skew);
-                    transform: skewX($nav-skew);
-        		}
-        	}
-        }
-		a {
-    		display:inline-block;
-    		padding-right: 1rem;
-    		color: #fff;
-		}
-    }
+
 }
 

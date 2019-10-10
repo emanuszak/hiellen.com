@@ -1,5 +1,3 @@
-@import 'tuesday/tuesday';
-
 .logo-header {
     display: inline-block;
     width: 50%;
@@ -49,7 +47,7 @@
             clip-path: polygon(0 0, 98% 0%, 99% 77%, 6% 98%)
         }
         a {
-            font: 700 1.6rem $defaultSans;
+            font: 700 1.6rem $default-sans;
             color: color(contactButton);
             text-transform: uppercase;
             background: none;
@@ -85,7 +83,7 @@
                 left: -12px;
             }
             a {
-                font: 700 1.5rem $defaultSans;
+                font: 700 1.5rem $default-sans;
             }
         }
     }
@@ -93,15 +91,15 @@
 
 .new-client-status {
     margin: 0;
-    font: 300 1.2rem $secondarySans;
-    color: color(primary);
+    font: 300 1.2rem $secondary-sans;
+    color: $color;
     
 }
 
 /*Portfolio navigation */
 a.overlay-menu {
 	color: #fff;
-	font: 700 .83rem $defaultSans;
+	font: 700 .83rem $default-sans;
 	padding-right: 1rem;
 	position: absolute;
 	top: 10px;

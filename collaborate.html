@@ -1,56 +1,13 @@
 ---
-layout: boilerplate
+layout: main
 colors: white
+menu: main
+nav_label: got stuff for me to do?
+nav_weight: 4
+title: Collaborate
 ---
-<div id="stand-alone-page" class="contact-wrapper full-screen flex-wrapper">
-    <div class="intake-form-wrapper">
-        <div id="contact-form">
-        	<h2>How can I help you?</h2>
-        	<form id="contact" name="contact" method="POST" action="assets/php/mailform.php" netlify>
-        		<input type="hidden" id="honeypot">
-        		
-        		<div class="contact-form-row">
-            		<label for="name">Hi, my name is </label>
-            			<input type="text" name="name" id="name" required="">
-        		</div>
-        
-        		<fieldset>
-            		<legend class="for-screen-readers">Project type</legend>
-            		<span>I have a</span>
-            			<input type="checkbox" name="project[]" id="project_website" value="Website" class="for-screen-readers">
-            			<label for="project_website">website</label>
-            			
-            			<input type="checkbox" name="project[]" id="project_email" value="HTML Email" class="for-screen-readers">
-            			<label for="project_email">html email</label>
-            			
-            			<input type="checkbox" name="project[]" id="project_wordpress" value="WordPress" class="for-screen-readers">
-            			<label for="project_wordpress">wordpress</label>
-            			
-                    <span>project that I need</span>
-                    <div class="contact-form-row">
-                        <input type="checkbox" name="work[]" id="develop" value="develop" class="for-screen-readers">
-            			<label for="develop">developed</label>
-                        <input type="checkbox" name="work[]" id="design" value="design" class="for-screen-readers">
-            			<label for="design">designed</label>
-                    </div>
-                </fieldset> 
-                <label for="project_deadline">I'd like to launch by</label>
-                <input type="date" name="deadline" id="project_deadline" value="">
-        		<div class="contact-form-row">
-            		<label for="email">You can email me back at </label>
-            			<input type="email" name="email" id="email" required="">
-        		</div>
-        		
-        		<div id="form-messages"></div>
-        		<div class="actions">
-        			<button type="submit" id="submit" class="form-send shadow">send message</button> 
-        			<button type="reset" id="reset" class="form-reset">cancel and close</button>
-        		</div>
-        	</form>
-        </div>
-        
-        <div class="logo-absolute-bottom-left s opacity-50">
-        {% include logo-rect.html %}
-        </div>
-    </div>
-</div>
+
+<div id="contact-form">
+	<h2>What kind of stuff do you need help with?</h2>
+	{% include leads.html %}
+</div> 

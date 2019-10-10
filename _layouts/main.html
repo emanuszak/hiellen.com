@@ -2,18 +2,18 @@
 layout: default
 ---
 
+<h1 class="company">Cactus.Works</h1>
 <nav class="global-nav">
-	<ul class="flex-wrapper">
+	<ol>
 		{% assign nav_pages = site.html_pages | sort: 'nav_weight' %}
 	    {% for p in nav_pages %}
 	    	{% if p.menu == 'main' %}
-	        	<span class="nav-{{ p.nav_weight }}-animate"><li class="nav-{{ p.nav_weight }}"><a href="{{p.url | relative_url}}">{{ p.nav_label }}</a></li></span>
+	        	<li class="nav-{{ p.nav_weight }}"><a href="{{p.url | relative_url}}">{{ p.nav_label }}</a></li>
 	        {% endif %}
  	    {% endfor %}
- 	    	<span class="nav-4-animate"><li class="nav-4"><a href={{ "docs/emanuszak_resume.pdf" | relative_url }} rel="nofollow">resume</a></li></span>
-	</ul>
+	</ol>
 </nav>
 
 <div class="content-container">
 	{{ content }}
-</div>
+</div> 

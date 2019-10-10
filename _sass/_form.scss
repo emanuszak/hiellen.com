@@ -1,43 +1,14 @@
-.contact-wrapper.full-screen {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-    background-color: fade-out(white, .02);
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    overflow: scroll;
-    border-bottom-width: 4px;
-    #contact-form {
-        margin: auto;
-        border: none;
-        background-color: fade-out(white, 1);
-    }
-    
-}
-
 #contact-form {
 	position: relative;
-	font-family: $defaultSans;
-    @include breakpoint(575px) {
-        font-size: 2rem;
-        width: 80%;
-        max-width: 1000px;
-        .contact-form-row {
-        	display: inline-block;
-    	}
-    }
+	font-family: $default-sans;
 	form {
     	position: relative;
     	padding-top:2rem;
-    	@include breakpoint(575px) {
-        	position: static;
-        	padding-top: 0;
+    	fieldset {
+	    	outline: none;
+	    	border: none;
+	    	padding: 0;
     	}
-	}
-	h2 {
-		margin-top: 0;
 	}
 	label, input:not([type="checkbox"]), legend, span {
 		display: block;
@@ -48,82 +19,83 @@
     		width: auto;
 		}
 	}
-	legend {
-    	font-size: 1px;
-	}
 	input:not([type="checkbox"]) {
     	line-height: 1.5;
-		color: color(formText);
+		color: $color;
 		outline: none;
 		padding: .2rem .5rem;
-		@include breakpoint(575px) {
-    		width: auto;
-		}
+
 	}
 	input {
-    	font: 700 1.5rem $defaultSerif;
-    	background-color: lighten(color(formText), 80%);
-		border: 1px solid white;
-    	@include breakpoint(575px) {
-        	margin: 0 0 1rem;
-    	}
-		&:focus {
-			border: dashed color(formText) 1px;
-		}
+    	font: 700 1.5rem $default-serif;
+    	background-color: lighten($color, 80%);
+		border: 1px solid $color;
 	}
-	fieldset {
-    	border: none;
-        outline: none;
-        padding: 0 0 1rem;
-        .contact-form-row {
-            padding-top: 1rem;
-            label {
-                display: inline-block;
-                width: 48%;
-            }
-            input {
-                width: 1px;
-            }
-            @include breakpoint(575px) {
-                label {
-                    display: inline-block;
-                    width: auto;
-                }
-            }
-        }
+	label {
+		margin-bottom: 2rem;
 	}
+	label, span {
+		font-weight: 400;
+	}
+
 	input[type="checkbox"] {
-    	&:focus + label {
-        	border: dashed color(formText) 1px;
-    	}
+		+ label {
+			position: relative;
+			font-family: $default-serif;
+			margin-left: 2rem;
+			border-style: solid;
+			border-width: 1px;
+			border-color: white white $color white;
+			&:before {
+				content: '';
+		    	border: 1px solid $color;
+		    	width: 1.5rem;
+		    	height: 1.5rem;
+		    	display: inline-block;
+	        	color: $color;
+	        	position: absolute;
+	        	left: -2rem;
+	        	top: 25%;
+	    	}
+	    	&:hover {
+	        	cursor: pointer;
+	    	}
+		}
     	&:checked {
         	+ label {
-            	background-color: color(formText);
-            	color: white;
-            	&:before {
-                	font-family: 'FontAwesome';
-                	content: '\f14a\00A0';
+	        	font-weight: 700;
+            	&:after {
+                	content: '\2713';
+                	position: absolute;
+                	top: 0;
+                	left: -2rem;
+                	font-size: 2rem;
             	}
         	}
     	}
 	}
-	input[type="checkbox"] + label {
-    	font-family: $defaultSerif;
-    	padding: .5rem;
-    	background-color: lighten(color(formText), 80%);
-    	border: 1px solid lighten(color(formText), 80%);
-    	&:hover {
-        	border: dashed color(formText) 1px;
-        	cursor: pointer;
-    	}
-    	&:before {
-        	font-family: 'FontAwesome';
-        	content: '\f0c8\00A0';
-        	color: lighten(color(formText), 60%);
-    	}
+	input:focus, input:focus + label {
+		border: dashed $color 1px;
 	}
+
 	.actions {
 		text-align: right;
+		margin-top: 2rem;
+		#submit, #reset {
+			background-color: #fff;
+            color: $color;
+		}
+		#submit {
+			border: 2px solid $color;
+			&:hover {
+				background-color: $color;
+				color: white;
+				font-family: $default-serif;
+			}
+		}
+		#reset {
+			margin-left: 1rem;
+		}
 	}
 	.form-send {
 		padding: 1rem;
@@ -133,27 +105,6 @@
 		&:hover {
 			cursor: pointer;
 		}
-		&#submit {
-			background-color: #fff;
-            color: color(formText);
-            border: 2px solid color(formText);
-		}
-	}
-	.form-reset, .cancel-to-home {
-    	color: color(primary);
-    	position: absolute;
-    	left: 0;
-    	top: -1rem;
-    	@include breakpoint(575px) {
-        	left:auto;
-        	right: 4px;
-            top: 4px;
-    	}
-	}
-	.form-reset {
-    	transition: none;
-    	padding: 0;
-    	background-color: fade-out(white, 1);
 	}
 	.cancel-to-home {
     	font-size: 1rem;

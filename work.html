@@ -1,40 +1,17 @@
 ---
 menu: main
-nav_label: portfolio
+nav_label: some stuff i've done
 nav_weight: 3
-title: Work I've Done
+title: Cactus.Work
 ---
 
-<section class="portfolio flex-wrapper">
-	{% assign portfolio_pages = site.portfolio | sort: 'project_weight' %}
-	
-	<h2 class="portfolio-category">Web</h2>
-	{% for p in portfolio_pages %}
-	    {% if p.work_type == 'web' %}
-	<a href="{{ p.url | relative_url }}">
-    	<article class="project">
-        	<div class="project-title">
-                <h3>{{ p.title }}</h3>
-        	</div>
-    		<div class="project-img {{ p.name }}"></div>
-            <div class="project-stack">{{ p.tech_stack }}</div>
-    	</article>
-	</a>
-	    {% endif %}
-	{% endfor %}
-	
-	<h2 class="portfolio-category">Responsive Email</h2>
-    {% for p in portfolio_pages %}
-	    {% if p.work_type == 'email' %}
-	<a href="{{ p.url | relative_url }}">
-    	<article class="project">
-        	<div class="project-title">
-                <h3>{{ p.title }}</h3>
-        	</div>
-    		<div class="project-img {{ p.name }}"></div>
-            <div class="project-stack">{{ p.tech_stack }}</div>
-    	</article>
-	</a>
-	    {% endif %}
-	{% endfor %}
-</section> 
+<section class="work">
+	Custom Marketo templates
+	Custom WordPress theme
+</section>
+
+<section class="clients">
+	J.P. Morgan
+	HBO
+	MHz Networks
+</section>

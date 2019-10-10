@@ -1,32 +1,11 @@
 /* VARIABLES and PLACEHOLDERS */
 
-$colors: (
-	primaryText: #fff,
-	darkText: #101e2c,
-	primary: #e51041, //vividpink alternative #ea1851
-	lightAccent: #fff,
-	bgColor: #101e2c,
-	contactButton: #101e2c,
-	nav: #e51041,
-	navAccent: #fff,
-	footer: #e51041,
-	footerAccent: #101e2c,
-	formText: #101e2c,
-	projectTitle: #fff,
-	link: #fff,
-	linkUnderline: #e51041,
-	postBackground: #fff,
-	postAccent: #e51041,
-	postText: #101e2c,
-	tagsColor: #101e2c,
-	contactButtonBg: #e51041,
-	boxShadow: #101e2c,
-);
+$color: #e51041;
 
 
-$defaultSerif: 'Roboto Slab', 'Palatino', serif;
-$defaultSans: 'Lato', 'Trebuchet MS', sans-serif;
-$secondarySans: 'Roboto Condensed', 'Futura', sans-serif;
+$default-serif: 'Roboto Mono', 'Palatino', serif;
+$default-sans: 'Roboto', Helvetica, Arial, sans-serif;
+$secondary-sans: 'Roboto Condensed', 'Futura', 'Arial Narrow', sans-serif;
 $headings: 'Roboto Condensed', sans-serif;
 
 /* MIXINS and FUNCTIONS */
@@ -37,16 +16,7 @@ $headings: 'Roboto Condensed', sans-serif;
 %clearFix {
 	clear:both;
 }
-@function color($key) {
-	@if map-has-key($colors, $key) {
-		@return map-get($colors, $key);
-	}
-}
-@function font($key) {
-	@if map-has-key($fonts, $key) {
-		@return map-get($fonts, $key);
-	}
-}
+
 @mixin square($hw) {
 	height: $hw;
 	width: $hw;

@@ -11,24 +11,53 @@ $portfolio: (
 );
 @each $project in $portfolio {
 	.#{$project} {
-   		$opacity: .7;
-    	background: linear-gradient(to bottom, rgba(20,20,83,$opacity), rgba(20,20,83,$opacity)),
-    				url('../img/#{$project}/#{$project}_thumb.png') no-repeat center top / cover;
-     	background-blend-mode: multiply, luminosity;
+		//linear-gradient(to top, rgba($color, .4), rgba($color, .6)),
+    	background: 
+    				url('../img/#{$project}/#{$project}-hero.png') no-repeat center / cover;
+		filter: saturate(180%) contrast(120%);
     }
 }
+
+// Work Page Styles
+
 .portfolio-category {
-    font-family: $secondarySans;
-    color:color(primary);
-    margin-bottom: 50px;
-    margin-top: -10px;
+    font-family: $secondary-sans;
+    color:$color;
 }
 .portfolio {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    margin-top: 12vw;
+    .project-wrapper {
+		display: flex;
+		flex-flow: row wrap; 
+		justify-content: space-between;
+		align-content: space-between;
+		margin-right: .85%;
+		margin-bottom: 100px;
+		.project {
+		    position: relative;
+		    border: 1px solid $color;
+		    padding: 3%;
+		    margin-bottom: 3%;
+		    .project-img {
+				width: 400px;
+				height: 200px; 
+		    }
+		    .project-title {
+		        color: #fff;
+		        background-color: $color;
+		        font-family: $default-sans;
+		    	margin: 0;
+		    }
+		    .project-stack {
+		        color: $color;
+		        font-family: $default-serif;
+		        font-size: 1rem;
+		        background-color: #fff;
+		        position: absolute;
+		        top: 0;
+		        right: 0;
+		    }
+		}  
+    }
     a {
     	display:block;
     	background: none;
@@ -36,132 +65,58 @@ $portfolio: (
         	background: none;
     	}
 	}
-	@include breakpoint (575px) {
-    	margin-top: 0;
-	}
-}
-.project { 
-    $skew-x: -3deg;
-    $skew-y: 2deg;
-    padding-left: .5rem;
-    background: color(primary);
-    height: 16vh;
-    position: relative;
-    -webkit-transform: skew($skew-x, $skew-y) rotate(-3deg);
-    transform: skew($skew-x, $skew-y) rotate(-3deg);
-    box-shadow: 1px 1px 0 15px color(lightAccent);
-    margin-bottom: 5rem;
-    @include breakpoint (575px) {
-        height: 23vh;
-    }
-    .project-img {
-        -webkit-transform: skew(-$skew-x, -$skew-y);
-        transform: skew(-$skew-x, -$skew-y);
-        width: 100%;
-    	text-align: left;
-    	height: 13vh;
-    	position: absolute;
-    	top: 0;
-    	right: .45rem;
-        @include breakpoint (575px) {
-            -webkit-transform: skew(-$skew-x, -$skew-y);
-            transform: skew(-$skew-x, -$skew-y);
-            height: 20vh;
-            top: .5rem;
-        }
-    }
-    .project-title {
-        position: absolute;
-        top: -2.5rem;
-    	a, h3 {
-    		font-family: $secondarySans;
-    		margin: 0 0 .25rem;
-    		color: color(projectTitle);
-    	}
-    	div {
-    		display:block;
-    		color: white;
-    		font: 400 1em $defaultSans;
-    	}
-    }
-    .project-stack {
-        position: absolute;
-        color: #fff;
-        bottom: 0;
-        right: 1rem;
-        font-size: 1rem;
-    }
 }
 
 
+// Project Page Styles
 
-.case-study-header {
-    width: 100%;
-	margin: 0 2rem 1rem;
-	a, span{
-		font-family: $defaultSans;
-	}
-	h2 {
-		line-height: 1.5;
-		margin: 0;
-	}
-	> div {
-    	border: 5px solid color(primaryText);
-	}
+
+
+.case-study__wrapper {
+	display: grid;
+	grid-template: repeat(1fr) / repeat(1fr);
+	grid-gap: 1rem;
 }
-.case-study-overview, .case-study-brief {
-    -webkit-flex: 0 0 100%;
-    flex: 0 0 100%;
-    -webkit-transform: skewX(-4deg);
-    transform: skewX(-4deg);
+
+.case-study__overview {
+    border: solid 1px $color;
     padding: 1rem;
-    @include breakpoint(575px) {
-        -webkit-flex: 0 0 50%;
-        flex: 0 0 50%;
-    }
-}
-.case-study-overview {
-    margin-bottom: 1rem;
-    p {
-        margin-bottom: 0;
-    }
+    position: relative;
     h2 {
-        font-family: $secondarySans;
+        font-family: $secondary-sans;
     }
-    @include breakpoint(575px) {
-        margin-bottom: 0;
-    }
-}
-.case-study-brief {
-	font-family: $defaultSans;
-	background-color: color(primaryText);
-	color: color(darkText);
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	.project-inner-container {
-    	-webkit-transform: skewX(4deg);
-        transform: skewX(4deg);
+    a {
+		text-decoration: underline;
+		color: $color;
+	}
+    &:after {
+	    content: '';
+	    position: absolute;
+	    left: .5rem;
+	    right: -1rem;
+	    bottom: -1rem;
+	    top: .5rem;
+	    border: 1px solid $color;
     }
 }
-.case-study-hero, .case-study-details {
-    margin: 0 auto;
+.case-study__brief {
+	font-family: $default-sans;
+	text-align: left;
+	align-self: end;
 }
-.case-study-hero {
-	width: 90%;
+.case-study__hero {
+	grid-column: 3 / span 2;
 	img {
-		display: block;
+		visibility: hidden;
 	}
 }
-.case-study-details {
-	width: 90%;
-	margin-bottom: 2rem;
-	text-align: left;
+.case-study__details {
+	grid-column: 1 / span 4;
 	p {
 		margin: 1rem;
 	}
 	h3 {
-        font-family: $secondarySans;
+        font-family: $secondary-sans;
     }
 	figure {
     	float:right;
