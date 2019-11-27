@@ -48,5 +48,5 @@ defaults:
       category: "blog"
 
 collections:
-  portfolio:
+  examples:
     output: true

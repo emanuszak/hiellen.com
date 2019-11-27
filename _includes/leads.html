@@ -1,13 +1,8 @@
 <form action="https://service.capsulecrm.com/service/newlead" method="post" id="contact" name="contact">
 	<input type="hidden" name="FORM_ID" value="89d8e82e-b7ea-47fd-b54d-d93532459b7a">
-	<input type="hidden" name="COMPLETE_URL" value="http://cactus.works">
+	<input type="hidden" name="COMPLETE_URL" value="http://cactus.works/contact-next">
 	<input type="hidden" name="TAG" value="Website Lead">
 	<input type="hidden" name="DEVELOPER" value="TRUE"/>
-	
-	<div class="contact-form-row">
-		<label for="name">Hi, my name is </label>
-		<input type="text" name="PERSON_NAME" id="name" required="">
-	</div>
 	
 	<fieldset>
 		<legend class="for-screen-readers">Project type</legend>
@@ -27,20 +22,31 @@
 	        <input type="checkbox" name="CUSTOMFIELD[Work Type]" id="develop" value="develop" class="for-screen-readers">
 			<label for="develop">developed</label>
 	        <input type="checkbox" name="CUSTOMFIELD[Work Type]" id="design" value="design" class="for-screen-readers">
-			<label for="design">designed</label>
+			<label for="design">designed</label>.
 	    </div>
 	</fieldset> 
 	<label for="project_deadline">I'd like to launch by</label>
 	<input type="date" name="CUSTOMFIELD[Deadline]" id="project_deadline" value="">
 	
 	<div class="contact-form-row">
+		<label for="name">My name is </label>
+		<input type="text" name="PERSON_NAME" id="name" required="">
+	</div>
+	
+	<div class="contact-form-row">
 		<label for="email">You can email me back at </label>
 			<input type="email" name="EMAIL" id="email" required="">
 	</div>
 	
+	<div class="contact-form-row small-print">
+		<input type="checkbox" name="CUSTOMFIELD[Consent for email marketing]" value="TRUE" id="consent" class="for-screen-readers"/>
+		<label for="consent">Check this box to get occasional (never spam!) emails or newsletters from me.</label>
+	</div>
+
+	
 	<div class="actions">
 		<button type="submit" id="submit" class="form-send shadow">send message</button> 
-		<button type="reset" id="reset" class="form-reset">cancel and close</button>
+		<button type="reset" id="reset" class="form-reset">clear form</button>
 	</div>
 
 	

@@ -5,10 +5,20 @@ nav_weight: 3
 title: Cactus.Work
 ---
 
-<section class="work">
-	Custom Marketo templates
-	Custom WordPress theme
-</section>
+<h1>Some stuff I've done</h1>
+
+<section class="portfolio flex-wrapper">
+	{% assign portfolio_pages = site.examples | sort: 'project_weight' %}
+	{% for p in portfolio_pages %}
+	<a href="{{ p.url | relative_url }}">
+    	<article class="project">
+        	<div class="project-title">
+                <h3>{{ p.title }}</h3>
+        	</div>
+    	</article>
+	</a>
+	{% endfor %}
+</section> 
 
 <section class="clients">
 	J.P. Morgan

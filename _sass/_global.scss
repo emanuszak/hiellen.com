@@ -52,7 +52,7 @@ h1.company {
 	height: 100%;
 	display: grid;
 	grid-template-columns: 1fr 2fr 8fr;
-	grid-column-gap: .25rem;
+	grid-column-gap: .5rem;
 	grid-template-rows: 1fr;
 	
 }
@@ -63,17 +63,17 @@ h1.company {
 
 .content-container {
 	text-align: left;
-	padding: 1rem;
+	padding: 1rem 2rem;
 	grid-column: 3;
 	display: grid;
 	padding-right: 4vw;
+	align-content: start;
     a:hover {
         background: $color;  
     }
-}
-
-#contact-form {
-	grid-column: 3 / 5;
+    h1 {
+	    text-align: right;
+    }
 }
 
 

@@ -5,32 +5,13 @@ layout: main
 <section class="case-study__wrapper">
     <div class="case-study__overview">
     	<h2>{{ page.title }}</h2>
-    	{% if page.status == 'active' %}
-    		<a href="http://{{ page.address }}" target="_blank">{{ page.address }}</a>
-    	{% else if page.status == 'inactive' %}
-    	<span data-status="{{ page.status }}">{{ page.status }}</span>
-    	{% else %} <div></div>
-    	{% endif %}
     	<p class="case-study__statement">{{ page.project_description }}</p>
     </div>
 
-    <div class="case-study__brief">
-    	<div class="case-study__inner-container">
-    		<div>Deployed: {{ page.project_date }}</div>
-    		<div>Platforms: {{page.project_platforms }}</div>
-    		<div>Role: {{ page.project_role }}</div>
-    		<div>Tech: {{ page.tech_stack }}</div>
-    	</div>
-    </div>
-    
-	<div class="case-study__hero {{ page.name }}">
-		<img src="/assets/img/{{page.name}}/{{page.hero_path}}">
-	</div>
 	
 	<div class="case-study__details">
 	
 		{{ content }}
-		
-		<a class="overlay-menu_bottom" href={{ "/work.html" | relative_url }}><i class="fa fa-arrow-left" aria-hidden="true"></i> back to view all work</a>
+
 	</div>
 </section>
