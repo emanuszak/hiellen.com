@@ -6,3 +6,4 @@ transport.php
 _psds/
 _drafts/
 .DS_Store
+.jekyll-cache
