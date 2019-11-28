@@ -1,14 +1,16 @@
 ---
 menu: main
-title: "About Ellen"
-nav_label: about ellen
+title: "About Me"
+nav_label: about
 nav_weight: 2
 ---
 
-# Hi, I'm Ellen. 
+# About Me
 
-My favorite question to ask is "why?"  It's been a major guiding principle throughout my career; even more importantly in my work as a developer and UX practitioner. 
+It's not about me, it's about you:
 
-In a former life I was a publicist for books, video games, and tech startups, but building things on the web has always been what I want to do.
+Your project, your objectives, your needs.
 
-On a snowy day you'll find me knitting, playing video games, or making things in the kitchen; on a sunny day I run long distance, ride my bike around Brooklyn, and occasionally venture to Staten Island for golf.
+I build websites, emails, and online user experiences.  But more than that, I build tools that can go to work for you.  You won't get templated work from me (unless you ask for a template!).  I'll listen to what problems you face today and your hopes for the future, then deliver web assets created to meet your goals and no one else's.  You'll then have functional web assets built to serve your needs for a long time. 
+
+Because everything I do, I do it for you.
