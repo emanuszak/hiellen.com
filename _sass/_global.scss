@@ -44,6 +44,9 @@ h1.company {
 	transform: translateX(-4.25rem) rotate(180deg);
 	text-align: right;
 	margin:0;
+	a {
+		text-decoration:none;
+	}
 }
 
 

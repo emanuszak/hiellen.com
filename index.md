@@ -1,7 +1,4 @@
 ---
-menu: main
-nav_label: home
-nav_weight: 1
 title: I'm Ellen. This is
 ---
 
