@@ -15,18 +15,13 @@ layout: default
     </div>
 
     <div class="case-study-brief flex-wrapper">
-    	<div class="case-study-inner-container">
-    		<div>Deployed: {{ page.project_date }}</div>
-    		<div>Platforms: {{page.project_platforms }}</div>
-    		<div>Role: {{ page.project_role }}</div>
-    		<div>Tech: {{ page.tech_stack }}</div>
-    	</div>
+		<div class="case-study-hero">
+			<img src="/assets/img/{{page.name}}/{{page.hero_path}}">
+		</div>
     </div>
 </section>
 
-<div class="case-study-hero">
-	<img src="/assets/img/{{page.name}}/{{page.hero_path}}">
-</div>
+
 
 <div class="case-study-details">
 	

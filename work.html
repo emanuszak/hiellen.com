@@ -9,6 +9,8 @@ title: Work I've Done
 	{% assign portfolio_pages = site.portfolio | sort: 'project_weight' %}
 	
 	<h2 class="portfolio-category">Web</h2>
+	
+	<div class="portfolio_group">
 	{% for p in portfolio_pages %}
 	    {% if p.work_type == 'web' %}
 	<a href="{{ p.url | relative_url }}">
@@ -22,8 +24,10 @@ title: Work I've Done
 	</a>
 	    {% endif %}
 	{% endfor %}
+	</div>
 	
 	<h2 class="portfolio-category">Responsive Email</h2>
+	<div class="portfolio_group">
     {% for p in portfolio_pages %}
 	    {% if p.work_type == 'email' %}
 	<a href="{{ p.url | relative_url }}">
@@ -37,4 +41,5 @@ title: Work I've Done
 	</a>
 	    {% endif %}
 	{% endfor %}
-</section> 
+	</div>
+</section>  

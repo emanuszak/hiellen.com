@@ -13,7 +13,7 @@ $portfolio: (
 	.#{$project} {
    		$opacity: .7;
     	background: linear-gradient(to bottom, rgba(20,20,83,$opacity), rgba(20,20,83,$opacity)),
-    				url('../img/#{$project}/#{$project}_thumb.png') no-repeat center top / cover;
+    				url('../img/#{$project}/#{$project}-hero.png') no-repeat center / cover;
      	background-blend-mode: multiply, luminosity;
     }
 }
@@ -26,15 +26,24 @@ $portfolio: (
 .portfolio {
     -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    margin-top: 12vw;
-    a {
+}
+.portfolio_group {
+	display: flex;
+	flex-wrap: wrap;
+	a {
     	display:block;
     	background: none;
+    	flex: 0 1 100%;
+    	-webkit-justify-content: space-between;
+		justify-content: space-between;
+		margin-right: 10%;
     	&:hover {
         	background: none;
     	}
+    	@include breakpoint (575px) {
+	    	flex: 0 1 40%;
+    	}
+    	
 	}
 	@include breakpoint (575px) {
     	margin-top: 0;
@@ -45,28 +54,27 @@ $portfolio: (
     $skew-y: 2deg;
     padding-left: .5rem;
     background: color(primary);
-    height: 16vh;
+    height: 24vh;
     position: relative;
     -webkit-transform: skew($skew-x, $skew-y) rotate(-3deg);
     transform: skew($skew-x, $skew-y) rotate(-3deg);
     box-shadow: 1px 1px 0 15px color(lightAccent);
     margin-bottom: 5rem;
     @include breakpoint (575px) {
-        height: 23vh;
+        height: 40vh;
     }
     .project-img {
         -webkit-transform: skew(-$skew-x, -$skew-y);
         transform: skew(-$skew-x, -$skew-y);
         width: 100%;
     	text-align: left;
-    	height: 13vh;
+    	height: 100%;
     	position: absolute;
     	top: 0;
     	right: .45rem;
         @include breakpoint (575px) {
             -webkit-transform: skew(-$skew-x, -$skew-y);
             transform: skew(-$skew-x, -$skew-y);
-            height: 20vh;
             top: .5rem;
         }
     }
