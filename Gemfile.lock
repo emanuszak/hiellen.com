@@ -140,7 +140,7 @@ DEPENDENCIES
   susy (~> 2.2, >= 2.2.12)
 
 RUBY VERSION
-   ruby 2.3.6p384
+   ruby 2.7.0p0
 
 BUNDLED WITH
-   1.17.1
+   2.1.2
