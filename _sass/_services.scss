@@ -1,0 +1,41 @@
+section[class^="services"] {
+	ul {
+		display: flex;
+	}
+	li {
+		list-style-type: none;
+		flex: 0 1 auto;
+		margin: 0 1rem;
+		padding: 2rem;
+		font-size: 1.12rem;
+		&.service--service {
+			background-color: $color;
+			color: white;
+			position: relative;
+			button {
+				background-color: white;
+				color: $color;
+			}
+		}
+		&.service--product {
+			border: 1px solid $color;
+			position: relative;
+			button {
+				background-color: $color;
+				color: white;
+			}
+			&:after {
+			    content: '';
+			    position: absolute;
+			    left: .5rem;
+			    right: -1rem;
+			    bottom: -1rem;
+			    top: .5rem;
+			    border: 1px solid $color;
+		    }
+		}
+	}
+	button {
+		display: block;
+	}
+}

@@ -7,6 +7,8 @@ title: Cactus.Work
 
 <h1>Some stuff I've done</h1>
 
+<p>See case studies for the sorts of problems I've solved on behalf of my clients.</p>
+
 <section class="portfolio flex-wrapper">
 	{% assign portfolio_pages = site.examples | sort: 'project_weight' %}
 	{% for p in portfolio_pages %}
@@ -18,10 +20,12 @@ title: Cactus.Work
     	</article>
 	</a>
 	{% endfor %}
+	
 </section> 
 
 <section class="clients">
 	J.P. Morgan
 	HBO
 	MHz Networks
+	<i class="fas fa-hat-cowboy"></i>
 </section>

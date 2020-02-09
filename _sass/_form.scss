@@ -91,6 +91,31 @@ input:focus, input:focus + label {
 	}
 }
 
+input#develop:checked ~ .hideshow {
+	display: block;
+}
+input#develop ~ .hideshow, input#design:checked ~ .hideshow {
+	display: none;
+}
+input#develop ~ .hideshow {
+	border: 1px solid $color;
+	margin-bottom: 4rem;
+	padding: 2rem;
+	position: relative;
+	label {
+		margin-bottom: 0;
+	}
+	&:after {
+	    content: '';
+	    position: absolute;
+	    left: .5rem;
+	    right: -1rem;
+	    bottom: -1rem;
+	    top: .5rem;
+	    border: 1px solid $color;
+    }
+}
+
 .actions {
 	text-align: right;
 	margin-top: 2rem;

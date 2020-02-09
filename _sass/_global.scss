@@ -29,9 +29,7 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-li {
-	list-style-type: decimal-leading-zero;
-}
+
 h1 {
     font-family: $headings;
 }
@@ -41,7 +39,7 @@ h1.company {
 	text-transform: uppercase;
 	letter-spacing: 1rem;
 	writing-mode: vertical-lr;
-	transform: translateX(-4.25rem) rotate(180deg);
+	transform: translateX(-4.75vw) rotate(180deg);
 	text-align: right;
 	margin:0;
 	a {
@@ -78,25 +76,3 @@ h1.company {
 	    text-align: right;
     }
 }
-
-
-// Module
-.xs {
-    
-}
-.s {
-    width: 35%;
-}
-.m {
-    width: 50%;
-}
-
-.logo-absolute-bottom-left {
-    bottom: 10px;
-    left: 6px;
-    @include breakpoint(575px) {
-        position: absolute;
-    }
-}
-
-// State
