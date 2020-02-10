@@ -1,8 +1,10 @@
 ---
+layout: main
 menu: main
 nav_label: stuff about me
-nav_weight: 5
+nav_weight: 1
 title: Stuff about me
+excerpt: about myself and Cactus.Works
 ---
 
 # Stuff about me

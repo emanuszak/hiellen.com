@@ -1,0 +1,22 @@
+---
+layout: home
+title: I'm Ellen. This is
+---
+
+<h2>Code and stuff.</h2>
+
+<p>Cactus.Works is an independent web development shop in Brooklyn, New York. I specialize in user interface code (what makes the stuff visitors see when they go to your site), and responsive html emails.</p>
+
+<nav class="nav__home">
+	<ul>
+		{% assign nav_pages = site.pages | sort: 'nav_weight' %}
+		{% for p in nav_pages %}
+			{% if p.menu == 'main' %}
+		    	<li><a href="{{p.url | relative_url}}">
+			    	<h4>{{ p.nav_label }}</h4>
+			    	<p>{{ p.excerpt }}</p>
+		    	</a></li>
+		    {% endif %}
+		{% endfor %}
+	</ul>
+</nav>

@@ -7,7 +7,8 @@ body {
 	@extend %zeroMP;
 	background: #fff;
 	font: 300 20px/1.5 $default-sans;
-	color: $color
+	color: $color;
+	display: flex;
 }
 div > p:first-child, div > h1:first-child {
     margin-top: 0;
@@ -30,31 +31,19 @@ img {
 	height: auto;
 }
 
-h1 {
+h2 {
     font-family: $headings;
-}
-
-h1.company {
-	font-size: 4rem;
-	text-transform: uppercase;
-	letter-spacing: 1rem;
-	writing-mode: vertical-lr;
-	transform: translateX(-4.75vw) rotate(180deg);
-	text-align: right;
-	margin:0;
-	a {
-		text-decoration:none;
-	}
 }
 
 
 // Layout
 .wrapper { 
+	flex: 1 1 auto;
 	height: 100%;
 	display: grid;
-	grid-template-columns: 1fr 2fr 8fr;
+	grid-template-columns: 2fr 8fr;
 	grid-column-gap: .5rem;
-	grid-template-rows: 1fr;
+// 	grid-template-rows: 1fr;
 	
 }
 
@@ -62,10 +51,27 @@ h1.company {
 	border: 1px solid $color;
 }
 
+.header__global {
+	flex: 0 0 10%;
+	min-width: 5vw;
+	h1.company {
+		font-size: 4rem;
+		text-transform: uppercase;
+		letter-spacing: 1rem;
+		writing-mode: vertical-lr;
+		transform: translateX(-3.25vw) rotate(180deg);
+		text-align: right;
+		margin:0;
+		a {
+			text-decoration:none;
+		}
+	}
+}
+
 .content-container {
 	text-align: left;
 	padding: 1rem 2rem;
-	grid-column: 3;
+	grid-column: 2;
 	display: grid;
 	padding-right: 4vw;
 	align-content: start;
@@ -74,5 +80,8 @@ h1.company {
     }
     h1 {
 	    text-align: right;
+    }
+    h2 {
+	    text-transform: capitalize;
     }
 }

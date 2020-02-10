@@ -16,12 +16,15 @@
 
         </style>
         <link href={{ "/assets/css/style.css" | relative_url }} type="text/css" rel="stylesheet">
-		<title>{{ page.title }} | Cactus.Works</title>
-		<script src="https://use.fontawesome.com/c4dd1b7b3c.js" async defer></script>
+		<title>{{ page.nav_label }} | Cactus.Works</title>
     </head>
 
 	<body>
+		{% include header.html %}
+		
+		<main class="wrapper">
 		{{ content }}
+		</main>
 	
 	<script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
