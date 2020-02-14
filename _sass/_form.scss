@@ -74,30 +74,14 @@ input[type="checkbox"] {
 input:focus, input:focus + label {
 	border: dashed $color 1px;
 }
-.small-print {
-	input[type="checkbox"] {
-		+ label {
-			border-color: white;
-			font-size: 1rem;
-			&:before {
-				top: 0;
-			}
-		}
-		&:checked {
-			+ label:after {
-				top: -50%;
-			}
-		}
-	}
-}
 
-input#develop:checked ~ .hideshow {
+input#work_develop:checked ~ .hideshow {
 	display: block;
 }
-input#develop ~ .hideshow, input#design:checked ~ .hideshow {
+input#work_develop ~ .hideshow, input#work_design:checked ~ .hideshow {
 	display: none;
 }
-input#develop ~ .hideshow {
+input#work_develop ~ .hideshow {
 	border: 1px solid $color;
 	margin-bottom: 4rem;
 	padding: 2rem;
@@ -114,6 +98,22 @@ input#develop ~ .hideshow {
 	    top: .5rem;
 	    border: 1px solid $color;
     }
+}
+.small-print {
+	input[type="checkbox"] {
+		+ label {
+			border-color: white;
+			font-size: 1rem;
+			&:before {
+				top: 0;
+			}
+		}
+		&:checked {
+			+ label:after {
+				top: -50%;
+			}
+		}
+	}
 }
 
 .actions {
