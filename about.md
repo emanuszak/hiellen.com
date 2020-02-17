@@ -9,11 +9,9 @@ excerpt: about myself and Cactus.Works
 
 # Stuff about me
 
-It's actually not about me, it's about you:
+It's actually not about me, it's about you: <b>Your project, your objectives, your needs.</b>
 
-Your project, your objectives, your needs.
-
-I'll listen to your current problems and what you hope for in the future, then deliver websites and emails created to meet your goals and no one else's.  You'll have functional web assets built to serve your needs for a long time. 
+I'll listen to your current problems and your future desires, then deliver websites and emails developed specifically to meet your goals and no one else's.  You'll have functional web assets built to serve your needs for a long time. 
 
 
 [Learn more about what kind of stuff I can do for you](/services.html)
