@@ -7,23 +7,70 @@ form {
     	padding: 0;
 	}
 }
-label, input:not([type="checkbox"]), legend, span {
+
+#general_contact, #lead_contact {
+	display: none;
+}
+#form--estimate + label, #form--general + label {
+	text-align: center;
+	margin: 0 .25rem;
+	padding: 1rem 0;
+	font-family: $default-serif;
+	border-style: solid;
+	border-color: $color;
+}
+#form--estimate, #form--estimate + label {
+	border-width: 0 0 1px 1px;
+}
+#form--estimate {
+	&:checked {
+		+ label {
+			background-color: $color;
+			color: white;
+		}
+		~ #lead_contact {
+			display: block;
+		}
+		~ #general_contact {
+			display: none;
+		}
+	}
+}
+#form--general, #form--general + label {
+	border-width: 1px 1px 0 0 ;
+}
+#form--general {
+	&:checked {
+		+ label {
+			background-color: $color;
+			color: white;
+		}
+		~ #general_contact {
+			display: block;
+		}
+		~ #lead_contact {
+			display: none;
+		}
+	}
+}
+
+label, input:not([type="checkbox"]):not([type="radio"]), legend, span {
 	display: block;
 	width: 100%;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	@include breakpoint(575px) {
 		display: inline-block;
 		width: auto;
 	}
 }
-input:not([type="checkbox"]) {
+input:not([type="checkbox"]):not([type="radio"]), textarea {
 	line-height: 1.5;
 	color: $color;
 	outline: none;
 	padding: .2rem .5rem;
 
 }
-input {
+input, textarea {
 	font: 700 1.5rem $default-serif;
 	background-color: lighten($color, 80%);
 	border: 1px solid $color;
@@ -35,7 +82,7 @@ label, span {
 	font-weight: 400;
 }
 
-input[type="checkbox"] {
+form input[type="checkbox"] {
 	+ label {
 		position: relative;
 		font-family: $default-serif;
@@ -71,6 +118,43 @@ input[type="checkbox"] {
     	}
 	}
 }
+form input[type="radio"] {
+	+ label {
+		padding: 0 .5rem;
+		border: 1px dashed $color;
+		position: relative;
+		width: 4rem;
+		text-align: center;
+		margin-bottom: 2rem;
+		font-weight: bold;
+		&:after {
+			position: absolute;
+			top: 2.8rem;
+			left: 0;
+			font-size: .8rem;
+			line-height: 1;
+			text-align: left;
+			color: $color;
+			font-weight: normal;
+		}
+	}
+	&:checked {
+		+ label {
+			background-color: $color;
+			color: white;
+			border-style: solid;
+		}
+	}
+	&#budget_low + label:after {
+		content: 'starting at $1200';
+	}
+	&#budget_medium + label:after {
+		content: 'starting at $5000';
+	}
+	&#budget_high + label:after {
+		content: 'starting at $10,000';
+	}
+}
 input:focus, input:focus + label {
 	border: dashed $color 1px;
 }
@@ -100,6 +184,7 @@ input#work_develop ~ .hideshow {
     }
 }
 .small-print {
+	margin-top: 4rem;
 	input[type="checkbox"] {
 		+ label {
 			border-color: white;
@@ -148,8 +233,3 @@ input#work_develop ~ .hideshow {
 	font-size: 1rem;
 }
 
-
-.intake-form-wrapper {
-    margin: auto;
-    text-align: left
-}

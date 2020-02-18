@@ -7,7 +7,8 @@ $().ready(function() {
     
     $("a[href^='http://']").attr("target","_blank");
     
-    $('#general_contact').submit(function(e) {
+    // Leads contact form Ajax
+    $('#lead_contact').submit(function(e) {
 	  e.preventDefault();
 	  var $form = $(this);
 	  $.post($form.attr("action"), $form.serialize()).then(function(data) {

@@ -1,0 +1,18 @@
+---
+layout: main
+menu: main
+nav_label: need help with some stuff?
+nav_weight: 4
+excerpt: contact me with general questions or projects
+---
+
+<h1>What kind of stuff do you need help with?</h1> 
+
+<input type="radio" name="form_select" id="form--estimate" class="for-screen-readers">
+<label for="form--estimate">I want a quote for a project</label>
+<input type="radio" name="form_select" id="form--general" class="for-screen-readers">
+<label for="form--general">I have a general question</label>
+
+{% include leads.html %}
+
+{% include say-hi.html %}
