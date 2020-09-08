@@ -12,7 +12,7 @@ $().ready(function() {
 	  e.preventDefault();
 	  var $form = $(this);
 	  $.post($form.attr("action"), $form.serialize()).then(function(data) {
-		   console.log(data);
+		   $(".form-content").html( data );
 		});
 	});
     
