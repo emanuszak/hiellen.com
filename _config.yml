@@ -49,9 +49,8 @@ defaults:
 
 collections_dir: collections
 collections:
-  examples:
+  clients:
     output: true
-    sort_by: project_weight
   products:
     output: false
   services:

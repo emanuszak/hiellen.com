@@ -1,27 +1,8 @@
-<form method="post" id="general_contact" name="general_contact" netlify>
-	
-	<div class="contact-form-row">
-		<label for="name">Name</label>
-		<input type="text" name="contact_name" id="name" required="">
-	</div>
-	
-	<div class="contact-form-row">
-		<label for="email">Email</label>
-			<input type="email" name="contact_email" id="email" required="">
-	</div>
-	
-	<div class="contact-form-row">
-		<label for="message">Message</label>
-		<textarea name="message" id="message" value="" rows="10"></textarea>
-	</div>
-	
-	<div class="contact-form-row small-print">
-		<input type="checkbox" name="marketing_consent" value="TRUE" id="consent" class="for-screen-readers"/>
-		<label for="consent">Check this box to get occasional (never spam!) emails or newsletters from me.</label>
-	</div>
-
-	<div class="actions">
-		<button type="submit" id="submit" class="form-send shadow">send message</button> 
-		<button type="reset" id="reset" class="form-reset">clear form</button>
-	</div>
-</form> 
+<div class="general_contact">
+	<p>Just saying hi? Email me at <a href="#" class="cryptedmail"
+	   data-name="ellen"
+	   data-domain="cactus"
+	   data-tld="works"
+	   onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"></a>
+	</p>
+</div>

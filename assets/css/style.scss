@@ -2,33 +2,12 @@
 ---
 @import 'breakpoint',
 		'mixins',
+		'global',
+		'footer',
 		'accessibility',
+		'navigation',
 		'form',
-		'portfolio',
+		'work',
 		'post',
 		'invoice',
 		'services';
-
-// breakpoints
-$mobile-only: max-width 575px;
-
-
-// Enhancement Components
-.shadow {
-    box-shadow: 5px 7px 0 1px $color;
-    -webkit-transition: all 120ms ease-out;
-    transition: all 120ms ease-out;
-    &:hover {
-        background-color: color(footerAccent);
-        box-shadow: 5px 7px 0 1px $color;
-    }
-}
-
-
-.hidden {
-    display: none;
-}
-
-.opacity-50 {
-    opacity: .5;
-}

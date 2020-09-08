@@ -7,7 +7,7 @@ title: Stuff about me
 excerpt: about myself and Cactus.Works
 ---
 
-# Stuff about me
+# About Cactus.Works and Ellen
 
 It's actually not about me, it's about you: <b>Your project, your objectives, your needs.</b>
 

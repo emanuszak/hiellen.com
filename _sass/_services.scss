@@ -24,14 +24,15 @@ section[class^="services"] {
 				background-color: $color;
 				color: white;
 			}
-			&:after {
+			&:before {
 			    content: '';
 			    position: absolute;
 			    left: .5rem;
 			    right: -1rem;
-			    bottom: -1rem;
+			    bottom: 1rem;
 			    top: .5rem;
 			    border: 1px solid $color;
+			    z-index: -1;
 		    }
 		}
 	}

@@ -6,13 +6,32 @@ nav_weight: 2
 excerpt: services that I provide
 ---
 
-<h1>This is the stuff I can do for you</h1>
+<h1>This is what I can do for you</h1>
 
 <section>
-	<p>I build websites and emails.  But more than that, I build tools that can go to work for you.  You won't get templated work from me (unless you ask for a template!).</p>
+	<p>I build websites and emails.  But more than that, I build tools that can go to work for you.  You won't get templated work from me (unless you ask for a template).</p>
 </section>
 
 <section class="services__group">
+	<h2>WordPress websites</h2>
+	<ul>
+		{% for product in site.products %}
+			{% if product.active == "active" and product.category == "wordpress" %}
+			<li class="service--{{product.type}}">
+			<h4>{{product.name}}</h4>
+			<p>{{product.content}}</p>
+			{% assign type = product.type %}{% case type %}
+			{% when 'product' %}
+			<button>${{product.price}}</button>
+			{% when 'service' %}
+			<button>Get a quote</button>
+			{% endcase %}
+			</li>
+			{% endif %}
+		{% endfor %}
+
+	</ul>
+	
 	<h2>Responsive HTML Email</h2>
 	<ul>
 		{% for product in site.products %}
@@ -20,19 +39,26 @@ excerpt: services that I provide
 			<li class="service--{{product.type}}">
 			<h4>{{product.name}}</h4>
 			<p>{{product.content}}</p>
+			{% assign type = product.type %}{% case type %}
+			{% when 'product' %}
+			<button>${{product.price}}</button>
+			{% when 'service' %}
 			<button>Get a quote</button>
+			{% endcase %}
 			</li>
 			{% endif %}
 		{% endfor %}
 
 	</ul>
+	
 </section>
 
 <section class="services__dontdo">
-	<h2>Stuff you won't get from me</h2>
+	<h2>Things you won't get from me</h2>
+	<p>My offerings are focused on my areas of expertise. While I am happy to advise on or provide neutral feedback on the below, I do not offer the following as services:</p>
 	<ul>
-		<li>Copywriting</li>
-		<li>SEO</li>
+		<li>Copywriting & copyediting</li>
+		<li>Search Engine Optimization</li>
 		<li>Graphic design</li>
 	</ul>
 </section> 

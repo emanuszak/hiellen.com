@@ -1,4 +1,5 @@
 // Base
+*, *:before, *:after {box-sizing: border-box;}
 html {
 	height: 100%;
 }
@@ -43,8 +44,12 @@ h2 {
 	flex: 1 1 auto;
 	height: 100%;
 	display: grid;
-	grid-template-columns: 2fr 8fr;
+	grid-template-columns: 2fr minmax(auto, 8fr);
 	grid-column-gap: .5rem;
+}
+
+.flex__wrapper {
+	display: flex;
 }
 
 .grid__item {
@@ -90,7 +95,7 @@ h2 {
 	padding-bottom: 4rem;
 	align-content: start;
     a:hover {
-        background: $color;  
+          
     }
     h1 {
 	    text-align: right;

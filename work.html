@@ -6,24 +6,26 @@ nav_weight: 5
 excerpt: case studies and examples of work
 ---
 
-<h1>Here is some stuff I've done</h1>
+<h1>Work I've done</h1>
 
-<p>See case studies for the sorts of problems I've solved on behalf of my clients.</p>
-
-<section class="portfolio flex-wrapper">
-	{% assign portfolio_pages = site.examples | sort: 'project_weight' %}
-	{% for p in portfolio_pages %}
-	<a href="{{ p.url | relative_url }}">
-    	<article class="project">
-        	<div class="project-title">
-                <h3>{{ p.title }}</h3>
-        	</div>
-    	</article>
-	</a>
-	{% endfor %}
-	
+<section class="case-studies">
+	<ul>
+		<li class="project-type__email"><div>A series of responsive HTML emails for a global private bank</div></li>
+		<li class="project-type__email"><div>Modular email template for a Fortune 100 financial institution.</div></li>
+		<li class="project-type__email"><div>Responsive email newsletter template for a multinational media and entertainment company</div></li>
+		<li class="project-type__wp"><div>WordPress website design and development for tech PR agency</div></li>
+		<li class="project-type__wp"><div>WordPress website design and development for New Jersey personal training and gym</div></li>
+	</ul>
 </section> 
 
 <section class="clients">
-
+	<h2>Work done for:</h2>
+	
+	<div class=" flex__wrapper clients__logos">
+	{% for logo in site.static_files %}
+		{% if logo.path contains 'clients' %}
+			<img class="client-logo" src="{{logo.path}}">
+		{% endif %}
+	{% endfor %}
+	</div>
 </section>
