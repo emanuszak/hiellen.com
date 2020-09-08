@@ -7,3 +7,4 @@ _psds/
 _drafts/
 .DS_Store
 .jekyll-cache
+.node_modules
