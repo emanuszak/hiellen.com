@@ -3,7 +3,7 @@ category: wordpress
 item: wp-managedhosting
 type: product
 name: Managed WordPress hosting
-price: 129/month
+price: 119 per month
 description: WordPress hosting with uptime monitoring, security, and updates.
 active: active
 ---

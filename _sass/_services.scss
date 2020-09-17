@@ -8,11 +8,16 @@ section[class^="services"] {
 		margin: 0 1rem;
 		padding: 2rem;
 		font-size: 1.12rem;
+		button, a.button {
+			text-decoration: none;
+			padding: .5rem;
+			font-size: 1rem;
+		}
 		&.service--service {
 			background-color: $color;
 			color: white;
 			position: relative;
-			button {
+			button, a.button {
 				background-color: white;
 				color: $color;
 			}
@@ -20,7 +25,7 @@ section[class^="services"] {
 		&.service--product {
 			border: 1px solid $color;
 			position: relative;
-			button {
+			button, a.button {
 				background-color: $color;
 				color: white;
 			}

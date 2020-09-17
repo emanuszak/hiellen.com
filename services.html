@@ -22,9 +22,9 @@ excerpt: services that I provide
 			<p>{{product.content}}</p>
 			{% assign type = product.type %}{% case type %}
 			{% when 'product' %}
-			<button>${{product.price}}</button>
+			<a class="button" href="/contact.html?type={{product.item}}">${{product.price}}</a>
 			{% when 'service' %}
-			<button>Get a quote</button>
+			<a class="button" href="/contact.html?type={{product.item}}">Get a quote</a>
 			{% endcase %}
 			</li>
 			{% endif %}
@@ -41,9 +41,9 @@ excerpt: services that I provide
 			<p>{{product.content}}</p>
 			{% assign type = product.type %}{% case type %}
 			{% when 'product' %}
-			<button>${{product.price}}</button>
+			<a class="button" href="/contact.html?type={{product.item}}">${{product.price}}</a>
 			{% when 'service' %}
-			<button>Get a quote</button>
+			<a class="button" href="/contact.html?type={{product.item}}">Get a quote</a>
 			{% endcase %}
 			</li>
 			{% endif %}
@@ -55,7 +55,7 @@ excerpt: services that I provide
 
 <section class="services__dontdo">
 	<h2>Things you won't get from me</h2>
-	<p>My offerings are focused on my areas of expertise. While I am happy to advise on or provide neutral feedback on the below, I do not offer the following as services:</p>
+	<p>My services are focused on my areas of expertise. While I am happy to advise on or provide neutral feedback on the below, I do not offer the following as services:</p>
 	<ul>
 		<li>Copywriting & copyediting</li>
 		<li>Search Engine Optimization</li>
