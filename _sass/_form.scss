@@ -48,11 +48,16 @@ label, span {
 	font-weight: 400;
 }
 
+label[for^="project"], label[for^="work"] {
+	&:hover {
+    	cursor: pointer;
+	}
+}
+
 form input[type="checkbox"] {
-	+ label {
+	+ .label_text {
 		position: relative;
 		font-family: $default-serif;
-		margin-left: 2rem;
 		border-style: solid;
 		border-width: 1px;
 		border-color: white white $color white;
@@ -62,34 +67,31 @@ form input[type="checkbox"] {
 	    	width: 1.5rem;
 	    	height: 1.5rem;
 	    	display: inline-block;
-        	color: $color;
-        	position: absolute;
-        	left: -2rem;
-        	top: 25%;
-    	}
-    	&:hover {
-        	cursor: pointer;
-    	}
+	    	color: $color;
+	    	vertical-align: middle;
+		}
 	}
+	
 	&:focus {
-		+ label {
+		+ .label_text {
 			border-style: dashed;
 			border-width: 1px;
 			border-color: white white $color white;
 		}
 	}
 	&:checked {
-    	+ label {
+    	+ .label_text {
         	font-weight: 700;
         	&:after {
             	content: '\2713';
             	position: absolute;
-            	top: 0;
-            	left: -2rem;
+            	top: -6px;
+            	left: 0;
             	font-size: 2rem;
         	}
     	}
 	}
+
 }
 form input[type="radio"] {
 	+ label {
@@ -134,13 +136,7 @@ form input[type="radio"] {
 	}
 }
 
-input#work_develop:checked ~ .hideshow {
-	display: block;
-}
-input#work_develop ~ .hideshow, input#work_design:checked ~ .hideshow {
-	display: none;
-}
-input#work_develop ~ .hideshow {
+.hideshow {
 	border: 1px solid $color;
 	margin-bottom: 4rem;
 	padding: 2rem;
@@ -162,15 +158,16 @@ input#work_develop ~ .hideshow {
 .small-print {
 	margin-top: 4rem;
 	input[type="checkbox"] {
-		+ label {
+		+ .label_text {
 			border-color: white;
 			font-size: 1rem;
 			&:before {
-				top: 0;
+				top: 50%;
+				vertical-align: top;
 			}
 		}
 		&:checked {
-			+ label:after {
+			+ .label_text:after {
 				top: -50%;
 			}
 		}
@@ -238,6 +235,7 @@ input#work_develop ~ .hideshow {
 	display: inline-block;
 	font-size: 1rem;
 	position: absolute;
+	right: 0;
 	&:hover {
 		cursor: pointer;
 	}

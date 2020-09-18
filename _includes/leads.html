@@ -3,32 +3,39 @@
 	<fieldset>
 		<legend class="for-screen-readers">Project type</legend>
 		<span>I have a</span>
-			<input type="checkbox" name="project_type[]" id="project_website" value="website" class="for-screen-readers">
-			<label for="project_website">website</label>
 			
-			<input type="checkbox" name="project_type[]" id="project_email" value="html_email" class="for-screen-readers">
-			<label for="project_email">html email</label>
-			
-			<input type="checkbox" name="project_type[]" id="project_wordpress" value="wordpress" class="for-screen-readers">
-			<label for="project_wordpress">wordpress</label>
+			<label for="project_website">
+				<input type="checkbox" name="project_type[]" id="project_website" value="website" class="for-screen-readers">
+				<span class="label_text"> website</span>
+			</label>
+			<label for="project_email">
+				<input type="checkbox" name="project_type[]" id="project_email" value="html_email" class="for-screen-readers">
+				<span class="label_text"> html email</span>
+			</label>
+			<label for="project_wordpress">
+				<input type="checkbox" name="project_type[]" id="project_wordpress" value="wordpress" class="for-screen-readers">
+				<span class="label_text"> wordpress</span>
+			</label>
 			
 	    <span>project</span>
-	</fieldset>
-    <div class="contact-form-row">
-	    <fieldset>
-		    <legend class="for-screen-readers">Work type</legend>
+	    <div class="contact-form-row">
 		    <span>that I need</span>
-	        <input type="checkbox" name="work_type[]" id="work_develop" value="develop" class="for-screen-readers">
-			<label for="work_develop">developed</label>
-	        <input type="checkbox" name="work_type[]" id="work_design" value="design" class="for-screen-readers">
-			<label for="work_design">designed</label>.
+	        
+			<label for="work_develop">
+				<input type="checkbox" name="work_type[]" id="work_develop" value="develop" class="for-screen-readers">
+				<span class="label_text"> developed</span>
+			</label>
+			<label for="work_design">
+				<input type="checkbox" name="work_type[]" id="work_design" value="design" class="for-screen-readers">
+				<span class="label_text"> designed</span>
+			</label>.
 			
 			<div class="hideshow">
 			    <label for="design_comps">If you already have a design please upload mockups or examples, which will help me put together a more accurate estimate for your project. Attach image files (jpg, png) or pdf.</label>
 			    <input type="file" name="design_comps" id="design_comps" accept="image/*,.pdf">
 		    </div>
-	    </fieldset>
-    </div>
+	    </div>
+	</fieldset> 
 	
 	<div class="lead-from-services">
 		<div class="clear-params">Need help with something else? Click here.</div>
@@ -50,8 +57,8 @@
 	</div>
 	
 	<div class="contact-form-row">
-		<label for="project_deadline">I'd like to launch by</label>
-		<input type="date" name="deadline" id="project_deadline" value="">
+		<label for="launch_date">I'd like to launch by</label>
+		<input type="date" name="deadline" id="launch_date" value="">
 	</div>
 	
 	<fieldset>
@@ -71,8 +78,10 @@
 	</fieldset>
 	
 	<div class="contact-form-row small-print">
-		<input type="checkbox" name="marketing_consent" value="TRUE" id="consent" class="for-screen-readers"/>
-		<label for="consent">Check this box to get occasional (never spam!) emails or newsletters from me.</label>
+		<label for="consent">
+			<input type="checkbox" name="marketing_consent" value="TRUE" id="consent" class="for-screen-readers"/>
+			<span class="label_text"> Check this box to get occasional (never spam!) emails or newsletters from me.</span>
+		</label>
 	</div>
 
 	
