@@ -48,7 +48,7 @@ label, span {
 	font-weight: 400;
 }
 
-label[for^="project"], label[for^="work"] {
+.checkbox_hitbox {
 	&:hover {
     	cursor: pointer;
 	}
